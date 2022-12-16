@@ -1,0 +1,244 @@
+# i3 config file (v4)
+# created by : C0SM0
+# to reset, run the i3-config-wizard(1).
+
+# mod key "alt"
+set $mod Mod1
+
+# font
+font pango: CascadiaCode 10
+
+# start XDG autostart .desktop files
+exec --no-startup-id dex --autostart --environment i3
+
+# xss-lock 
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager applet
+exec --no-startup-id nm-applet
+
+# path to volume control, without trailing slash
+set $volumepath ~/.config/i3/i3-volume
+
+# status command (i3blocks, i3status)
+set $statuscmd i3blocks
+
+# signal to update status (i3blocks:SIGRTMIN+10, i3status:SIGUSR1)
+set $statussig SIGRTMIN+10
+
+# amount to increase/decrease volume
+set $volumestep 5
+
+# pulse audio keybindings
+bindsym XF86AudioRaiseVolume exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig up $volumestep
+bindsym XF86AudioLowerVolume exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig down $volumestep
+bindsym XF86AudioMute        exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig mute
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# sreen brightness controls
+bindsym XF86MonBrightnessUp exec brillo -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec brillo -U 10 # decrease screen brightness
+
+# touchpad controls
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+# media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# move tiling windows via drag & drop by left-clicking into the title bar, or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+s exec --no-startup-id dmenu_run -nb black -nf gray -sb cyan -sf black -fn CascadiaCode
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+e split h
+
+# split in vertical orientation
+bindsym $mod+o split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+p layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+t layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# hide window title bar
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
+
+# i3 gaps
+gaps inner 14
+gaps outer -3
+smart_gaps on
+
+# workspace variables
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# application workspaces
+# use 'xprop' to get class name
+# assign [class="CLASSNAME"] $ws#
+assign [class="discord"] $ws1
+assign [class="Terminator"] $ws2
+assign [class="firefox"] $ws3
+assign [class="Brave-browser"] $ws4
+assign [class="obsidian"] $ws5
+assign [class="obs"] $ws7
+assign [class="Virt-manager"] $ws10
+assign [class="Virtual-machine-manager"] $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window 
+mode "resize" {
+
+        bindsym h resize shrink width 10 px or 10 ppt 
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# resize keybind
+bindsym $mod+r mode "resize"
+
+# colors
+set $bg-color 	         #242424
+set $inactive-bg-color   #242424
+set $text-color          #ffffff
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #009999
+set $brdr-color          #ffffff
+set $inactive-brdr-color #a6a6a6
+
+# window color          border              background           text                 indicator
+client.focused          $bg-color           $brdr-color          $text-color          #009999
+client.unfocused        $inactive-bg-color  $inactive-brdr-color $inactive-text-color #009999
+client.focused_inactive $inactive-bg-color  $inactive-brdr-color $inactive-text-color #009999
+client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          #009999
+
+# status bar
+bar {
+	# position top
+	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
+
+	# colors
+	colors {
+		
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+
+		background $bg-color
+		separator #009999
+	}
+}
+
+# custom binds
+bindsym $mod+x exec i3lock --color "$bg-color"
+
+# applications
+exec flameshot
+bindsym $mod+b exec firefox
+
+# startup
+exec_always mv /home/bluecosmo/.config/pulse/ /home/bluecosmo/.config/pulse.old
+exec_always feh --bg-center /home/bluecosmo/media/photos/wallpapers/kidcosmo-grey.png
+exec_always pulseaudio --start
+exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 5746x574 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 3826x634 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off
+
