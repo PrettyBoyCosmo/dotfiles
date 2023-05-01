@@ -1,0 +1,47 @@
+[global_config]
+  geometry_hinting = True
+  extra_styling = False
+[keybindings]
+  go_up = <Primary><Alt>k
+  go_down = <Primary><Alt>j
+  go_left = <Primary><Alt>h
+  go_right = <Primary><Alt>l
+[profiles]
+  [[default]]
+    background_color = "#242424"
+    background_darkness = 0.36
+    cursor_shape = ibeam
+    cursor_color = "#009999"
+    font = Cascadia Code Bold Italic 26
+    foreground_color = "#009999"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#242424:#007991:#ffffff:#dc8add:#ffffff:#3d3846:#5dc9ef:#ffffff:#ffffff:#f9f06b:#74b6af:#ffffff:#d3fffd:#8ff0a4:#ffffff:#deddda"
+    use_custom_command = True
+    custom_command = xonsh
+    use_system_font = False
+    bold_is_bright = True
+    background_image = /home/bluecosmo/media/photos/wallpapers/weeb/mono.png
+  [[powershell]]
+    background_color = "#101482"
+    cursor_shape = ibeam
+    cursor_color = "#aaaaaa"
+    font = Monospace 18
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    use_custom_command = True
+    custom_command = pwsh
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

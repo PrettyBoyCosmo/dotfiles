@@ -20,7 +20,7 @@ sudo setfacl -m u:$username:rx /bin/brillo
 sudo chown $username /sys/class/backlight/intel_backlight/brightness
 
 # packages
-sudo pacman -S xclip discord flatpak caja flameshot python3 python-pip git feh arandr acpi breeze nodejs npm yarn lxappearance materia-gtk-theme xonsh eom net-tools
+sudo pacman -S xclip discord flatpak caja flameshot python3 python-pip git feh arandr acpi breeze nodejs npm yarn lxappearance materia-gtk-theme xonsh eom net-tools nim mesa 
 
 # flatpaks
 flatpak install flathub md.obsidian.Obsidian com.obsproject.Studio com.brave.Browser com.spotify.Client org.kde.kdenlive org.gimp.GIMP im.riot.Riot
