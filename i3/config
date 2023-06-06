@@ -9,6 +9,7 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
+set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
 
 # colors
 set $bg-color 	         #242424
@@ -21,45 +22,47 @@ set $inactive-brdr-color #a6a6a6
 
 # startup
 font pango: CascadiaCode 10
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
+exec flameshot
 exec duplicati
-#exec_always mv /home/bluecosmo/.config/pulse/ /home/bluecosmo/.config/pulse.old
-#exec_always pulseaudio --start
-exec_always mate-volume-control-status-icon
-exec_always feh --bg-center /home/bluecosmo/media/photos/wallpapers/kidcosmo-grey.png
-exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 5746x574 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 3826x634 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id amixer sset Master unmute
+exec --no-startup-id amixer sset Speaker unmute
+exec --no-startup-id amixer sset Headphone unmute
+exec --no-startup-id numlockx on
+exec_always feh --bg-fill $wallpaper
+exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
+exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
+exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x0 --rotate normal
 
 # applications
-exec flameshot
 bindsym $win+a exec mintinstall
 bindsym $win+b exec brave
 bindsym $win+d exec discord
-bindsym $win+e exec nemo
+bindsym $win+e exec terminator -e ranger
 bindsym $win+f exec firefox
 bindsym $win+g exec gimp
-bindsym $win+h exec virt-manager
+bindsym $win+i exec cinnamon-settings
 bindsym $win+k exec kdenlive
 bindsym $win+o exec obsidian
 bindsym $win+p exec terminator --profile=powershell
+bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
 bindsym $win+s exec spotify
-bindsym $win+v exec vivaldi
+bindsym $win+v exec vivaldi-stable
 
-# pulse audio keybindings
-#bindsym XF86AudioRaiseVolume exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig up $volumestep
-#bindsym XF86AudioLowerVolume exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig down $volumestep
-#bindsym XF86AudioMute        exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig mute 
+# display preference
+bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --off --output DP-1-6 --off
+bindsym $mod+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x0 --rotate normal
 
-# alsa mixer
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+# pactl (volume)
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec $HOME/.config/i3/scripts/mute
 
 # modifiers
 floating_modifier $mod
-tiling_drag modifier titlebar
 
 # sreen brightness controls
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -69,8 +72,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh 
 
 # media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -78,7 +81,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Return exec i3-sensible-terminal 
 bindsym $mod+Shift+q kill 
 bindsym $mod+Shift+c reload 
-bindsym $mod+s exec --no-startup-id dmenu_run -nb black -nf gray -sb cyan -sf black -fn CascadiaCode 
+bindsym $mod+s exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+r restart 
 
 # window management
@@ -108,25 +111,40 @@ for_window [class="^.*"] border pixel 1
 
 # i3 gaps
 gaps inner 14
-gaps outer -3
-smart_gaps on
+gaps outer 4
+# smart_gaps on
 
-for_window [class="X-terminal-emulator"] gaps outer 200
-
-for_window [class="^.*"] gaps outer 0
-for_window [class="^.*"] gaps inner 0
+set $mode_gaps Toggle gaps: (1) on (2) off
+bindsym $mod+g mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym 1 mode "default", gaps inner all set 14, gaps outer all set 4
+    bindsym 2 mode "default", gaps inner all set 1, gaps outer all set 1
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # workspace variables
-set $ws1 "01:" 
-set $ws2 "02:"
-set $ws3 "03:"
-set $ws4 "04:" 
-set $ws5 "05:" 
-set $ws6 "06:" 
-set $ws7 "07:"
-set $ws8 "08:" 
-set $ws9 "09:"
-set $ws10 "10:" 
+set $ws1 "1" 
+set $ws2 "2" 
+set $ws3 "3"
+set $ws4 "4" 
+set $ws5 "5" 
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8" 
+set $ws9 "9"
+set $ws10 "10" 
+
+# set $ws1 "01:" 
+# set $ws2 "02:" 
+# set $ws3 "03:"
+# set $ws4 "04:" 
+# set $ws5 "05:" 
+# set $ws6 "06:"
+# set $ws7 "07:"
+# set $ws8 "08:" 
+# set $ws9 "09:"
+# set $ws10 "10:" 
 
 # workspace handling
 bindsym $mod+1 workspace number $ws1
@@ -150,11 +168,20 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# assign workspace to monitor
+workspace $ws1 output DP-1-6
+workspace $ws7 output DP-1-5
+
 # application workspaces
 # assign [class="CLASSNAME"] $ws#
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-nagbar -f "pango:CascadiaCode 12" \
+-m "Exit i3? This will end your current X session." \
+-B "Exit now" "i3-msg exit" \
+-B "Suspend" "systemctl suspend && pkill i3-nagbar" \
+-B "Reboot" "systemctl reboot" \
+-B "Power off" "systemctl poweroff" \
 
 # resize window 
 mode "resize" {
@@ -180,23 +207,24 @@ client.focused_inactive $inactive-bg-color  $inactive-brdr-color $inactive-text-
 client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          #009999
 
 # status bar
-bar {
-	position bottom
-	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
+# bar {
+# 	position bottom
+# 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
+#     workspace_buttons no
 
-	# colors
-	colors {
+# 	# colors
+# 	colors {
 		
-		# workspace        border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+# 		# workspace        border             background         text
+# 		focused_workspace  $bg-color          $bg-color          $text-color
+# 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+# 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 
-		background $bg-color
-		separator #009999
-	}
-}
+# 		background $bg-color
+# 		separator #009999
+# 	}
+# }
 
 # custom binds
-bindsym $mod+x exec i3lock --color "$bg-color"
+bindsym $mod+x exec i3lock-fancy
 

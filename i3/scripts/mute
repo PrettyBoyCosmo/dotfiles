@@ -1,0 +1,15 @@
+#!/bin/bash
+# mute script
+# created by : bluecosmo
+
+# check if audio is muted
+if pactl list sinks | grep -q "Mute: yes"; then
+    # audio is muted, unmute it
+    pactl set-sink-mute 0 0
+    echo "Audio has been unmuted."
+else
+    # audio is not muted, mute it
+    pactl set-sink-mute 0 1
+    echo "Audio has been muted."
+fi
+

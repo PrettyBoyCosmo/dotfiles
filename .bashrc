@@ -13,6 +13,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
+PATH=/home/bluecosmo/.nimble/bin:$PATH
 
 # check the window size after each command and, if necessary,
 shopt -s checkwinsize

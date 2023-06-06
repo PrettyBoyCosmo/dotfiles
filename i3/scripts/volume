@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Run amixer command and capture the output
+output=$(amixer -c2 get Master)
+
+# Extract the volume percentage using string manipulation
+volume=$(echo "$output" | grep -oP '\[\K[0-9]+(?=%)')
+
+# Print the volume level
+echo "$volume%"
+

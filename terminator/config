@@ -1,40 +1,33 @@
 [global_config]
-  geometry_hinting = True
-  extra_styling = False
+  borderless = True
+  tab_position = bottom
 [keybindings]
-  go_up = <Primary><Alt>k
-  go_down = <Primary><Alt>j
-  go_left = <Primary><Alt>h
-  go_right = <Primary><Alt>l
 [profiles]
   [[default]]
-    background_color = "#242424"
-    background_darkness = 0.36
-    cursor_shape = ibeam
-    cursor_color = "#009999"
-    font = Cascadia Code Bold Italic 26
-    foreground_color = "#009999"
+    icon_bell = False
+    background_color = "#282828"
+    cursor_color = "#007991"
+    font = Cascadia Mono PL Semi-Bold 26
+    foreground_color = "#007991"
     show_titlebar = False
     scrollbar_position = hidden
+    scroll_on_keystroke = False
     scrollback_infinite = True
-    palette = "#242424:#007991:#ffffff:#dc8add:#ffffff:#3d3846:#5dc9ef:#ffffff:#ffffff:#f9f06b:#74b6af:#ffffff:#d3fffd:#8ff0a4:#ffffff:#deddda"
+    palette = "#282828:#b43fbf:#20b39e:#f8e45c:#458588:#b16286:#57a992:#a89984:#928374:#ffa348:#20b39e:#dc8add:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_custom_command = True
     custom_command = xonsh
     use_system_font = False
     bold_is_bright = True
-    background_image = /home/bluecosmo/media/photos/wallpapers/weeb/mono.png
   [[powershell]]
-    background_color = "#101482"
-    cursor_shape = ibeam
+    icon_bell = False
+    background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = Monospace 18
-    foreground_color = "#ffffff"
+    font = Cascadia Mono PL Semi-Bold 26
+    foreground_color = "#839496"
     show_titlebar = False
-    scrollbar_position = hidden
-    scrollback_infinite = True
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_custom_command = True
-    custom_command = pwsh
+    custom_command = powershell
     use_system_font = False
 [layouts]
   [[default]]

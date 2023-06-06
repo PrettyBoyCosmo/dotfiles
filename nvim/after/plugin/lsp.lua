@@ -8,7 +8,6 @@ lsp.preset("recommended")
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 
-
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({

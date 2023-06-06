@@ -1,0 +1,85 @@
+// ~/.config/rofi/config.rasi
+// rofi configuration file
+// created by : cosmo
+
+// configuration
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "Cascadia Code 12";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+
+// colors
+* {
+  bg: #24242488;
+  bg-alt: #00000066;
+  bg-selected: #66666666;
+  fg: #ffffff;
+  fg-alt: #669999;
+  
+  border: 1;
+  margin: 0;
+  padding: 0;
+ spacing: 0;
+}
+
+// window
+window {
+  width: 40%;
+  background-color: @bg;
+  border-color: @fg;
+}
+
+// element
+element {
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+element-icon {
+  size: 14;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+
+// inputs
+entry {
+  padding: 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+// list
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 10;
+}
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}

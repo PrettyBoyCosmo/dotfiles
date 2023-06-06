@@ -1,0 +1,214 @@
+; ~/.config/polybar/config
+; polybar configuration file
+; created by : bluecosmo
+
+[colors]
+    transparent = #00
+    ;background = #cc242424
+    background = #dd333333
+    background-alt = #242424
+    primary = #ffffff
+    secondary = #009999
+
+[bar/main]
+    monitor = eDP-1
+    modules-left = i3 xwindow
+    modules-right = alsa filesystem cpu battery date
+    bottom = false
+    padding-right = 2
+    background = ${colors.background}
+    border-size = 1
+    border-color = ${colors.primary}
+    border-margin = 3
+    font-0 = Cascadia Code:pixelsize=12;1
+    font-1 = FontAwesome
+    module-margin-left = 1
+    module-margin-right = 1
+    tray-position = center
+    tray-padding = 2
+    tray-background = ${colors.background}
+    wm-restack = i3
+    scroll-up = i3wm-wsnext
+    scroll-down = i3wm-wsprev
+    cursor-click = pointer
+    cursor-scroll = ns-resize
+
+[bar/right]
+    monitor = DP-1-5
+    modules-left = i3 xwindow
+    modules-right = alsa filesystem cpu battery date
+    bottom = false
+    padding-right = 2
+    background = ${colors.background}
+    border-size = 1
+    border-color = ${colors.primary}
+    border-margin = 3
+    font-0 = Cascadia Code:pixelsize=12;1
+    font-1 = FontAwesome
+    module-margin-left = 1
+    module-margin-right = 1
+    wm-restack = i3
+    scroll-up = i3wm-wsnext
+    scroll-down = i3wm-wsprev
+    cursor-click = pointer
+    cursor-scroll = ns-resize
+
+[bar/left]
+    monitor = DP-1-6
+    modules-left = i3 xwindow
+    modules-right = alsa filesystem cpu battery date
+    bottom = false
+    padding-right = 2
+    background = ${colors.background}
+    border-size = 1
+    border-color = ${colors.primary}
+    border-margin = 3
+    font-0 = Cascadia Code:pixelsize=12;1
+    font-1 = FontAwesome
+    module-margin-left = 1
+    module-margin-right = 1
+    wm-restack = i3
+    scroll-up = i3wm-wsnext
+    scroll-down = i3wm-wsprev
+    cursor-click = pointer
+    cursor-scroll = ns-resize
+
+[module/title]
+    type = custom/script
+    exec = echo CosmodiumCS
+
+[module/xwindow]
+    type = internal/xwindow
+    label = %title:0:30:...%
+
+[module/filesystem]
+    type = internal/fs
+    interval = 25
+    mount-0 = /
+    label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+    label-unmounted = %mountpoint% not mounted
+    label-unmounted-foreground = ${colors.primary}
+    label-mounted-background = ${colors.background}
+    label-unmounted-background = ${colors.background}
+
+[module/cpu]
+    type = internal/cpu
+    interval = 2
+    format-prefix = ":"
+    format-prefix-foreground = ${colors.primary}
+    format-background = ${colors.background}
+    format-underline = #f90000
+    label =%percentage:2%%
+
+[module/date]
+    type = internal/date
+    interval = 1
+    date = %Y/%m/%d
+    time = %H:%M:%S
+    format-background = ${colors.background}
+    label = %date% ~ %time%
+
+[module/alsa]
+    type = internal/alsa
+    format-volume = <label-volume> <bar-volume>
+    label-volume = :
+    label-volume-foreground = ${root.foreground}
+    label-volume-background = ${colors.background}
+    format-muted-prefix = " "
+    format-muted-foreground = ${colors.primary}
+    label-muted = : MUTED
+    label-muted-background = ${colors.background}
+    bar-volume-width = 10
+    bar-volume-foreground-0 = #55aa55
+    bar-volume-foreground-1 = #55aa55
+    bar-volume-foreground-2 = #55aa55
+    bar-volume-foreground-3 = #55aa55
+    bar-volume-foreground-4 = #55aa55
+    bar-volume-foreground-5 = #f5a70a
+    bar-volume-foreground-6 = #ff5555
+    bar-volume-gradient = false
+    bar-volume-indicator = |
+    bar-volume-indicator-font = 2
+    bar-volume-indicator-background = ${colors.background}
+    bar-volume-fill = ─
+    bar-volume-fill-font = 2
+    bar-volume-fill-background = ${colors.background}
+    bar-volume-empty = ─
+    bar-volume-empty-font = 2
+    bar-volume-empty-foreground = ${colors.primary}
+    bar-volume-empty-background = ${colors.background}
+
+[module/battery]
+    type = internal/battery
+    battery = BAT0
+    adapter = AC
+    full-at = 98
+    format-charging = <animation-charging> <label-charging>
+    format-charging-underline = #ffb52a
+    format-discharging = <animation-discharging> <label-discharging>
+    format-discharging-underline = ${self.format-charging-underline}
+    format-full-prefix = ": "
+    format-full-prefix-foreground = ${colors.primary}
+    format-full-prefix-background = ${colors.background}
+    format-full-underline = ${self.format-charging-underline}
+    ramp-capacity-0 = :
+    ramp-capacity-1 = :
+    ramp-capacity-2 = :
+    ramp-capacity-foreground = ${colors.primary}
+    ramp-capacity-background = ${colors.background}
+    animation-charging-0 = :
+    animation-charging-1 = :
+    animation-charging-2 = :
+    animation-charging-foreground = ${colors.primary}
+    animation-charging-background = ${colors.background}
+    animation-charging-framerate = 750
+    animation-discharging-0 = :
+    animation-discharging-1 = :
+    animation-discharging-2 = :
+    animation-discharging-foreground = ${colors.primary}
+    animation-discharging-background = ${colors.background}
+    animation-discharging-framerate = 750
+
+[module/i3]
+    type = internal/i3
+    format = <label-state> <label-mode>
+    index-sort = true
+    wrapping-scroll = false
+    pin-workspaces = true
+    ws-icon-0 = 1;
+    ws-icon-1 = 2;
+    ws-icon-2 = 3;
+    ws-icon-3 = 4;
+    ws-icon-4 = 5;
+    ws-icon-5 = 6;
+    ws-icon-6 = 7;
+    ws-icon-7 = 8;
+    ws-icon-8 = 9;
+    ws-icon-9 = 10;
+    label-mode-padding = 2
+    label-mode-foreground = ${colors.primary}
+    label-mode-background = ${colors.secondary}
+    label-focused = %index%:%icon%
+    label-focused-foreground = ${colors.background}
+    label-focused-background = ${colors.primary}
+    label-focused-underline= ${colors.secondary}
+    label-focused-padding = 2
+    label-unfocused = %index%:%icon%
+    label-unfocused-padding = 2
+    label-unfocused-background = ${colors.background}
+    label-visible = %index%:%icon%
+    label-visible-background = #cc009999
+    label-visible-underline = ${self.label-focused-underline}
+    label-visible-padding = ${self.label-focused-padding}
+    label-urgent = %index%:%icon%
+    label-urgent-background = ${colors.secondary}
+    label-urgent-padding = 2
+    label-separator = |
+    label-separator-foreground = ${colors.secondary}
+
+[settings]
+    screenchange-reload = true
+
+[global/wm]
+    margin-top = 5
+    margin-bottom = 5
