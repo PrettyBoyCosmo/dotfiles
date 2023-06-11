@@ -15,7 +15,7 @@ DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
 
 # custom prompt
-$PROMPT = "{INTENSE_WHITE}┌[{GREEN}{user}{INTENSE_WHITE}@{GREEN}{hostname}{INTENSE_WHITE}]─[{INTENSE_BLUE}{cwd}{INTENSE_WHITE}]\n└──■ {BLUE}{curr_branch} {INTENSE_BLACK}$ "
+$PROMPT = "{WHITE}┌[{GREEN}{user}{WHITE}@{GREEN}{hostname}{WHITE}]─[{INTENSE_BLUE}{cwd}{WHITE}]\n└──■ {BLUE}{curr_branch} {INTENSE_BLACK}$ "
 
 # get working directory
 def pwd():
