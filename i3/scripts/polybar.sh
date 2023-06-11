@@ -7,6 +7,6 @@ killall -q polybar
 
 # launch
 echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
-polybar main 2>&1 | tee -a /tmp/polybar1.log & disown
-polybar left 2>&1 | tee -a /tmp/polybar1.log & disown
-polybar right 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=$HOME/.config/polybar/config.ini main 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=$HOME/.config/polybar/config.ini left 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=$HOME/.config/polybar/config.ini right 2>&1 | tee -a /tmp/polybar1.log & disown

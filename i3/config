@@ -9,7 +9,7 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
+set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
 
 # colors
 set $bg-color 	         #242424
@@ -41,7 +41,7 @@ bindsym $win+a exec mintinstall
 bindsym $win+b exec brave
 bindsym $win+d exec discord
 bindsym $win+e exec terminator -e ranger
-bindsym $win+f exec firefox
+bindsym $win+f exec flameshot gui
 bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
 bindsym $win+k exec kdenlive
@@ -82,6 +82,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill 
 bindsym $mod+Shift+c reload 
 bindsym $mod+s exec --no-startup-id rofi -show drun
+bindsym $mod+w exec --no-startup-id $HOME/.config/i3/scripts/rofi-wifi-menu
 bindsym $mod+Shift+r restart 
 
 # window management
@@ -97,7 +98,7 @@ bindsym $mod+e split h
 bindsym $mod+o split v
 bindsym $mod+f fullscreen toggle 
 bindsym $mod+p layout stacking 
-bindsym $mod+w layout tabbed 
+bindsym $mod+b layout tabbed 
 bindsym $mod+t layout toggle split 
 bindsym $mod+Shift+space floating toggle 
 bindsym $mod+space focus mode_toggle 
@@ -110,14 +111,14 @@ default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
 
 # i3 gaps
-gaps inner 14
-gaps outer 4
-# smart_gaps on
+gaps inner 10
+gaps outer 2
+smart_gaps on
 
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 14, gaps outer all set 4
+    bindsym 1 mode "default", gaps inner all set 10, gaps outer all set 4
     bindsym 2 mode "default", gaps inner all set 1, gaps outer all set 1
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -201,10 +202,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # window color          border              background           text                 indicator
-client.focused          $bg-color           $brdr-color          $text-color          #009999
-client.unfocused        $inactive-bg-color  $inactive-brdr-color $inactive-text-color #009999
-client.focused_inactive $inactive-bg-color  $inactive-brdr-color $inactive-text-color #009999
-client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          #009999
+client.focused          $bg-color           $brdr-color          $text-color          $brdr-color
+client.unfocused        $inactive-bg-color  $inactive-brdr-color $inactive-text-color $inactive-brdr-color
+client.focused_inactive $inactive-bg-color  $inactive-brdr-color $inactive-text-color $inactive-brdr-color
+client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          $urgent-bg-color
 
 # status bar
 # bar {

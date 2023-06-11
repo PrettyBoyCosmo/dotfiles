@@ -8,7 +8,7 @@
     background_color = "#282828"
     cursor_color = "#007991"
     font = Cascadia Mono PL Semi-Bold 26
-    foreground_color = "#007991"
+    foreground_color = "#3fa8bf"
     show_titlebar = False
     scrollbar_position = hidden
     scroll_on_keystroke = False

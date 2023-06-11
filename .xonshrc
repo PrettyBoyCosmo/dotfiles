@@ -14,6 +14,9 @@ WORKFLOW = f'{HOME}/workflow'
 DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
 
+# custom prompt
+$PROMPT = "{INTENSE_WHITE}┌[{GREEN}{user}{INTENSE_WHITE}@{GREEN}{hostname}{INTENSE_WHITE}]─[{INTENSE_BLUE}{cwd}{INTENSE_WHITE}]\n└──■ {BLUE}{curr_branch} {INTENSE_BLACK}$ "
+
 # get working directory
 def pwd():
     return os.getcwd()
@@ -166,8 +169,8 @@ aliases.update({
     'cblocks': 'cat /home/bluecosmo/.config/i3/i3blocks.conf',
     'exonsh': 'nvim /home/bluecosmo/.xonshrc',
     'cxonsh': 'cat /home/bluecosmo/.xonshrc',
-    'epol': 'nvim $HOME/.config/polybar/config',
-    'cpol': 'cat $HOME/.config/polybar/config',
+    'epol': 'nvim $HOME/.config/polybar/config.ini',
+    'cpol': 'cat $HOME/.config/polybar/config.ini',
     'ecomp': 'nvim $HOME/.config/compton/compton.conf',
     'ccomp': 'cat $HOME/.config/compton/compton.conf',
     'elias': 'nvim /home/bluecosmo/.bash_aliases',
