@@ -23,12 +23,14 @@ def pwd():
 
 # get output from system command
 def command_output(command):
+    command = command[0]
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return result.stdout.strip()
 
 # animated-wallpaper
 def animated_wallpaper(wp):
-    os.system(f'bash /home/bluecosmo/media/photos/wallpapers/animated-wallpaper.sh /home/bluecosmo/media/photos/wallpapers/{wp[0]}')
+    wp = wp[0]
+    os.system(f'bash /home/bluecosmo/media/photos/wallpapers/animated-wallpaper.sh /home/bluecosmo/media/photos/wallpapers/{wp}')
 
 # get local ip address (ipv4)
 def local_ip():
@@ -52,7 +54,7 @@ def set_wallpaper(filename):
     return None
 
 # backup dotfiles (bdots)
-def backup_dot_files(destination_dir):
+def backup_dot_files():
     file_paths = (
         '$HOME/.config/i3',
         '$HOME/.config/terminator',
@@ -71,22 +73,26 @@ def backup_dot_files(destination_dir):
 
 # monitor mode (monitor_mode)
 def monitor_mode(adapter):
+    adapter = adapter[0]
     os.system('sudo airmon-ng check kill')
     os.system(f'sudo airmon-ng start {adapter}')
 
 # managed mode (managed_mode)
 def managed_mode(adapter):
+    adapter = adapter[0]
     os.system(f'sudo airmon-ng stop {adapter}')
     os.system('sudo NetworkManager && sudo wpa_supplicant')
 
 # change mac address (change_mac)
 def change_mac(adapter):
+    adapter = adapter[0]
     os.system(f'sudo ifconfig {adapter} down')
     os.system(f'sudo macchanger -r {adapter}')
     os.system(f'sudo ifconfig {adapter} up')
 
 # git (main)
 def mnupdate(commit_message):
+    commit_message = commit_message[0]
     os.system('cd .')
     os.system('git fetch')
     os.system('git pull origin main')
@@ -96,6 +102,7 @@ def mnupdate(commit_message):
 
 # git (master)
 def msupdate(commit_message):
+    commit_message = commit_message[0]
     os.system('cd .')
     os.system('git fetch')
     os.system('git pull origin master')
@@ -105,11 +112,12 @@ def msupdate(commit_message):
 
 # add git token to repo (add_token)
 def add_token(github_path):
+    github_path = github_path[0]
     git_token = command_output('pass tokens/git')
     os.system('cd .')
     os.system('git branch -M main')
     os.system('git remote remove origin')
-    os.system(f'git remote add origin https://{git_token}@github.com/{github_path[0]}')
+    os.system(f'git remote add origin https://{git_token}@github.com/{github_path}')
 
 # modify path (environment variable)
 for new_path in [
