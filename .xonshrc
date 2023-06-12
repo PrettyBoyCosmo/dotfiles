@@ -26,6 +26,10 @@ def command_output(command):
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return result.stdout.strip()
 
+# animated-wallpaper
+def animated_wallpaper(wp):
+    os.system(f'bash /home/bluecosmo/media/photos/wallpapers/animated-wallpaper.sh /home/bluecosmo/media/photos/wallpapers/{wp[0]}')
+
 # get local ip address (ipv4)
 def local_ip():
     try:
@@ -132,7 +136,7 @@ aliases.update({
     'rip': 'mv @(NOTEBOOK) @(pwd())',
     'analyze': 'mv @($arg0) $HOME/research/analyze',
     'anal': 'cd $HOME/research/analyze',
-    'neo': f'neofetch --ascii {WORKFLOW}/system/planet-cosmo.ascii --ascii_colors 12 30 --colors 30 12 80 30 80 12',
+    'neo': f'neofetch --ascii {WORKFLOW}/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 255 80',
     'wp': set_wallpaper,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
@@ -231,4 +235,6 @@ aliases.update({
     'rng': 'ranger',
     'ipv4': local_ip,
     'ipv': local_ip,
+    'gen_frames': 'bash /home/bluecosmo/media/photos/wallpapers/generate-frames.sh',
+    'wp_animated': animated_wallpaper,
 })
