@@ -121,14 +121,12 @@ def add_token(github_path):
 
 # modify path (environment variable)
 for new_path in [
-    '/home/bluecosmo/.nimble/bin'
+    '/home/bluecosmo/.nimble/bin',
     ]:
     $PATH.insert(0, new_path)
 
 # aliases
 aliases.update({
-    'vim':'nvim',
-    'poc':'echo @($args)',
     'path_of': 'echo @(pwd())/@($arg0)',
     'doop': 'bash -c terminator --working-directory=@(pwd())',
     'nvim': '$HOME/workflow/tools/nvim.appimage',
@@ -150,6 +148,7 @@ aliases.update({
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
     'mvcon': 'mullvad connect',
     'mvdis': 'mullvad disconnect',
+    'mvstat': 'mullvad status',
     'pccon': 'ssh bluecosmo@planetcosmo',
     'gitcon': 'ssh git@planetcosmo',
     'webserv': 'python3 -m http.server 8080',
@@ -216,6 +215,7 @@ aliases.update({
     'nb': 'cd /home/bluecosmo/notebook',
     'wargames': 'cd /home/bluecosmo/research/wargames',
     'koth': 'cd /home/bluecosmo/research/wargames/koth',
+    'cme': 'cd /home/bluecosmo/research/wargames/crackme/',
     'bug': 'cd /home/bluecosmo/research/bugbounty',
     'media': 'cd /home/bluecosmo/media',
     'torload': 'cd $HOME/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/Downloads',

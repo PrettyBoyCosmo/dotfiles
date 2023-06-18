@@ -9,7 +9,7 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 
 # packages
-sudo apt-get install neofetch terminator spotify-client vlc neovim i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg
+sudo apt-get install neofetch terminator spotify-client vlc neovim i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk
 
 # flatpaks
 flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord de.shorsh.discord-screenaudio com.visualstudio.code org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform

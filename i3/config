@@ -34,13 +34,14 @@ exec --no-startup-id numlockx on
 exec_always feh --bg-fill $wallpaper
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
-exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x0 --rotate normal
+exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x1080 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x1080 --rotate normal
 
 # applications
 bindsym $win+a exec mintinstall
 bindsym $win+b exec brave
 bindsym $win+d exec discord
-bindsym $win+e exec terminator -e ranger
+# bindsym $win+e exec terminator -e ranger
+bindsym $win+e exec nemo
 bindsym $win+f exec flameshot gui
 bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
@@ -54,9 +55,9 @@ bindsym $win+v exec vivaldi-stable
 
 # display preference
 bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --off --output DP-1-6 --off
-bindsym $mod+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x0 --rotate normal
+bindsym $mod+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x1080 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x1080 --rotate normal
 
-# pactl (volume)
+# pulseaudio pactl (volume)
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec $HOME/.config/i3/scripts/mute
@@ -172,6 +173,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # assign workspace to monitor
 workspace $ws1 output DP-1-6
 workspace $ws7 output DP-1-5
+workspace $ws8 output HDMI-1
 
 # application workspaces
 # assign [class="CLASSNAME"] $ws#
