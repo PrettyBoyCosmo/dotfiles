@@ -102,4 +102,4 @@ fi
 
 export SkeletonKey_PATH="~/.SkeletonKey"
 alias key="python3 ~/.SkeletonKey/main.py"
-        
+alias onlyrat="python3 /home/bluecosmo/.OnlyRAT/main.py"

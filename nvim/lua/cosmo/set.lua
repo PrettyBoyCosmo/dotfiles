@@ -25,5 +25,5 @@ vim.api.nvim_command('set mouse=a')
 vim.api.nvim_command('set completeopt-=preview')
 vim.api.nvim_command('set encoding=UTF-8')
 vim.api.nvim_command('colorscheme habamax')
-
+vim.g.lsp_zero_api_warnings = 0
 

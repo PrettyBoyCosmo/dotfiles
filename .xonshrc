@@ -119,7 +119,7 @@ def add_token(github_path):
     os.system('git remote remove origin')
     os.system(f'git remote add origin https://{git_token}@github.com/{github_path}')
 
-# modify path (environment variable)
+# modify $PATH environment variable
 for new_path in [
     '/home/bluecosmo/.nimble/bin',
     ]:
@@ -214,6 +214,7 @@ aliases.update({
     'notebook': 'cd /home/bluecosmo/notebook',
     'nb': 'cd /home/bluecosmo/notebook',
     'wargames': 'cd /home/bluecosmo/research/wargames',
+    'ctf': 'cd /home/bluecosmo/research/wargames',
     'koth': 'cd /home/bluecosmo/research/wargames/koth',
     'cme': 'cd /home/bluecosmo/research/wargames/crackme/',
     'bug': 'cd /home/bluecosmo/research/bugbounty',
@@ -245,4 +246,7 @@ aliases.update({
     'ipv': local_ip,
     'gen_frames': 'bash /home/bluecosmo/media/photos/wallpapers/generate-frames.sh',
     'wp_animated': animated_wallpaper,
+    'xc':'xclip -selection c',
+    'blah':'ls -alh',
+    'cat':'pygmentize -g -O linenos=1,style=native',
 })

@@ -11,3 +11,4 @@ polybar --config=$HOME/.config/polybar/config.ini main 2>&1 | tee -a /tmp/polyba
 polybar --config=$HOME/.config/polybar/config.ini tv 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=$HOME/.config/polybar/config.ini left 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=$HOME/.config/polybar/config.ini right 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=$HOME/.config/polybar/config.ini hp 2>&1 | tee -a /tmp/polybar1.log & disown
