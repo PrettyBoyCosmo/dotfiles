@@ -12,7 +12,7 @@ sudo tailscale up
 sudo apt-get install neofetch terminator spotify-client vlc neovim i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit steghide docker.io docker-compose device-tree-compiler
 
 # flatpaks
-flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord de.shorsh.discord-screenaudio com.visualstudio.code org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher
+flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord de.shorsh.discord-screenaudio com.visualstudio.code org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher net.werwolv.ImHex
 
 # add flatpaks to dmenu
 sudo ln -s /var/lib/flatpak/exports/bin/com.brave.Browser /usr/bin/brave

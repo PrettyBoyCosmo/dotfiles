@@ -9,8 +9,8 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
-# set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
+# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
 
 # colors
 set $bg-color 	         #242424
@@ -32,32 +32,28 @@ exec --no-startup-id amixer sset Master unmute
 exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
+exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
 exec_always feh --bg-fill $wallpaper
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
-# exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x1080 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x1080 --rotate normal
-exec_always xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-1-2 --off --output DP-1-3 --off
 
-# applications
+# applications - `h,j,k,l` are reserved for terminator
 bindsym $win+a exec mintinstall
 bindsym $win+b exec brave
+bindsym $win+c exec kdenlive
 bindsym $win+d exec discord
 # bindsym $win+e exec terminator -e ranger
 bindsym $win+e exec nemo
 bindsym $win+f exec flameshot gui
 bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
-bindsym $win+k exec kdenlive
+bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1080x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
 bindsym $win+o exec obsidian
 bindsym $win+p exec terminator --profile=powershell
 bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
 bindsym $win+s exec spotify
 bindsym $win+v exec vivaldi-stable
-
-# display preference
-bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --off --output DP-1-6 --off
-bindsym $mod+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1920x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-5 --mode 1920x1080 --pos 3840x1080 --rotate normal --output DP-1-6 --mode 1920x1080 --pos 0x1080 --rotate normal
 
 # pulseaudio pactl (volume)
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"

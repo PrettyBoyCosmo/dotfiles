@@ -6,13 +6,16 @@
 import os
 import socket
 import subprocess
+from pwn import *
 
 # constants
 HOME = '/home/bluecosmo'
 NOTEBOOK = f'{HOME}/notebook'
 WORKFLOW = f'{HOME}/workflow'
+DEVELOPMENT = f'{HOME}/development'
 DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
+DISPLAY_SCRIPTS = f'{HOME}/.screenlayout'
 
 # custom prompt
 $PROMPT = "{WHITE}┌[{GREEN}{user}{WHITE}@{GREEN}{hostname}{WHITE}]─[{INTENSE_BLUE}{cwd}{WHITE}]\n└──■ {BLUE}{curr_branch} {INTENSE_BLACK}$ "
@@ -23,9 +26,8 @@ def pwd():
 
 # get output from system command
 def command_output(command):
-    command = command[0]
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
-    return result.stdout.strip()
+    result = subprocess.check_output(command).decode('utf-8')
+    return result.strip()
 
 # animated-wallpaper
 def animated_wallpaper(wp):
@@ -53,6 +55,32 @@ def set_wallpaper(filename):
                 os.system(f'feh --bg-fill {WALLPAPER_DIR}/{file}')
     return None
 
+# set display (disp)
+def set_display(mode):
+    os.system(f'bash {DISPLAY_SCRIPTS}/{mode[0]}.sh')
+    return None
+
+# add monitor (amon)
+def add_monitor():
+    polybar_config="/home/bluecosmo/.config/polybar/config.ini"
+    polybar_exec="/home/bluecosmo/.config/i3/scripts/polybar.sh"
+    connected_monitors = command_output(["xrandr", "--query"])
+    new_monitors = [ line.split()[0] for line in connected_monitors.splitlines() if " connected" in line and "eDP-1" not in line ]
+    for monitor in new_monitors:
+        polybar_config_format = f"""[bar/{monitor}]
+    inherit=bar-template
+    monitor={monitor}
+    bottom=false 
+    modules-left=left i3 line space title right
+    modules-center=left space date space right
+    modules-right=left pulseaudio rl-alt space filesystem space space cpu space space battery right"""
+        polybar_exec_format = f"polybar --config=/home/bluecosmo/.config/polybar/config.ini {monitor} 2>&1 | tee -a /tmp/polybar1.log & disown"
+        with open(polybar_config, "a") as pc:
+            pc.write(polybar_config_format)
+        with open(polybar_exec, "a") as pe:
+            pe.write(polybar_exec_format)
+    return None
+
 # backup dotfiles (bdots)
 def backup_dot_files():
     file_paths = (
@@ -66,7 +94,7 @@ def backup_dot_files():
         '$HOME/.bash_aliases',
         '$HOME/.bashrc',
     )
-    destination_path = '$HOME/workflow/dotfiles'
+    destination_path = '$HOME/development/dotfiles'
 
     for file_path in file_paths:
         os.system(f'cp -r {file_path} {destination_path}')
@@ -110,10 +138,10 @@ def msupdate(commit_message):
     os.system(f'git commit -m "{commit_message}"')
     os.system('git push -u origin master')
 
-# add git token to repo (add_token)
+# add git token to repo (addtoken)
 def add_token(github_path):
     github_path = github_path[0]
-    git_token = command_output('pass tokens/git')
+    git_token = command_output(['pass', 'tokens/git'])
     os.system('cd .')
     os.system('git branch -M main')
     os.system('git remote remove origin')
@@ -144,6 +172,8 @@ aliases.update({
     'anal': 'cd $HOME/research/analyze',
     'neo': f'neofetch --ascii {WORKFLOW}/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 255 80',
     'wp': set_wallpaper,
+    'disp': set_display,
+    'amon': add_monitor,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
     'mvcon': 'mullvad connect',
@@ -203,12 +233,14 @@ aliases.update({
     'res': 'cd /home/bluecosmo/research',
     'development': 'cd /home/bluecosmo/development',
     'dev': 'cd /home/bluecosmo/development',
+    'software': 'cd /home/bluecosmo/development/software-resources',
+    'soft': 'cd /home/bluecosmo/development/software-resources',
     'workflow': 'cd /home/bluecosmo/workflow',
     'mal': 'cd /home/bluecosmo/development/malware-projects',
     'payloads': 'cd /home/bluecosmo/development/payloads',
     'pay': 'cd /home/bluecosmo/development/payloads',
     'work': 'cd /home/bluecosmo/workflow',
-    'dots': 'cd /home/bluecosmo/workflow/dotfiles',
+    'dots': 'cd /home/bluecosmo/development/dotfiles',
     'bdots': backup_dot_files,
     'packs': 'cd /home/bluecosmo/workflow/packages',
     'notebook': 'cd /home/bluecosmo/notebook',
@@ -248,5 +280,6 @@ aliases.update({
     'wp_animated': animated_wallpaper,
     'xc':'xclip -selection c',
     'blah':'ls -alh',
-    'cat':'pygmentize -g -O linenos=1,style=native',
+    'cat':'pygmentize -g -O linenos=1,style=rrt',
+    'bcat':'/bin/cat',
 })

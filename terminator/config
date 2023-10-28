@@ -2,6 +2,14 @@
   borderless = True
   tab_position = bottom
 [keybindings]
+  go_up = <Super>k
+  go_down = <Super>j
+  go_left = <Super>h
+  go_right = <Super>l
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
 [profiles]
   [[default]]
     icon_bell = False
