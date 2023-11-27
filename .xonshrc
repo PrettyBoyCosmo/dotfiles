@@ -4,6 +4,7 @@
 
 # imports
 import os
+import os.path
 import socket
 import subprocess
 from pwn import *
@@ -17,8 +18,12 @@ DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
 DISPLAY_SCRIPTS = f'{HOME}/.screenlayout'
 
-# custom prompt
-$PROMPT = "{WHITE}┌[{GREEN}{user}{WHITE}@{GREEN}{hostname}{WHITE}]─[{INTENSE_BLUE}{cwd}{WHITE}]\n└──■ {BLUE}{curr_branch} {INTENSE_BLACK}$ "
+# get environment name (custom prompt)
+def env_name_cust(pre_chars='─[', post_chars=']'):
+    env_path = __xonsh__.env.get('VIRTUAL_ENV', '')
+    env_name = os.path.basename(env_path)
+    if env_name and env_name != 'xonsh':
+        return '{WHITE}'+pre_chars+'{#00ffff}'+env_name+'{WHITE}'+post_chars
 
 # get working directory
 def pwd():
@@ -93,6 +98,7 @@ def backup_dot_files():
         '$HOME/.xonshrc',
         '$HOME/.bash_aliases',
         '$HOME/.bashrc',
+        '$HOME/.screenlayout',
     )
     destination_path = '$HOME/development/dotfiles'
 
@@ -152,6 +158,11 @@ for new_path in [
     '/home/bluecosmo/.nimble/bin',
     ]:
     $PATH.insert(0, new_path)
+
+# custom prompt
+xontrib load vox
+$PROMPT_FIELDS['env_name_cust'] = env_name_cust
+$PROMPT = "{WHITE}┌[{GREEN}{user}{WHITE}@{GREEN}{hostname}{WHITE}]─[{INTENSE_BLUE}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{BLUE}{}{WHITE}]}{env_name_cust}─■ {INTENSE_BLACK}$ "
 
 # aliases
 aliases.update({
@@ -233,12 +244,11 @@ aliases.update({
     'res': 'cd /home/bluecosmo/research',
     'development': 'cd /home/bluecosmo/development',
     'dev': 'cd /home/bluecosmo/development',
-    'software': 'cd /home/bluecosmo/development/software-resources',
-    'soft': 'cd /home/bluecosmo/development/software-resources',
     'workflow': 'cd /home/bluecosmo/workflow',
-    'mal': 'cd /home/bluecosmo/development/malware-projects',
-    'payloads': 'cd /home/bluecosmo/development/payloads',
-    'pay': 'cd /home/bluecosmo/development/payloads',
+    'mal': 'cd /home/bluecosmo/development/marks',
+    'mks': 'cd /home/bluecosmo/development/marks',
+    'marks': 'cd /home/bluecosmo/development/marks',
+    'poc': 'cd /home/bluecosmo/development/poc',
     'work': 'cd /home/bluecosmo/workflow',
     'dots': 'cd /home/bluecosmo/development/dotfiles',
     'bdots': backup_dot_files,
@@ -282,4 +292,9 @@ aliases.update({
     'blah':'ls -alh',
     'cat':'pygmentize -g -O linenos=1,style=rrt',
     'bcat':'/bin/cat',
+    'mkvenv':'python3 -m venv ./venv/',
+    'vac': 'vox activate @($arg0)',
+    'vdac': 'vox deactivate',
+    'vlis': 'vox list',
+    'vls': 'vox list',
 })

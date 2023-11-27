@@ -9,8 +9,8 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
-set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
+set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+# set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
 
 # colors
 set $bg-color 	         #242424
@@ -39,7 +39,7 @@ exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/com
 
 # applications - `h,j,k,l` are reserved for terminator
 bindsym $win+a exec mintinstall
-bindsym $win+b exec brave
+bindsym $win+b exec brave-browser
 bindsym $win+c exec kdenlive
 bindsym $win+d exec discord
 # bindsym $win+e exec terminator -e ranger
