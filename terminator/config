@@ -1,6 +1,7 @@
 [global_config]
   borderless = True
   tab_position = bottom
+  suppress_multiple_term_dialog = True
 [keybindings]
   go_up = <Super>k
   go_down = <Super>j
@@ -45,4 +46,88 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
+  [[editor]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:40
+      maximised = False
+      fullscreen = False
+      size = 1918, 1158
+      title = bluecosmo@ccs: ~/development/marks/mk14-supervision | xonsh
+      last_active_term = 0c994cf9-6278-4cc5-8b6d-866478b05061
+      last_active_window = False
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 828
+      ratio = 0.7181266261925412
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 38104285-5c09-44b9-aec5-6020ba7f4d73
+    [[[child3]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 956
+      ratio = 0.5
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 9b8bc9a7-177b-40d2-8275-6a309f20b30e
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = 0c994cf9-6278-4cc5-8b6d-866478b05061
+    [[[child6]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 12:52
+      maximised = False
+      fullscreen = False
+      size = 941, 1134
+      title = bluecosmo@ccs: ~/development/marks | xonsh
+      last_active_term = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
+      last_active_window = True
+    [[[child7]]]
+      type = VPaned
+      parent = child6
+      order = 0
+      position = 799
+      ratio = 0.7077059344552702
+    [[[terminal8]]]
+      type = Terminal
+      parent = child7
+      order = 0
+      profile = default
+      uuid = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
+    [[[child9]]]
+      type = HPaned
+      parent = child7
+      order = 1
+      position = 468
+      ratio = 0.5
+    [[[terminal10]]]
+      type = Terminal
+      parent = child9
+      order = 0
+      profile = default
+      uuid = acb1059c-82c2-4b67-b32f-0e2dfbd37c24
+    [[[terminal11]]]
+      type = Terminal
+      parent = child9
+      order = 1
+      profile = default
+      uuid = 1db17976-3b05-48ef-99b4-d335af0c052f
 [plugins]

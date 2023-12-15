@@ -12,3 +12,4 @@ polybar --config=$HOME/.config/polybar/config.ini HDMI-1 2>&1 | tee -a /tmp/poly
 polybar --config=$HOME/.config/polybar/config.ini DP-1-6 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=$HOME/.config/polybar/config.ini DP-1-5 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=/home/bluecosmo/.config/polybar/config.ini DP-1-1 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=/home/bluecosmo/.config/polybar/config.ini HDMI-1 2>&1 | tee -a /tmp/polybar1.log & disown
