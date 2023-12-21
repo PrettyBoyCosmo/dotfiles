@@ -3,23 +3,14 @@
 # created by : C0SM0
 
 # variables
-set $mod Mod1
+set $alt Mod1
 set $win Mod4
 set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
 # set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
-
-# colors
-set $bg-color 	         #242424
-set $inactive-bg-color   #242424
-set $text-color          #ffffff
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #009999
-set $brdr-color          #ffffff
-set $inactive-brdr-color #a6a6a6
 
 # startup
 font pango: CascadiaCode 10
@@ -34,7 +25,7 @@ exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
 exec_always feh --bg-fill $wallpaper
-exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
+# exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
 
 # applications - `h,j,k,l` are reserved for terminator
@@ -61,7 +52,7 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec $HOME/.config/i3/scripts/mute
 
 # modifiers
-floating_modifier $mod
+floating_modifier $alt
 
 # sreen brightness controls
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -77,46 +68,48 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # keybinds
-bindsym $mod+Return exec i3-sensible-terminal 
-bindsym $mod+Shift+q kill 
-bindsym $mod+Shift+c reload 
-bindsym $mod+s exec --no-startup-id rofi -show drun
-bindsym $mod+w exec --no-startup-id $HOME/.config/i3/scripts/rofi-wifi-menu
-bindsym $mod+Shift+r restart 
+bindsym $alt+Return exec i3-sensible-terminal 
+bindsym $alt+Shift+q kill 
+bindsym $alt+Shift+c reload 
+bindsym $alt+s exec --no-startup-id rofi -show drun
+bindsym $alt+w exec --no-startup-id $HOME/.config/i3/scripts/rofi-wifi-menu
+bindsym $alt+c exec --no-startup-id rofimoji -a copy
+bindsym $alt+Shift+r restart 
 
 # window management
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+e split h 
-bindsym $mod+o split v
-bindsym $mod+f fullscreen toggle 
-bindsym $mod+p layout stacking 
-bindsym $mod+b layout tabbed 
-bindsym $mod+t layout toggle split 
-bindsym $mod+Shift+space floating toggle 
-bindsym $mod+space focus mode_toggle 
-bindsym $mod+a focus parent 
-bindsym $mod+c focus child 
+bindsym $alt+h focus left
+bindsym $alt+j focus down
+bindsym $alt+k focus up
+bindsym $alt+l focus right
+bindsym $alt+Shift+h move left
+bindsym $alt+Shift+j move down
+bindsym $alt+Shift+k move up
+bindsym $alt+Shift+l move right
+bindsym $alt+e split h 
+bindsym $alt+o split v
+bindsym $alt+f fullscreen toggle 
+bindsym $alt+p layout stacking 
+bindsym $alt+b layout tabbed 
+bindsym $alt+t layout toggle split 
+bindsym $alt+Shift+space floating toggle 
+bindsym $alt+space focus mode_toggle 
+# bindsym $alt+a focus parent 
+# bindsym $alt+c focus child 
 
 # hide window title bar
 default_border pixel 1
 default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
+# new_window pixel 0
 
 # i3 gaps
 gaps inner 10
 gaps outer 2
 smart_gaps on
 
-set $mode_gaps Toggle gaps: (1) on (2) off
-bindsym $mod+g mode "$mode_gaps"
-mode "$mode_gaps" {
+set $alte_gaps Toggle gaps: (1) on (2) off
+bindsym $alt+g mode "$alte_gaps"
+mode "$alte_gaps" {
     bindsym 1 mode "default", gaps inner all set 10, gaps outer all set 4
     bindsym 2 mode "default", gaps inner all set 1, gaps outer all set 1
     bindsym Return mode "default"
@@ -124,60 +117,70 @@ mode "$mode_gaps" {
 }
 
 # workspace variables
-set $ws1 "1" 
-set $ws2 "2" 
-set $ws3 "3"
-set $ws4 "4" 
-set $ws5 "5" 
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8" 
-set $ws9 "9"
-set $ws10 "10" 
-
-# set $ws1 "01:" 
-# set $ws2 "02:" 
+# set $ws1 "01:"
+# set $ws2 "02:"
 # set $ws3 "03:"
-# set $ws4 "04:" 
-# set $ws5 "05:" 
+# set $ws4 "04:"
+# set $ws5 "05:"
 # set $ws6 "06:"
 # set $ws7 "07:"
-# set $ws8 "08:" 
+# set $ws8 "08:"
 # set $ws9 "09:"
-# set $ws10 "10:" 
+# set $ws10 "10:"
+
+# set $ws1 ""
+# set $ws2 ""
+# set $ws3 ""
+# set $ws4 ""
+# set $ws5 ""
+# set $ws6 ""
+# set $ws7 ""
+# set $ws8 ""
+# set $ws9 ""
+# set $ws10 ""
+
+set $ws1 "01:home"
+set $ws2 "02:internet"
+set $ws3 "03:terminal"
+set $ws4 "04:development"
+set $ws5 "05:obsidian"
+set $ws6 "06:file-explorer"
+set $ws7 "07:media"
+set $ws8 "08:virt-manager"
+set $ws9 "09:linux-vm"
+set $ws10 "10:windows-vm"
 
 # workspace handling
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $alt+1 workspace number $ws1
+bindsym $alt+2 workspace number $ws2
+bindsym $alt+3 workspace number $ws3
+bindsym $alt+4 workspace number $ws4
+bindsym $alt+5 workspace number $ws5
+bindsym $alt+6 workspace number $ws6
+bindsym $alt+7 workspace number $ws7
+bindsym $alt+8 workspace number $ws8
+bindsym $alt+9 workspace number $ws9
+bindsym $alt+0 workspace number $ws10
+bindsym $alt+Shift+1 move container to workspace number $ws1
+bindsym $alt+Shift+2 move container to workspace number $ws2
+bindsym $alt+Shift+3 move container to workspace number $ws3
+bindsym $alt+Shift+4 move container to workspace number $ws4
+bindsym $alt+Shift+5 move container to workspace number $ws5
+bindsym $alt+Shift+6 move container to workspace number $ws6
+bindsym $alt+Shift+7 move container to workspace number $ws7
+bindsym $alt+Shift+8 move container to workspace number $ws8
+bindsym $alt+Shift+9 move container to workspace number $ws9
+bindsym $alt+Shift+0 move container to workspace number $ws10
 
 # assign workspace to monitor
-workspace $ws1 output DP-1-6
-# workspace $ws7 output eDP-1
+workspace $ws7 output DP-1-6
 workspace $ws8 output HDMI-1
 
 # application workspaces
 # assign [class="CLASSNAME"] $ws#
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec i3-nagbar -f "pango:CascadiaCode 12" \
+bindsym $alt+Shift+e exec i3-nagbar -f "pango:CascadiaCode 12" \
 -m "Exit i3? This will end your current X session." \
 -B "Exit now" "i3-msg exit" \
 -B "Suspend" "systemctl suspend && pkill i3-nagbar" \
@@ -192,40 +195,49 @@ mode "resize" {
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        # back to normal: Enter or Escape or $alt+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $alt+r mode "default"
 }
 
-# resize keybind
-bindsym $mod+r mode "resize"
+# colors
+set $GRAYDARK   #242424
+set $BLACK 	    #000000
+set $WHITE      #ffffff
+set $GRAYLIGHT  #676E7D
+set $TEAL       #009999
+set $GRAYMID    #999999
 
-# window color          border              background           text                 indicator
-client.focused          $bg-color           $brdr-color          $text-color          $brdr-color
-client.unfocused        $inactive-bg-color  $inactive-brdr-color $inactive-text-color $inactive-brdr-color
-client.focused_inactive $inactive-bg-color  $inactive-brdr-color $inactive-text-color $inactive-brdr-color
-client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          $urgent-bg-color
+# resize keybind
+bindsym $alt+r mode "resize"
+
+# window color           border  background  text      indicator
+client.focused           $WHITE  $WHITE      $WHITE    $WHITE
+client.unfocused         $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
+client.focused_inactive  $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
+client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar
-# bar {
-# 	position bottom
-# 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
-#     workspace_buttons no
+bar {
+	position top
+	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
+	# status_command i3blocks
+    workspace_buttons yes
+    tray_output primary
 
-# 	# colors
-# 	colors {
+	# colors
+	colors {
 		
-# 		# workspace        border             background         text
-# 		focused_workspace  $bg-color          $bg-color          $text-color
-# 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-# 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+		# workspace        border     background  text
+ 		focused_workspace  $GRAYDARK  $GRAYDARK   $WHITE
+		inactive_workspace $BLACK     $BLACK      $GRAYMID
+		urgent_workspace   $TEAL      $TEAL       $WHITE
 
-# 		background $bg-color
-# 		separator #009999
-# 	}
-# }
+		background $BLACK
+		separator $WHITE
+	}
+}
 
 # custom binds
-bindsym $mod+x exec i3lock-fancy
-
+bindsym $alt+x exec i3lock-fancy

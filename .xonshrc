@@ -11,7 +11,7 @@ from pwn import *
 
 # constants
 HOME = '/home/bluecosmo'
-NOTEBOOK = f'{HOME}/notebook'
+NOTEBOOK = f'{HOME}/constellations'
 WORKFLOW = f'{HOME}/workflow'
 DEVELOPMENT = f'{HOME}/development'
 DOWNLOADS = f'{HOME}/Downloads'
@@ -234,7 +234,7 @@ aliases.update({
     'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
     'deport': 'mv $HOME/Downloads/* $HOME/imports',
     'lsx': 'ls *.@($arg0)',
-    'add_license': f'cp {NOTEBOOK}/LICENSE.md ./LICENSE',
+    'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
     'bak': 'cp @($arg0) @($arg0).bak',
     'trash': 'mv @($arg0) $HOME/local/share/Trash/files',
     'bin': 'cd $HOME/local/share/Trash/files',
@@ -254,7 +254,7 @@ aliases.update({
     'bdots': backup_dot_files,
     'packs': 'cd /home/bluecosmo/workflow/packages',
     'notebook': 'cd /home/bluecosmo/notebook',
-    'nb': 'cd /home/bluecosmo/notebook',
+    'nb': 'cd @(NOTEBOOK)',
     'wargames': 'cd /home/bluecosmo/research/wargames',
     'ctf': 'cd /home/bluecosmo/research/wargames',
     'koth': 'cd /home/bluecosmo/research/wargames/koth',
