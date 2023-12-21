@@ -9,8 +9,8 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
-# set $wallpaper $HOME/media/photos/wallpapers/retro.jpg
+# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+set $wallpaper $HOME/media/photos/wallpapers/kali.jpeg
 
 # startup
 font pango: CascadiaCode 10
@@ -221,8 +221,8 @@ client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 # status bar
 bar {
 	position top
+    # i3bar_command i3bar -t
 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
-	# status_command i3blocks
     workspace_buttons yes
     tray_output primary
 
@@ -234,7 +234,7 @@ bar {
 		inactive_workspace $BLACK     $BLACK      $GRAYMID
 		urgent_workspace   $TEAL      $TEAL       $WHITE
 
-		background $BLACK
+		background #00000000
 		separator $WHITE
 	}
 }

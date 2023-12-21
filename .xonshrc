@@ -23,7 +23,7 @@ def env_name_cust(pre_chars='─[', post_chars=']'):
     env_path = __xonsh__.env.get('VIRTUAL_ENV', '')
     env_name = os.path.basename(env_path)
     if env_name and env_name != 'xonsh':
-        return '{WHITE}'+pre_chars+'{#00ffff}'+env_name+'{WHITE}'+post_chars
+        return '{WHITE}'+pre_chars+'{CYAN}'+env_name+'{WHITE}'+post_chars
 
 # get working directory
 def pwd():
@@ -91,6 +91,7 @@ def backup_dot_files():
     file_paths = (
         '$HOME/.config/i3',
         '$HOME/.config/terminator',
+        '$HOME/.config/neofetch',
         '$HOME/.config/nvim',
         '$HOME/.config/compton',
         '$HOME/.config/polybar',
@@ -162,7 +163,7 @@ for new_path in [
 # custom prompt
 xontrib load vox
 $PROMPT_FIELDS['env_name_cust'] = env_name_cust
-$PROMPT = "{WHITE}┌[{GREEN}{user}{WHITE}@{GREEN}{hostname}{WHITE}]─[{INTENSE_BLUE}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{BLUE}{}{WHITE}]}{env_name_cust}─■ {INTENSE_BLACK}$ "
+$PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
 
 # aliases
 aliases.update({
@@ -181,7 +182,7 @@ aliases.update({
     'rip': 'mv @(NOTEBOOK) @(pwd())',
     'analyze': 'mv @($arg0) $HOME/research/analyze',
     'anal': 'cd $HOME/research/analyze',
-    'neo': f'neofetch --ascii {WORKFLOW}/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 255 80',
+    'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
     'wp': set_wallpaper,
     'disp': set_display,
     'amon': add_monitor,

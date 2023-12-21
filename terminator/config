@@ -1,6 +1,7 @@
 [global_config]
   borderless = True
   tab_position = bottom
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   suppress_multiple_term_dialog = True
 [keybindings]
   go_up = <Super>k
@@ -14,30 +15,24 @@
 [profiles]
   [[default]]
     icon_bell = False
-    background_color = "#282828"
+    background_color = "#0f1c21"
     cursor_color = "#007991"
     font = Cascadia Mono PL Semi-Bold 26
-    foreground_color = "#3fa8bf"
+    foreground_color = "#80b6ad"
     show_titlebar = False
     scrollbar_position = hidden
     scroll_on_keystroke = False
     scrollback_infinite = True
-    palette = "#282828:#b43fbf:#20b39e:#f8e45c:#458588:#b16286:#57a992:#ffffff:#546264:#f9f06b:#20b39e:#dc8add:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff"
     use_custom_command = True
     custom_command = xonsh
     use_system_font = False
     bold_is_bright = True
   [[powershell]]
-    icon_bell = False
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = Cascadia Mono PL Semi-Bold 26
     foreground_color = "#839496"
-    show_titlebar = False
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_custom_command = True
-    custom_command = powershell
-    use_system_font = False
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
 [layouts]
   [[default]]
     [[[window0]]]
