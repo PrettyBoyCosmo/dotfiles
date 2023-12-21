@@ -21,7 +21,7 @@ if ($status eq 'Discharging') {
     # Set color based on percentage
     if ($percent < 20) {
         $color = "#FF0000"; # Red
-    } elsif ($percent < 60) {
+    } elsif ($percent < 40) {
         $color = "#FFAA00"; # Orange
     } elsif ($percent < 85) {
         $color = "#FFFF00"; # Yellow
