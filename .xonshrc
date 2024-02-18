@@ -51,7 +51,7 @@ def local_ip():
         return "Unable to retrieve local IP address"
 
 # set wallpaper (wp)
-def set_wallpaper(filename):
+def set_wallpaper_fill(filename):
     wallpaper = filename[0]
     for root, dirs, files in os.walk(WALLPAPER_DIR):
         for file in files:
@@ -60,9 +60,19 @@ def set_wallpaper(filename):
                 os.system(f'feh --bg-fill {WALLPAPER_DIR}/{file}')
     return None
 
+def set_wallpaper_center(filename):
+    wallpaper = filename[0]
+    for root, dirs, files in os.walk(WALLPAPER_DIR):
+        for file in files:
+            name, ext = os.path.splitext(file)
+            if name == wallpaper:
+                os.system(f'feh --bg-center {WALLPAPER_DIR}/{file}')
+    return None
+
 # set display (disp)
 def set_display(mode):
     os.system(f'bash {DISPLAY_SCRIPTS}/{mode[0]}.sh')
+    os.system('i3 restart')
     return None
 
 # add monitor (amon)
@@ -85,26 +95,6 @@ def add_monitor():
         with open(polybar_exec, "a") as pe:
             pe.write(polybar_exec_format)
     return None
-
-# backup dotfiles (bdots)
-def backup_dot_files():
-    file_paths = (
-        '$HOME/.config/i3',
-        '$HOME/.config/terminator',
-        '$HOME/.config/neofetch',
-        '$HOME/.config/nvim',
-        '$HOME/.config/compton',
-        '$HOME/.config/polybar',
-        '$HOME/.config/rofi',
-        '$HOME/.xonshrc',
-        '$HOME/.bash_aliases',
-        '$HOME/.bashrc',
-        '$HOME/.screenlayout',
-    )
-    destination_path = '$HOME/development/dotfiles'
-
-    for file_path in file_paths:
-        os.system(f'cp -r {file_path} {destination_path}')
 
 # monitor mode (monitor_mode)
 def monitor_mode(adapter):
@@ -157,6 +147,7 @@ def add_token(github_path):
 # modify $PATH environment variable
 for new_path in [
     '/home/bluecosmo/.nimble/bin',
+    '/home/bluecosmo/workflow/tools/',
     ]:
     $PATH.insert(0, new_path)
 
@@ -171,6 +162,7 @@ aliases.update({
     'doop': 'bash -c terminator --working-directory=@(pwd())',
     'nvim': '$HOME/workflow/tools/nvim.appimage',
     'vim': '$HOME/workflow/tools/nvim.appimage',
+    'v': '$HOME/workflow/tools/nvim.appimage',
     'll': 'ls -l',
     'la': 'ls -a',
     'lla': 'ls -la',
@@ -183,7 +175,8 @@ aliases.update({
     'analyze': 'mv @($arg0) $HOME/research/analyze',
     'anal': 'cd $HOME/research/analyze',
     'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
-    'wp': set_wallpaper,
+    'wpf': set_wallpaper_fill,
+    'wpc': set_wallpaper_center,
     'disp': set_display,
     'amon': add_monitor,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
@@ -198,6 +191,8 @@ aliases.update({
     'pccon': 'ssh bluecosmo@planetcosmo',
     'gitcon': 'ssh git@planetcosmo',
     'mcon': 'ssh moon',
+    'vcon': 'ssh void',
+    'dscon': 'ssh deathstar',
     'thmcon': f'sudo openvpn {WORKFLOW}/vpn/BlueCosmo.ovpn',
     'bbcon': 'ssh root@172.16.64.1',
     'sjcon': 'ssh root@172.16.24.1',
@@ -235,6 +230,8 @@ aliases.update({
     'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
     'deport': 'mv $HOME/Downloads/* $HOME/imports',
     'lsx': 'ls *.@($arg0)',
+    'vlone': 'scp -r @($arg0) bluecosmo@void:~',
+    'vdown': 'scp -r bluecosmo@void:~/@($arg0) .',
     'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
     'bak': 'cp @($arg0) @($arg0).bak',
     'trash': 'mv @($arg0) $HOME/local/share/Trash/files',
@@ -251,8 +248,7 @@ aliases.update({
     'marks': 'cd /home/bluecosmo/development/marks',
     'poc': 'cd /home/bluecosmo/development/poc',
     'work': 'cd /home/bluecosmo/workflow',
-    'dots': 'cd /home/bluecosmo/development/dotfiles',
-    'bdots': backup_dot_files,
+    'dots': 'cd /home/bluecosmo/.dotfiles',
     'packs': 'cd /home/bluecosmo/workflow/packages',
     'notebook': 'cd /home/bluecosmo/notebook',
     'nb': 'cd @(NOTEBOOK)',
@@ -281,7 +277,7 @@ aliases.update({
     'runpm': 'npm install && npm run dev',
     'sjupload': 'scp -r payload.sh root@172.16.24.1:/root/payload',
     'duckencode': 'python2 /home/bluecosmo/development/hak5/rubberducky/encoder/duckencoder.py -i payload.txt',
-    'onlyrat': 'python3 /home/bluecosmo/.OnlyRAT/main.py',
+    'onlyrat': 'python3 /home/bluecosmo/.MK01-OnlyRAT/main.py',
     'key': 'python3 ~/.SkeletonKey/main.py',   
     'wpls': f'ls {WALLPAPER_DIR}',
     'rng': 'ranger',
@@ -291,12 +287,13 @@ aliases.update({
     'wp_animated': animated_wallpaper,
     'xc':'xclip -selection c',
     'blah':'ls -alh',
-    'cat':'pygmentize -g -O linenos=1,style=rrt',
-    'bcat':'/bin/cat',
+    'bcat':'pygmentize -g -O linenos=1,style=rrt',
+    'cat':'/bin/cat',
     'mkvenv':'python3 -m venv ./venv/',
     'vac': 'vox activate @($arg0)',
     'vdac': 'vox deactivate',
     'vlis': 'vox list',
     'vls': 'vox list',
     'c': 'clear',
+    'qflipper': 'sudo /home/bluecosmo/workflow/tools/qFlipper-x86_64-1.3.3.AppImage',
 })

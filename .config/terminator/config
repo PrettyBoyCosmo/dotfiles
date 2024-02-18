@@ -1,9 +1,11 @@
 [global_config]
+  focus = mouse
   borderless = True
   tab_position = bottom
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   suppress_multiple_term_dialog = True
 [keybindings]
+  cycle_prev = <Primary><Shift>Tab
   go_up = <Super>k
   go_down = <Super>j
   go_left = <Super>h
@@ -12,6 +14,11 @@
   resize_down = <Primary><Shift>j
   resize_left = <Primary><Shift>h
   resize_right = <Primary><Shift>l
+  group_all = ""
+  group_tab = ""
+  broadcast_group = <Primary><Shift>Escape
+  broadcast_all = <Primary>Escape
+  edit_tab_title = ""
 [profiles]
   [[default]]
     icon_bell = False
@@ -21,7 +28,7 @@
     foreground_color = "#80b6ad"
     show_titlebar = False
     scrollbar_position = hidden
-    scroll_on_keystroke = False
+    scroll_on_output = True
     scrollback_infinite = True
     palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff"
     use_custom_command = True
@@ -42,86 +49,45 @@
       type = Terminal
       parent = window0
       profile = default
-  [[editor]]
+  [[nvim]]
     [[[child0]]]
       type = Window
       parent = ""
       order = 0
-      position = 0:40
+      position = 12:35
       maximised = False
       fullscreen = False
-      size = 1918, 1158
-      title = bluecosmo@ccs: ~/development/marks/mk14-supervision | xonsh
-      last_active_term = 0c994cf9-6278-4cc5-8b6d-866478b05061
-      last_active_window = False
+      size = 941, 1151
+      title = bluecosmo@ccs: ~/development/marks | xonsh
+      last_active_term = 1db17976-3b05-48ef-99b4-d335af0c052f
+      last_active_window = True
     [[[child1]]]
       type = VPaned
       parent = child0
       order = 0
-      position = 828
-      ratio = 0.7181266261925412
+      position = 811
+      ratio = 0.7076788830715532
     [[[terminal2]]]
       type = Terminal
       parent = child1
       order = 0
       profile = default
-      uuid = 38104285-5c09-44b9-aec5-6020ba7f4d73
+      uuid = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
     [[[child3]]]
       type = HPaned
       parent = child1
       order = 1
-      position = 956
-      ratio = 0.5
+      position = 467
+      ratio = 0.49893162393162394
     [[[terminal4]]]
       type = Terminal
       parent = child3
       order = 0
       profile = default
-      uuid = 9b8bc9a7-177b-40d2-8275-6a309f20b30e
+      uuid = acb1059c-82c2-4b67-b32f-0e2dfbd37c24
     [[[terminal5]]]
       type = Terminal
       parent = child3
-      order = 1
-      profile = default
-      uuid = 0c994cf9-6278-4cc5-8b6d-866478b05061
-    [[[child6]]]
-      type = Window
-      parent = ""
-      order = 0
-      position = 12:52
-      maximised = False
-      fullscreen = False
-      size = 941, 1134
-      title = bluecosmo@ccs: ~/development/marks | xonsh
-      last_active_term = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
-      last_active_window = True
-    [[[child7]]]
-      type = VPaned
-      parent = child6
-      order = 0
-      position = 799
-      ratio = 0.7077059344552702
-    [[[terminal8]]]
-      type = Terminal
-      parent = child7
-      order = 0
-      profile = default
-      uuid = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
-    [[[child9]]]
-      type = HPaned
-      parent = child7
-      order = 1
-      position = 468
-      ratio = 0.5
-    [[[terminal10]]]
-      type = Terminal
-      parent = child9
-      order = 0
-      profile = default
-      uuid = acb1059c-82c2-4b67-b32f-0e2dfbd37c24
-    [[[terminal11]]]
-      type = Terminal
-      parent = child9
       order = 1
       profile = default
       uuid = 1db17976-3b05-48ef-99b4-d335af0c052f

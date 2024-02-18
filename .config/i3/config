@@ -2,6 +2,13 @@
 # i3 configuration file
 # created by : C0SM0
 
+# wallpaper
+# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+# set $wallpaper $HOME/media/photos/wallpapers/kali.jpeg
+set $wallpaper $HOME/media/photos/wallpapers/vxug.png
+# exec_always feh --bg-fill $wallpaper
+exec_always feh --bg-center $wallpaper
+
 # variables
 set $alt Mod1
 set $win Mod4
@@ -9,13 +16,12 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
-# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
-set $wallpaper $HOME/media/photos/wallpapers/kali.jpeg
-
 # startup
 font pango: CascadiaCode 10
 exec flameshot
 exec duplicati
+exec obsidian
+exec --no-startup-id virt-manager --show-systray
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 exec --no-startup-id nm-applet
@@ -24,8 +30,7 @@ exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
-exec_always feh --bg-fill $wallpaper
-# exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
+
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
 
 # applications - `h,j,k,l` are reserved for terminator
@@ -40,16 +45,15 @@ bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
 bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1080x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
 bindsym $win+o exec obsidian
-bindsym $win+p exec terminator --profile=powershell
 bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
 bindsym $win+s exec spotify
-bindsym $win+v exec vivaldi-stable
+bindsym $win+v exec firefox
 
 # pulseaudio pactl (volume)
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-bindsym XF86AudioMute exec $HOME/.config/i3/scripts/mute
+bindsym XF86AudioMute exec $HOME/.scripts/mute
 
 # modifiers
 floating_modifier $alt
@@ -59,7 +63,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 # touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh 
+# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh 
 
 # media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -72,7 +76,8 @@ bindsym $alt+Return exec i3-sensible-terminal
 bindsym $alt+Shift+q kill 
 bindsym $alt+Shift+c reload 
 bindsym $alt+s exec --no-startup-id rofi -show drun
-bindsym $alt+w exec --no-startup-id $HOME/.config/i3/scripts/rofi-wifi-menu
+# bindsym $alt+w exec --no-startup-id $HOME/.scripts/rofi-wifi-menu
+bindsym $alt+w exec --no-startup-id nm-connection-editor
 bindsym $alt+c exec --no-startup-id rofimoji -a copy
 bindsym $alt+Shift+r restart 
 
@@ -105,7 +110,7 @@ for_window [class="^.*"] border pixel 1
 # i3 gaps
 gaps inner 10
 gaps outer 2
-smart_gaps on
+# smart_gaps on
 
 set $alte_gaps Toggle gaps: (1) on (2) off
 bindsym $alt+g mode "$alte_gaps"
@@ -128,27 +133,16 @@ mode "$alte_gaps" {
 # set $ws9 "09:"
 # set $ws10 "10:"
 
-# set $ws1 ""
-# set $ws2 ""
-# set $ws3 ""
-# set $ws4 ""
-# set $ws5 ""
-# set $ws6 ""
-# set $ws7 ""
-# set $ws8 ""
-# set $ws9 ""
-# set $ws10 ""
-
-set $ws1 "01:home"
-set $ws2 "02:internet"
-set $ws3 "03:terminal"
-set $ws4 "04:development"
-set $ws5 "05:obsidian"
-set $ws6 "06:file-explorer"
+set $ws1 "01:obsidian"
+set $ws2 "02:web"
+set $ws3 "03:shell"
+set $ws4 "04:work"
+set $ws5 "05:office"
+set $ws6 "06:files"
 set $ws7 "07:media"
-set $ws8 "08:virt-manager"
-set $ws9 "09:linux-vm"
-set $ws10 "10:windows-vm"
+set $ws8 "08:machines"
+set $ws9 "09:linux"
+set $ws10 "10:windows"
 
 # workspace handling
 bindsym $alt+1 workspace number $ws1
@@ -176,8 +170,9 @@ bindsym $alt+Shift+0 move container to workspace number $ws10
 workspace $ws7 output DP-1-6
 workspace $ws8 output HDMI-1
 
-# application workspaces
+# application workspaces (use xprop)
 # assign [class="CLASSNAME"] $ws#
+assign [class="obsidian"] $ws1
 
 # exit i3 (logs you out of your X session)
 bindsym $alt+Shift+e exec i3-nagbar -f "pango:CascadiaCode 12" \
@@ -221,10 +216,12 @@ client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 # status bar
 bar {
 	position top
-    # i3bar_command i3bar -t
+	# position bottom
+    # i3bar_command i3bar -t 
 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
     workspace_buttons yes
     tray_output primary
+
 
 	# colors
 	colors {
@@ -234,7 +231,7 @@ bar {
 		inactive_workspace $BLACK     $BLACK      $GRAYMID
 		urgent_workspace   $TEAL      $TEAL       $WHITE
 
-		background #00000000
+		background #000000
 		separator $WHITE
 	}
 }
