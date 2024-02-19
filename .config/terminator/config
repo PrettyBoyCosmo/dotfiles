@@ -25,7 +25,7 @@
     icon_bell = False
     background_color = "#0f1c21"
     cursor_color = "#007991"
-    font = Cascadia Mono PL Semi-Bold 26
+    font = Cascadia Mono PL Semi-Bold 22
     foreground_color = "#80b6ad"
     show_titlebar = False
     scrollbar_position = hidden

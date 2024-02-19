@@ -38,7 +38,9 @@ local plugins = {
   -- icons and colors
   {'ryanoasis/vim-devicons'},
   {'ap/vim-css-color'},
-  -- startup
+    -- notify
+    {'rcarriga/nvim-notify'},
+    -- startup
   {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -101,6 +103,9 @@ local plugins = {
 local opts = {}
 
 require("lazy").setup(plugins, opts)
+
+-- notify
+vim.notify = require("notify")
 
 -- telescope
 local builtin = require("telescope.builtin")
@@ -197,6 +202,7 @@ require('mason-lspconfig').setup({
 
 -- options
 vim.o.guicursor = "a:block"
+vim.opt.guifont = { "Cascadia Code", ":h12" }
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
