@@ -10,6 +10,7 @@
   go_down = <Super>j
   go_left = <Super>h
   go_right = <Super>l
+  search = ""
   resize_up = <Primary><Shift>k
   resize_down = <Primary><Shift>j
   resize_left = <Primary><Shift>h

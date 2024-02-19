@@ -295,5 +295,6 @@ aliases.update({
     'vlis': 'vox list',
     'vls': 'vox list',
     'c': 'clear',
-    'qflipper': 'sudo /home/bluecosmo/workflow/tools/qFlipper-x86_64-1.3.3.AppImage',
+    'qflipper': 'sudo /home/bluecosmo/workflow/tools/qFlipper-x86_64-1.3.3.AppImage', 
+    'code': 'codium', 
 })

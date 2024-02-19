@@ -2,18 +2,18 @@
 # created by : cosmo
 
 # system updates
-sudo apt update && sudo apt upgrade && sudo apt autoremove
+sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
  
 # tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 
 # packages
-sudo apt-get install neofetch terminator spotify-client vlc i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit steghide docker.io docker-compose device-tree-compiler stow
+sudo apt-get install neofetch terminator spotify-client vlc i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit steghide docker.io docker-compose device-tree-compiler stow fzf ripgrep
 # neovim
 
 # flatpaks
-flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord de.shorsh.discord-screenaudio com.visualstudio.code org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher net.werwolv.ImHex
+flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher net.werwolv.ImHex
 
 # add flatpaks to dmenu
 sudo ln -s /var/lib/flatpak/exports/bin/com.brave.Browser /usr/bin/brave
@@ -23,8 +23,8 @@ sudo ln -s /var/lib/flatpak/exports/bin/com.obsproject.Studio /usr/bin/obs
 sudo ln -s /var/lib/flatpak/exports/bin/org.kde.kdenlive /usr/bin/kdenlive
 sudo ln -s /var/lib/flatpak/exports/bin/org.gimp.GIMP /usr/bin/gimp
 sudo ln -s /var/lib/flatpak/exports/bin/im.riot.Riot /usr/bin/element
-sudo ln -s /var/lib/flatpak/exports/bin/de.shorsh.discord-screenaudio /usr/bin/discord-screenaudio
-sudo ln -s /var/lib/flatpak/exports/bin/com.visualstudio.code /usr/bin/code
+sudo ln -s /var/lib/flatpak/exports/bin/ com.github.micahflee.torbrowser-launcher /usr/bin/tor-browser
+sudo ln -s /var/lib/flatpak/exports/bin/net.werwolv.ImHex /usr/bin/imhex
 
 # powershell
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.3.3/powershell_7.3.3-1.deb_amd64.deb
