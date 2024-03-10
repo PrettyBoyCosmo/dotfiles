@@ -48,6 +48,7 @@ bindsym $win+o exec obsidian
 bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
 bindsym $win+s exec spotify
+bindsym $win+u exec cinnamon-settings sound
 bindsym $win+v exec firefox
 
 # pulseaudio pactl (volume)

@@ -109,7 +109,7 @@ vim.notify = require("notify")
 
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-r>', builtin.find_files, {noremap = true, silent = true})
+vim.keymap.set('n', '<C-o>', builtin.find_files, {noremap = true, silent = true})
 vim.keymap.set('n', '<C-f>', builtin.live_grep, {noremap = true, silent = true})
 vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
 

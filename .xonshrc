@@ -276,7 +276,7 @@ aliases.update({
     'comdll': '/usr/bin/x86_64-w64-mingw32-gcc-win32 dll.c -o a.dll -shared',
     'runpm': 'npm install && npm run dev',
     'sjupload': 'scp -r payload.sh root@172.16.24.1:/root/payload',
-    'duckencode': 'python2 /home/bluecosmo/development/hak5/rubberducky/encoder/duckencoder.py -i payload.txt',
+    'duckencode': 'python2 /home/bluecosmo/development/rubberducky/encoder/duckencoder.py -i payload.txt',
     'onlyrat': 'python3 /home/bluecosmo/.MK01-OnlyRAT/main.py',
     'key': 'python3 ~/.SkeletonKey/main.py',   
     'wpls': f'ls {WALLPAPER_DIR}',

@@ -39,8 +39,16 @@
   [[powershell]]
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 22
     foreground_color = "#839496"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_custom_command = True
+    custom_command = powershell
+    use_system_font = False
+    bold_is_bright = True
 [layouts]
   [[default]]
     [[[window0]]]
