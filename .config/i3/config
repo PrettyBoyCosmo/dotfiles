@@ -3,9 +3,9 @@
 # created by : C0SM0
 
 # wallpaper
-# set $wallpaper $HOME/media/photos/wallpapers/kc-g.png
+set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
 # set $wallpaper $HOME/media/photos/wallpapers/kali.jpeg
-set $wallpaper $HOME/media/photos/wallpapers/vxug.png
+# set $wallpaper $HOME/media/photos/wallpapers/vxug.png
 # exec_always feh --bg-fill $wallpaper
 exec_always feh --bg-center $wallpaper
 

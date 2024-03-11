@@ -190,7 +190,7 @@ aliases.update({
     'change_mac': change_mac,
     'pccon': 'ssh bluecosmo@planetcosmo',
     'gitcon': 'ssh git@planetcosmo',
-    'mcon': 'ssh moon',
+    'mcon': 'ssh moon -p 69',
     'vcon': 'ssh void',
     'dscon': 'ssh deathstar',
     'thmcon': f'sudo openvpn {WORKFLOW}/vpn/BlueCosmo.ovpn',
@@ -297,4 +297,6 @@ aliases.update({
     'c': 'clear',
     'qflipper': 'sudo /home/bluecosmo/workflow/tools/qFlipper-x86_64-1.3.3.AppImage', 
     'code': 'codium', 
+    'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
+    'dload': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
 })
