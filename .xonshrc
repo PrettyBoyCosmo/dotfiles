@@ -25,6 +25,15 @@ def env_name_cust(pre_chars='─[', post_chars=']'):
     if env_name and env_name != 'xonsh':
         return '{WHITE}'+pre_chars+'{CYAN}'+env_name+'{WHITE}'+post_chars
 
+import netifaces
+
+def get_tun0(pre_chars='─[', post_chars=']'):
+    try:
+        tun0_ip = netifaces.ifaddresses('tun0')[netifaces.AF_INET][0]['addr']
+        return '{WHITE}'+pre_chars+'{PURPLE}'+tun0_ip+'{WHITE}'+post_chars
+    except (KeyError, IndexError, ValueError):
+        return ''
+
 # get working directory
 def pwd():
     return os.getcwd()
@@ -154,7 +163,9 @@ for new_path in [
 # custom prompt
 xontrib load vox
 $PROMPT_FIELDS['env_name_cust'] = env_name_cust
-$PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
+$PROMPT_FIELDS['get_tun0'] = get_tun0
+# $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
+$PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]{get_tun0:{}}─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
 
 # aliases
 aliases.update({
@@ -233,7 +244,7 @@ aliases.update({
     'vlone': 'scp -r @($arg0) bluecosmo@void:~',
     'vdown': 'scp -r bluecosmo@void:~/@($arg0) .',
     'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
-    'bak': 'cp @($arg0) @($arg0).bak',
+    'bak': 'cp @($arg0) @($arg0).bak -r',
     'trash': 'mv @($arg0) $HOME/local/share/Trash/files',
     'bin': 'cd $HOME/local/share/Trash/files',
     'education': 'cd /home/bluecosmo/education',
@@ -287,7 +298,6 @@ aliases.update({
     'wp_animated': animated_wallpaper,
     'xc':'xclip -selection c',
     'blah':'ls -alh',
-    'bcat':'pygmentize -g -O linenos=1,style=rrt',
     'cat':'/bin/cat',
     'mkvenv':'python3 -m venv ./venv/',
     'vac': 'vox activate @($arg0)',

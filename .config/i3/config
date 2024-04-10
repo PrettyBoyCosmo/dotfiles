@@ -43,7 +43,8 @@ bindsym $win+e exec nemo
 bindsym $win+f exec flameshot gui
 bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
-bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1080x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+# bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1080x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+bindsym $win_m exec xonsh -c "disp default"
 bindsym $win+o exec obsidian
 bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
@@ -215,15 +216,25 @@ client.focused_inactive  $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
 client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar
+# bar {
+#     i3bar_command i3bar -t 
+#     position top
+#     tray_output secondary
+#     workspace_buttons no
+
+#     colors {
+#         background #00000000
+#     }
+# }
+
 bar {
 	position top
-	# position bottom
     # i3bar_command i3bar -t 
 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
     workspace_buttons yes
     tray_output primary
 
-
+    
 	# colors
 	colors {
 		

@@ -10,6 +10,8 @@
   go_down = <Super>j
   go_left = <Super>h
   go_right = <Super>l
+  split_horiz = <Primary><Shift>o
+  split_vert = <Primary><Shift>e
   search = ""
   resize_up = <Primary><Shift>k
   resize_down = <Primary><Shift>j
@@ -31,7 +33,7 @@
     scrollbar_position = hidden
     scroll_on_output = True
     scrollback_infinite = True
-    palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#a200ff:#00ffff:#ffffff"
+    palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff"
     use_custom_command = True
     custom_command = xonsh
     use_system_font = False
