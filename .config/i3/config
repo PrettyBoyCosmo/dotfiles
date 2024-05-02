@@ -3,11 +3,11 @@
 # created by : C0SM0
 
 # wallpaper
-set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
-# set $wallpaper $HOME/media/photos/wallpapers/kali.jpeg
-# set $wallpaper $HOME/media/photos/wallpapers/vxug.png
-# exec_always feh --bg-fill $wallpaper
-exec_always feh --bg-center $wallpaper
+# set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
+set $wallpaper $HOME/media/photos/wallpapers/cycity.png
+# set $wallpaper $HOME/media/photos/wallpapers/cycle.png
+exec_always feh --bg-fill $wallpaper
+# exec_always feh --bg-center $wallpaper
 
 # variables
 set $alt Mod1
@@ -20,7 +20,6 @@ set $volumestep 5
 font pango: CascadiaCode 10
 exec flameshot
 exec duplicati
-exec obsidian
 exec --no-startup-id virt-manager --show-systray
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
@@ -229,7 +228,7 @@ client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 bar {
 	position top
-    # i3bar_command i3bar -t 
+    i3bar_command i3bar -t 
 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
     workspace_buttons yes
     tray_output primary
@@ -243,7 +242,8 @@ bar {
 		inactive_workspace $BLACK     $BLACK      $GRAYMID
 		urgent_workspace   $TEAL      $TEAL       $WHITE
 
-		background #000000
+		# background #000000
+		background #000000aa
 		separator $WHITE
 	}
 }
