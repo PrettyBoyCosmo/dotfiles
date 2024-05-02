@@ -80,7 +80,8 @@ bindsym $alt+s exec --no-startup-id rofi -show drun
 # bindsym $alt+w exec --no-startup-id $HOME/.scripts/rofi-wifi-menu
 bindsym $alt+w exec --no-startup-id nm-connection-editor
 bindsym $alt+c exec --no-startup-id rofimoji -a copy
-bindsym $alt+Shift+r restart 
+# bindsym $alt+Shift+r restart 
+bindsym $alt+Shift+r exec pkill lemonbar, restart
 
 # window management
 bindsym $alt+h focus left
@@ -215,19 +216,8 @@ client.focused_inactive  $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
 client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar
-# bar {
-#     i3bar_command i3bar -t 
-#     position top
-#     tray_output secondary
-#     workspace_buttons no
-
-#     colors {
-#         background #00000000
-#     }
-# }
-
 bar {
-	position top
+	position bottom
     i3bar_command i3bar -t 
 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
     workspace_buttons yes
