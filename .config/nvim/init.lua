@@ -200,9 +200,22 @@ require('mason-lspconfig').setup({
   },
 })
 
+-- netrw
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+vim.g.netrw_browse_split = 4
+vim.g.netrw_altv = 1
+vim.g.netrw_winsize = 25
+
+vim.api.nvim_command('augroup ProjectDrawer')
+vim.api.nvim_command('autocmd!')
+vim.api.nvim_command('autocmd VimEnter * let g:netrw_banner = 0')
+vim.api.nvim_command('augroup END')
+
+vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
+
 -- options
 vim.o.guicursor = "a:block"
-vim.g.netrw_banner = 0
 vim.opt.guifont = { "Cascadia Code", ":h12" }
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -250,3 +263,5 @@ vim.api.nvim_set_keymap('i', '<Esc>', '<Esc>:normal! zz<CR>', { noremap = true, 
 vim.api.nvim_set_keymap('v', '<Esc>', '<Esc>:normal! zz<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gg', 'ggzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'GG', 'GGzz', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>a', ':Alpha<CR>', { noremap = true, silent = true })
+
