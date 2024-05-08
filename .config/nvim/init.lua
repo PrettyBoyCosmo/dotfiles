@@ -202,6 +202,7 @@ require('mason-lspconfig').setup({
 
 -- options
 vim.o.guicursor = "a:block"
+vim.g.netrw_banner = 0
 vim.opt.guifont = { "Cascadia Code", ":h12" }
 vim.opt.nu = true
 vim.opt.relativenumber = true
