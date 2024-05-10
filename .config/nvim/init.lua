@@ -129,10 +129,16 @@ local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "<leader>m", ui.toggle_quick_menu)
-vim.keymap.set("n", "<leader>u", function() ui.nav_file(1) end)
-vim.keymap.set("n", "<leader>i", function() ui.nav_file(2) end)
-vim.keymap.set("n", "<leader>o", function() ui.nav_file(3) end)
-vim.keymap.set("n", "<leader>p", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end)
+vim.keymap.set("n", "<leader>6", function() ui.nav_file(6) end)
+vim.keymap.set("n", "<leader>7", function() ui.nav_file(7) end)
+vim.keymap.set("n", "<leader>8", function() ui.nav_file(8) end)
+vim.keymap.set("n", "<leader>9", function() ui.nav_file(9) end)
+vim.keymap.set("n", "<leader>0", function() ui.nav_file(0) end)
 
 -- airline
 if vim.g.airline_symbols == nil then
@@ -263,5 +269,5 @@ vim.api.nvim_set_keymap('i', '<Esc>', '<Esc>:normal! zz<CR>', { noremap = true, 
 vim.api.nvim_set_keymap('v', '<Esc>', '<Esc>:normal! zz<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gg', 'ggzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'GG', 'GGzz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>a', ':Alpha<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>q', ':Alpha<CR>', { noremap = true, silent = true })
 
