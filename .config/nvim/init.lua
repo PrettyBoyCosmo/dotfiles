@@ -76,6 +76,8 @@ local plugins = {
       alpha.setup(dashboard.config)
     end
   },
+  -- vim tmux navigator
+{"christoomey/vim-tmux-navigator"},
   -- lsp zero
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
@@ -210,14 +212,13 @@ require('mason-lspconfig').setup({
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 vim.g.netrw_browse_split = 4
+vim.g.netrw_fastbrowse = 0
 vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 25
-
 vim.api.nvim_command('augroup ProjectDrawer')
 vim.api.nvim_command('autocmd!')
 vim.api.nvim_command('autocmd VimEnter * let g:netrw_banner = 0')
 vim.api.nvim_command('augroup END')
-
 vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
 
 -- options
@@ -259,6 +260,14 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- vim tmux navigation
+function netrw_move_to_right_pane()
+    vim.cmd([[wincmd l]])
+end
+vim.cmd[[
+  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
+]]
+
 -- navigation (default centering)
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -270,4 +279,4 @@ vim.api.nvim_set_keymap('v', '<Esc>', '<Esc>:normal! zz<CR>', { noremap = true, 
 vim.api.nvim_set_keymap('n', 'gg', 'ggzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'GG', 'GGzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>q', ':Alpha<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap('n', '<Leader>l', ':Mason<CR>', { noremap = true, silent = true })

@@ -99,14 +99,15 @@ bindsym $alt+p layout stacking
 bindsym $alt+b layout tabbed 
 bindsym $alt+t layout toggle split 
 bindsym $alt+Shift+space floating toggle 
-bindsym $alt+space focus mode_toggle 
-# bindsym $alt+a focus parent 
-# bindsym $alt+c focus child 
+bindsym $win+space focus mode_toggle 
+bindsym $alt+a focus parent 
+bindsym $alt+q focus child 
 
 # hide window title bar
 default_border pixel 1
 default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
+for_window [class="Firefox" instance="Places"] floating enable
 # new_window pixel 0
 
 # i3 gaps

@@ -188,7 +188,7 @@ aliases.update({
     'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
     'wpf': set_wallpaper_fill,
     'wpc': set_wallpaper_center,
-    'd': set_display,
+    'disp': set_display,
     'amon': add_monitor,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
