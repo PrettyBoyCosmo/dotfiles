@@ -60,49 +60,21 @@ def local_ip():
         return "Unable to retrieve local IP address"
 
 # set wallpaper (wp)
-def set_wallpaper_fill(filename):
-    wallpaper = filename[0]
+def set_wallpaper(args):
+    option = args[0]
+    wallpaper = args[1]
     for root, dirs, files in os.walk(WALLPAPER_DIR):
         for file in files:
             name, ext = os.path.splitext(file)
             if name == wallpaper:
-                os.system(f'feh --bg-fill {WALLPAPER_DIR}/{file}')
-    return None
-
-def set_wallpaper_center(filename):
-    wallpaper = filename[0]
-    for root, dirs, files in os.walk(WALLPAPER_DIR):
-        for file in files:
-            name, ext = os.path.splitext(file)
-            if name == wallpaper:
-                os.system(f'feh --bg-center {WALLPAPER_DIR}/{file}')
+                os.system(f'cp {WALLPAPER_DIR}/{file} {WALLPAPER_DIR}/wallpaper')
+                os.system(f'feh --bg-{option} {WALLPAPER_DIR}/wallpaper')
     return None
 
 # set display (d)
 def set_display(mode):
     os.system(f'bash {DISPLAY_SCRIPTS}/{mode[0]}.sh')
     os.system('i3 restart')
-    return None
-
-# add monitor (amon)
-def add_monitor():
-    polybar_config="/home/bluecosmo/.config/polybar/config.ini"
-    polybar_exec="/home/bluecosmo/.config/i3/scripts/polybar.sh"
-    connected_monitors = command_output(["xrandr", "--query"])
-    new_monitors = [ line.split()[0] for line in connected_monitors.splitlines() if " connected" in line and "eDP-1" not in line ]
-    for monitor in new_monitors:
-        polybar_config_format = f"""[bar/{monitor}]
-    inherit=bar-template
-    monitor={monitor}
-    bottom=false 
-    modules-left=left i3 line space title right
-    modules-center=left space date space right
-    modules-right=left pulseaudio rl-alt space filesystem space space cpu space space battery right"""
-        polybar_exec_format = f"polybar --config=/home/bluecosmo/.config/polybar/config.ini {monitor} 2>&1 | tee -a /tmp/polybar1.log & disown"
-        with open(polybar_config, "a") as pc:
-            pc.write(polybar_config_format)
-        with open(polybar_exec, "a") as pe:
-            pe.write(polybar_exec_format)
     return None
 
 # monitor mode (monitor_mode)
@@ -170,27 +142,17 @@ $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]{get_tun0:{}}─
 # aliases
 aliases.update({
     'path_of': 'echo @(pwd())/@($arg0)',
-    'doop': 'bash -c terminator --working-directory=@(pwd())',
-    'nvim': '$HOME/workflow/tools/nvim.appimage',
-    'vim': '$HOME/workflow/tools/nvim.appimage',
-    'v': '$HOME/workflow/tools/nvim.appimage',
+    'v': 'nvim',
     'll': 'ls -l',
     'la': 'ls -a',
     'lla': 'ls -la',
-    'ugrade': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
+    'update': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
     'pfchangs': 'proxychains4',
     'acf': 'auto-cpufreq --stats',
-    'pin': 'mv @($arg0) @(NOTEBOOK)',
-    'unpin': 'cp @(NOTEBOOK)/@($arg0) $HOME/Downloads',
-    'rip': 'mv @(NOTEBOOK) @(pwd())',
     'analyze': 'mv @($arg0) $HOME/research/analyze',
-    'anal': 'cd $HOME/research/analyze',
     'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
-    'wpf': set_wallpaper_fill,
-    'wpc': set_wallpaper_center,
-    'disp': set_display,
+    'wp': set_wallpaper,
     'd': set_display,
-    'amon': add_monitor,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
     'mvcon': 'mullvad connect',
@@ -212,78 +174,21 @@ aliases.update({
     'wpcon': 'ssh root@172.16.42.1',
     'ltcon': 'ssh root@172.16.84.1',
     'pscon': 'ssh root@172.16.32.1',
-    'start': 'xdg-open @($arg0)',
-    'ccs': 'xdg-open https://www.cosmodiumcs.com',
-    'yt': 'xdg-open https://www.youtube.com/c/CosmodiumCS',
     'ff': 'firefox',
-    'note': f'nvim {NOTEBOOK}/@($arg0)',
     'mnupdate': mnupdate,
     'msupdate': msupdate,
     'fuck': 'rm -rf',
     'please': 'sudo',
     'addtoken': add_token,
-    'ei3': 'nvim /home/bluecosmo/.config/i3/config',
-    'ci3': 'cat /home/bluecosmo/.config/i3/config',
-    'evim': 'nvim /home/bluecosmo/.config/nvim/init.lua',
-    'cvim': 'cat /home/bluecosmo/.config/nvim/init.lua',
-    'eblocks': 'nvim /home/bluecosmo/.config/i3/i3blocks.conf',
-    'cblocks': 'cat /home/bluecosmo/.config/i3/i3blocks.conf',
-    'exonsh': 'nvim /home/bluecosmo/.xonshrc',
-    'cxonsh': 'cat /home/bluecosmo/.xonshrc',
-    'epol': 'nvim $HOME/.config/polybar/config.ini',
-    'cpol': 'cat $HOME/.config/polybar/config.ini',
-    'ecomp': 'nvim $HOME/.config/compton/compton.conf',
-    'ccomp': 'cat $HOME/.config/compton/compton.conf',
-    'elias': 'nvim /home/bluecosmo/.bash_aliases',
-    'clias': 'cat /home/bluecosmo/.bash_aliases',
-    'ehosts': 'sudo nvim /etc/hosts',
-    'chosts': 'cat /etc/hosts',
     'untar': 'tar -xf *.tar.xz',
     'move': 'mv $HOME/Downloads/* @(pwd())',
     'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
     'deport': 'mv $HOME/Downloads/* $HOME/imports',
-    'lsx': 'ls *.@($arg0)',
     'vlone': 'scp -r @($arg0) bluecosmo@void:~',
     'vdown': 'scp -r bluecosmo@void:~/@($arg0) .',
     'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
     'bak': 'cp @($arg0) @($arg0).bak -r',
-    'trash': 'mv @($arg0) $HOME/local/share/Trash/files',
-    'bin': 'cd $HOME/local/share/Trash/files',
-    'education': 'cd /home/bluecosmo/education',
-    'edu': 'cd /home/bluecosmo/education',
-    'research': 'cd /home/bluecosmo/research',
-    'res': 'cd /home/bluecosmo/research',
-    'development': 'cd /home/bluecosmo/development',
-    'dev': 'cd /home/bluecosmo/development',
-    'workflow': 'cd /home/bluecosmo/workflow',
-    'mal': 'cd /home/bluecosmo/development/marks',
-    'mks': 'cd /home/bluecosmo/development/marks',
-    'marks': 'cd /home/bluecosmo/development/marks',
-    'poc': 'cd /home/bluecosmo/development/poc',
-    'work': 'cd /home/bluecosmo/workflow',
-    'dots': 'cd /home/bluecosmo/.dotfiles',
-    'packs': 'cd /home/bluecosmo/workflow/packages',
-    'notebook': 'cd /home/bluecosmo/notebook',
-    'nb': 'cd @(NOTEBOOK)',
-    'wargames': 'cd /home/bluecosmo/research/wargames',
-    'ctf': 'cd /home/bluecosmo/research/wargames',
-    'koth': 'cd /home/bluecosmo/research/wargames/koth',
-    'cme': 'cd /home/bluecosmo/research/wargames/crackme/',
-    'bug': 'cd /home/bluecosmo/research/bugbounty',
-    'media': 'cd /home/bluecosmo/media',
-    'torload': 'cd $HOME/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/Downloads',
-    'school': 'cd /home/bluecosmo/workflow/school',
-    'downloads': 'cd /home/bluecosmo/Downloads',
-    'down': 'cd /home/bluecosmo/Downloads',
-    'imports': 'cd /home/bluecosmo/imports',
-    'clients': 'cd /home/bluecosmo/development/clients',
-    'reconnaissance': 'cd /home/bluecosmo/research/operations',
-    'recon': 'cd /home/bluecosmo/research/operations',
-    'operations': 'cd /home/bluecosmo/research/operations',
-    'ops': 'cd /home/bluecosmo/research/operations',
-    'tools': 'cd /home/bluecosmo/workflow/tools',
-    'config': 'cd /home/bluecosmo/.config',
-    'conf': 'cd /home/bluecosmo/.config',
+    'trash': 'mv @($arg0) $HOME/.local/share/Trash/files',
     'comelf': 'g++ main.cpp && ./a.out',
     'comexe': '/usr/bin/x86_64-w64-mingw32-gcc-win32 main.c',
     'comdll': '/usr/bin/x86_64-w64-mingw32-gcc-win32 dll.c -o a.dll -shared',
@@ -300,17 +205,17 @@ aliases.update({
     'wp_animated': animated_wallpaper,
     'xc':'xclip -selection c',
     'blah':'ls -alh',
-    'cat':'/bin/cat',
     'mkvenv':'python3 -m venv ./venv/',
     'vac': 'vox activate @($arg0)',
     'vdac': 'vox deactivate',
     'vlis': 'vox list',
     'vls': 'vox list',
     'c': 'clear',
-    'qflipper': 'sudo /home/bluecosmo/workflow/tools/qFlipper-x86_64-1.3.3.AppImage', 
     'code': 'codium', 
     'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
     'dload': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
+    'tkill': 'tmux kill-server',
+    'r': 'ranger .',
 })
 
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

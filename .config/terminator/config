@@ -22,6 +22,8 @@
   broadcast_group = <Primary><Shift>Escape
   broadcast_all = <Primary>Escape
   edit_tab_title = ""
+  preferences = F1
+  help = ""
 [profiles]
   [[default]]
     icon_bell = False

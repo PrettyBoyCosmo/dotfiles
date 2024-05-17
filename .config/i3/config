@@ -3,9 +3,7 @@
 # created by : C0SM0
 
 # wallpaper
-# set $wallpaper $HOME/media/photos/wallpapers/kc-b.png
-set $wallpaper $HOME/media/photos/wallpapers/cycity.png
-# set $wallpaper $HOME/media/photos/wallpapers/cycle.png
+set $wallpaper $HOME/media/photos/wallpapers/wallpaper
 exec_always feh --bg-fill $wallpaper
 # exec_always feh --bg-center $wallpaper
 
@@ -16,6 +14,7 @@ set $volumepath ~/.config/i3/i3-volume
 set $statuscmd i3blocks 
 set $statussig SIGRTMIN+10 
 set $volumestep 5
+
 # startup
 font pango: CascadiaCode 10
 exec flameshot
@@ -29,7 +28,6 @@ exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
-
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
 
 # applications - `h,j,k,l` are reserved for terminator
@@ -73,7 +71,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # keybinds
-bindsym $alt+Return exec i3-sensible-terminal 
+bindsym $alt+Return exec kitty
 bindsym $alt+Shift+q kill 
 bindsym $alt+Shift+c reload 
 bindsym $alt+s exec --no-startup-id rofi -show drun
