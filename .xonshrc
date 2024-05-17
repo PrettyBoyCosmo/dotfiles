@@ -312,3 +312,5 @@ aliases.update({
     'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
     'dload': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
 })
+
+execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

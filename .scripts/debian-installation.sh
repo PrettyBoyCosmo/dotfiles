@@ -9,7 +9,7 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 
 # packages
-sudo apt-get install neofetch terminator spotify-client vlc i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit steghide docker.io docker-compose device-tree-compiler stow fzf ripgrep
+sudo apt-get install neofetch terminator spotify-client vlc i3 flameshot xonsh git feh lxappearance go-md2man i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit steghide docker.io docker-compose device-tree-compiler stow fzf ripgrep tmux zoxide
 # neovim
 
 # flatpaks
