@@ -35,7 +35,7 @@
     scrollback_infinite = True
     palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff"
     use_custom_command = True
-    custom_command = xonsh
+    custom_command = tmux
     use_system_font = False
     bold_is_bright = True
   [[powershell]]

@@ -78,7 +78,6 @@ bindsym $alt+Shift+q kill
 bindsym $alt+Shift+c reload 
 bindsym $alt+s exec --no-startup-id rofi -show drun
 # bindsym $alt+w exec --no-startup-id $HOME/.scripts/rofi-wifi-menu
-bindsym $alt+w exec --no-startup-id nm-connection-editor
 bindsym $alt+c exec --no-startup-id rofimoji -a copy
 # bindsym $alt+Shift+r restart 
 bindsym $alt+Shift+r exec pkill lemonbar, restart

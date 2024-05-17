@@ -189,6 +189,7 @@ aliases.update({
     'wpf': set_wallpaper_fill,
     'wpc': set_wallpaper_center,
     'disp': set_display,
+    'd': set_display,
     'amon': add_monitor,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
     'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
