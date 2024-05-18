@@ -215,6 +215,7 @@ vim.g.netrw_browse_split = 4
 vim.g.netrw_fastbrowse = 0
 vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 25
+vim.g.netrw_list_hide = '\\(^\\|\\s\\s\\)\\(\\.env\\|\\.secrets\\|\\.git\\)\\($\\|/\\|\\s\\s\\)'
 vim.api.nvim_command('augroup ProjectDrawer')
 vim.api.nvim_command('autocmd!')
 vim.api.nvim_command('autocmd VimEnter * let g:netrw_banner = 0')
