@@ -209,6 +209,21 @@ require('mason-lspconfig').setup({
 })
 
 -- netrw
+function ToggleNetrw()
+    local bufnr = vim.fn.bufnr('%')
+    local bufname = vim.fn.bufname(bufnr)
+    local filetype = vim.bo.filetype
+
+    if filetype == 'netrw' then
+        vim.cmd('bwipeout')
+        -- Close the window if it's not the last one
+        if vim.fn.winnr('$') > 1 then
+            vim.cmd('close')
+        end
+    else
+        vim.cmd('Vexplore')
+    end
+end
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 vim.g.netrw_browse_split = 4
@@ -220,7 +235,8 @@ vim.api.nvim_command('augroup ProjectDrawer')
 vim.api.nvim_command('autocmd!')
 vim.api.nvim_command('autocmd VimEnter * let g:netrw_banner = 0')
 vim.api.nvim_command('augroup END')
-vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<C-e>', ':lua ToggleNetrw()<CR>', { noremap = true, silent = true })
 
 -- options
 vim.o.guicursor = "a:block"
