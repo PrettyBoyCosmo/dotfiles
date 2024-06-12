@@ -1,0 +1,15 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":tennis:",
+    ":three:",
+    ":zero:",
+    ":aerial_tramway:",
+    ":v:",
+    ":man_shrugging:",
+    ":eyes:"
+  ]
+}

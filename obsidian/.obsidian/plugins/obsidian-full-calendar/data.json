@@ -1,0 +1,41 @@
+{
+  "calendarSources": [
+    {
+      "type": "local",
+      "color": "hsl(calc(180 - 1), calc(100% * 1.01), calc(30% * 1.075))",
+      "directory": "/"
+    },
+    {
+      "type": "dailynote",
+      "color": "#ff0000",
+      "heading": "DUE:"
+    },
+    {
+      "type": "local",
+      "color": "#5abbd3",
+      "directory": "03 - calendar/classes"
+    },
+    {
+      "type": "local",
+      "color": "#fff700",
+      "directory": "03 - calendar/ei-eca"
+    },
+    {
+      "type": "local",
+      "color": "#00ffe1",
+      "directory": "03 - calendar/usna"
+    },
+    {
+      "type": "local",
+      "color": "#00ff91",
+      "directory": "03 - calendar/personal"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": true
+}

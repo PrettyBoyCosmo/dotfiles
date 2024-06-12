@@ -1,0 +1,40 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.theme-light,
+.theme-dark {
+    --pomodoro-timer-elapsed-color: var(--color-green);
+    --pomodoro-timer-color: var(--text-faint);
+    --pomodoro-timer-text-color: var(--text-normal);
+    --pomodoro-timer-dot-color: var(--color-red);
+}
+
+.status-bar-item.plugin-pomodoro-timer {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.pomodoro-focus {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.pomodoro-tasks-item-desc * {
+    font-size: 0.8rem !important;
+}
+
+.pomodoro-tasks-item-desc p {
+    width: 100%;
+    line-height: 1.1;
+    height: 2.2em;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    line-break: anywhere;
+}

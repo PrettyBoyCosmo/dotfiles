@@ -1,0 +1,38 @@
+{
+  "show-checkboxes": true,
+  "hide-tags-in-title": true,
+  "show-relative-date": true,
+  "hide-date-display": false,
+  "hide-date-in-title": true,
+  "link-date-to-daily-note": true,
+  "date-picker-week-start": 0,
+  "tag-colors": [
+    {
+      "tagKey": "#priority",
+      "color": "rgba(255, 255, 255, 1)",
+      "backgroundColor": "rgba(255, 0, 0, 1)"
+    },
+    {
+      "tagKey": "#todo",
+      "color": "rgba(0, 0, 0, 1)",
+      "backgroundColor": "rgba(255, 132, 0, 1)"
+    },
+    {
+      "tagKey": "#doing",
+      "color": "rgba(0, 0, 0, 1)",
+      "backgroundColor": "rgba(255, 229, 0, 1)"
+    },
+    {
+      "tagKey": "#done",
+      "color": "rgba(0, 0, 0, 1)",
+      "backgroundColor": "rgba(0, 255, 21, 1)"
+    },
+    {
+      "tagKey": "#optional",
+      "color": "rgba(255, 255, 255, 1)",
+      "backgroundColor": "rgba(0, 23, 125, 1)"
+    }
+  ],
+  "new-note-folder": "area/ccs",
+  "prepend-archive-format": "MM-DD-YY"
+}

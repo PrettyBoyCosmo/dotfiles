@@ -1,0 +1,44 @@
+{
+  "displayMethod": "NAME",
+  "alwaysOpen": true,
+  "ignoreDocTags": "blog, todo, doing, done, video, priority",
+  "ignoreTags": "",
+  "hideOnRootTags": "",
+  "sortType": "DISPNAME_ASC",
+  "sortExactFirst": true,
+  "sortTypeTag": "NAME_ASC",
+  "expandLimit": 0,
+  "disableNestedTags": false,
+  "hideItems": "ALL_EXCEPT_BOTTOM",
+  "ignoreFolders": "",
+  "targetFolders": "",
+  "scanDelay": 250,
+  "useTitle": false,
+  "reduceNestedParent": true,
+  "frontmatterKey": "title",
+  "useTagInfo": true,
+  "tagInfo": "pininfo.md",
+  "mergeRedundantCombination": false,
+  "useVirtualTag": false,
+  "useFrontmatterTagsForNewNotes": false,
+  "doNotSimplifyTags": false,
+  "overrideTagClicking": false,
+  "useMultiPaneList": false,
+  "archiveTags": "",
+  "disableNarrowingDown": true,
+  "expandUntaggedToRoot": false,
+  "disableDragging": false,
+  "linkConfig": {
+    "incoming": {
+      "enabled": true,
+      "key": ""
+    },
+    "outgoing": {
+      "enabled": true,
+      "key": ""
+    }
+  },
+  "linkShowOnlyFDR": true,
+  "linkCombineOtherTree": true,
+  "showListIn": ""
+}

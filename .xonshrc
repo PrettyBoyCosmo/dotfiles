@@ -146,7 +146,7 @@ aliases.update({
     'll': 'ls -l',
     'la': 'ls -a',
     'lla': 'ls -la',
-    'update': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
+    'up': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
     'pfchangs': 'proxychains4',
     'acf': 'auto-cpufreq --stats',
     'analyze': 'mv @($arg0) $HOME/research/analyze',

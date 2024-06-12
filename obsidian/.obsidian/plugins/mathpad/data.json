@@ -1,0 +1,20 @@
+{
+  "addRibbonIcon": true,
+  "showAtStartUp": false,
+  "preferBlock": false,
+  "preferBlockForInline": false,
+  "preferBlockForCodeblock": true,
+  "evaluate": false,
+  "declarationStr": ":=",
+  "evaluateStr": "=?",
+  "evaluateNumericStr": "=~?",
+  "evaluateSymbolicStr": "==?",
+  "inlinePostfix": "-",
+  "latexPostfix": "$",
+  "hidePrefix": "%",
+  "plotGrid": false,
+  "plotWidth": 0,
+  "plotDerivatives": false,
+  "precision": 21,
+  "scientific": false
+}

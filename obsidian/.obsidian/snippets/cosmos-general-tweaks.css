@@ -1,0 +1,5 @@
+/* Center tables on the page */
+.center-tables table {
+    margin-left: auto;
+    margin-right: auto;
+}

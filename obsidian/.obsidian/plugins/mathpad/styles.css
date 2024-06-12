@@ -1,0 +1,158 @@
+.mathpad-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mathpad-container .toolbar {
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-top: 1px solid var(--background-modifier-border);
+  padding: 4px;
+  flex: 0;
+}
+.mathpad-container .toolbar button {
+  padding: 2px 2px;
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
+.mathpad-container .toolbar button:disabled {
+  color: var(--text-faint);
+  cursor: default;
+}
+.mathpad-container .mathpad-scroller {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  flex: 1;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container {
+  display: flex;
+  flex-direction: column;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container {
+  display: flex;
+  position: relative;
+  min-height: 6em;
+  border-top: 1px solid var(--background-modifier-border);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-anchor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  border-right: 1px solid var(--background-modifier-border);
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-anchor .slot-name {
+  width: 100%;
+  text-align: center;
+  font-size: smaller;
+  color: var(--text-faint);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-anchor:hover {
+  background-color: var(--background-modifier-border);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-anchor.selected {
+  cursor: default;
+  background-color: var(--background-modifier-border);
+  border-color: var(--interactive-accent);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content {
+  flex: 1;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input {
+  overflow-x: auto;
+  line-height: 12px;
+  cursor: text;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input mjx-container {
+  text-align: left;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input .plain-input {
+  padding: 5px;
+  line-height: 12px;
+  height: 24px;
+  font-size: 16px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input .plain-input:hover {
+  background-color: var(--background-primary);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input .mathpad-input {
+  margin: 1em 0px;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-input .latex-wrapper {
+  padding: 4px;
+  margin: 1px;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .mathpad-slider {
+  margin-right: 20px;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .mathpad-slider input[type=range] {
+  width: 100%;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-result {
+  overflow-y: auto;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-result .slot-error {
+  font-size: 12px;
+  color: var(--text-error);
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-actions {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container:hover .slot-actions {
+  visibility: visible;
+}
+.mathpad-container .current-input {
+  border-top: 1px solid var(--background-modifier-border);
+  flex: 0;
+  margin-bottom: 32px;
+  padding: 16px 8px 8px 8px;
+}
+.mathpad-container .current-input input.mathpad-input {
+  height: 30px;
+}
+.mathpad-container .mathpad-input {
+  font-size: 16px;
+  line-height: 12px;
+  height: 24px;
+  padding: 4px;
+  width: 100%;
+  font-family: monospace;
+}
+.mathpad-plot {
+  cursor: pointer;
+}
+.mathpad-plot .function-plot path.x.origin {
+  stroke: var(--text-normal);
+}
+.mathpad-plot .function-plot path.y.origin {
+  stroke: var(--text-normal);
+}
+.mathpad-plot .function-plot .x.axis {
+  stroke: var(--text-normal);
+}
+.mathpad-plot .function-plot .x.axis .tick line {
+  stroke: var(--text-normal);
+}
+.mathpad-plot .function-plot .y.axis .tick line {
+  stroke: var(--text-normal);
+}
+.mathpad-declaration {
+  font-family: "MathJax_Math";
+}

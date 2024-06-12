@@ -1,0 +1,54 @@
+
+.pdf-annotate-button {
+    float: right;
+    /* padding: 0px 6px;
+    box-shadow: none !important;
+    float: right;
+    color: var(--text-faint); */
+}
+.pdf-collapse-button {
+    float: left;
+    /* padding: 0px 6px;
+    box-shadow: none !important;
+    float: right;
+    color: var(--text-faint); */
+}
+
+.pdf-name {
+    text-decoration: underline;
+    display: inline-block; /* or block, depending on your requirements */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 50px;
+}
+
+.settings-button {
+    padding: 6px 8px;
+}
+.settings-scroll-container {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.share-img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pdf-embed-collapsed {
+    height: auto !important;
+    min-height: min-content;
+}
+.pdf-container-collapsed {
+    display:none !important;
+}
+.pdf-toolbar-left-collapsed {
+    /* visibility: hidden !important;
+    position: absolute !important;
+    height: 41px; */
+}

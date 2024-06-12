@@ -1,0 +1,13 @@
+{
+	"id": "x86-flow-graphing",
+	"name": "x86 Assembly Flow Graphing",
+	"version": "1.0.2",
+	"minAppVersion": "1.1.0",
+	"description": "An Obsidian plugin for converting x86 code blocks into flow graphs",
+	"author": "icebear",
+	"authorUrl": "https://github.com/dwolfe884",
+	"fundingUrl": {
+		"Buy Me a Coffee": "https://www.buymeacoffee.com/djwolfe"
+	},
+	"isDesktopOnly": false
+}
