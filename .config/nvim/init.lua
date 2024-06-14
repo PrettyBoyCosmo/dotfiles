@@ -78,6 +78,26 @@ local plugins = {
   },
   -- vim tmux navigator
 {"christoomey/vim-tmux-navigator"},
+-- Lua
+
+{ 
+  'olivercederborg/poimandres.nvim',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require('poimandres').setup {
+        disable_background = true, -- disable background
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+    }
+  end,
+
+  -- optionally set the colorscheme within lazy config
+  init = function()
+    vim.cmd("colorscheme poimandres")
+  end
+},
   -- lsp zero
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
@@ -265,8 +285,10 @@ vim.opt.colorcolumn = "80"
 vim.api.nvim_command('set mouse=a')
 vim.api.nvim_command('set completeopt-=preview')
 vim.api.nvim_command('set encoding=UTF-8')
-vim.api.nvim_command('colorscheme habamax')
-vim.cmd('hi normal guibg=#0F1C21')
+-- vim.api.nvim_command('colorscheme habamax')
+-- vim.cmd('hi normal guibg=#0F1C21')
+vim.cmd('hi normal guibg=#0D0F10')
+
 
 -- keymaps
 vim.keymap.set("i", "<C-c>", "<Esc>")
