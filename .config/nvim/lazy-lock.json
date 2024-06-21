@@ -1,4 +1,5 @@
 {
+  "Base2Tone-nvim": { "branch": "main", "commit": "c32c1d3dfdc8fb6e91cbf6078c078d6c3eaaa673" },
   "LuaSnip": { "branch": "master", "commit": "f3b3d3446bcbfa62d638b1903ff00a78b2b730a1" },
   "alpha-nvim": { "branch": "main", "commit": "1356b9ef31b985d541d94314f2cf73c61124bf1d" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },

@@ -94,10 +94,11 @@ local plugins = {
   end,
 
   -- optionally set the colorscheme within lazy config
-  init = function()
-    vim.cmd("colorscheme poimandres")
-  end
+  -- init = function()
+  --   vim.cmd("colorscheme poimandres")
+  -- end
 },
+    {"atelierbram/Base2Tone-nvim" },
   -- lsp zero
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
@@ -285,9 +286,10 @@ vim.opt.colorcolumn = "80"
 vim.api.nvim_command('set mouse=a')
 vim.api.nvim_command('set completeopt-=preview')
 vim.api.nvim_command('set encoding=UTF-8')
--- vim.api.nvim_command('colorscheme habamax')
--- vim.cmd('hi normal guibg=#0F1C21')
-vim.cmd('hi normal guibg=#0D0F10')
+vim.api.nvim_command('colorscheme habamax')
+vim.cmd('hi normal guibg=#0F1C21')
+-- vim.api.nvim_command('colorscheme base2tone_lake_dark')
+-- vim.cmd('hi normal guibg=#0D0F10')
 
 
 -- keymaps

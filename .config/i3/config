@@ -27,6 +27,7 @@ exec --no-startup-id amixer sset Master unmute
 exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
+exec_always --no-startup-id ~/.dotfiles/.scripts/polybar.sh &
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
 
@@ -77,8 +78,7 @@ bindsym $alt+Shift+c reload
 bindsym $alt+s exec --no-startup-id rofi -show drun
 # bindsym $alt+w exec --no-startup-id $HOME/.scripts/rofi-wifi-menu
 bindsym $alt+c exec --no-startup-id rofimoji -a copy
-# bindsym $alt+Shift+r restart 
-bindsym $alt+Shift+r exec pkill lemonbar, restart
+bindsym $alt+Shift+r restart 
 
 # window management
 bindsym $alt+h focus left
@@ -255,27 +255,28 @@ client.focused_inactive  $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
 client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar
-bar {
-	position bottom
-    i3bar_command i3bar -t 
-	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
-    workspace_buttons yes
-    tray_output primary
+# bar {
+# 	position bottom
+# 	# position top
+#     # i3bar_command i3bar -t 
+# 	status_command i3blocks -c /home/bluecosmo/.config/i3/i3blocks.conf
+#     workspace_buttons yes
+#     tray_output primary
 
     
-	# colors
-	colors {
+# 	# colors
+# 	colors {
 		
-		# workspace        border     background  text
- 		focused_workspace  $GRAYDARK  $GRAYDARK   $WHITE
-		inactive_workspace $BLACK     $BLACK      $GRAYMID
-		urgent_workspace   $TEAL      $TEAL       $WHITE
+# 		# workspace        border     background  text
+#  		focused_workspace  $GRAYDARK  $GRAYDARK   $WHITE
+# 		inactive_workspace $BLACK     $BLACK      $GRAYMID
+# 		urgent_workspace   $TEAL      $TEAL       $WHITE
 
-		# background #000000
-		background #000000aa
-		separator $WHITE
-	}
-}
+# 		# background #000000
+# 		background #000000aa
+# 		separator $WHITE
+# 	}
+# }
 
 # custom binds
 bindsym $alt+x exec i3lock-fancy

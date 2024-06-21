@@ -214,6 +214,7 @@ aliases.update({
     'code': 'codium', 
     'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
     'dload': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
+    'remload': 'scp -r remnux@192.168.122.7:/home/remnux/Downloads/Desktop /home/bluecosmo/research/analyze/remnux',
     'tkill': 'tmux kill-server',
     'r': 'ranger .',
 })
