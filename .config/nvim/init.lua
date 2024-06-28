@@ -175,6 +175,7 @@ vim.g.airline_symbols.branch = ''
 vim.g.airline_symbols.readonly = ''
 vim.g.airline_symbols.linenr = ''
 vim.g.airline_theme = 'lucius'
+-- vim.g.airline_theme = 'deus'
 
 -- lsp zero
 local lsp_zero = require('lsp-zero')
@@ -290,7 +291,6 @@ vim.api.nvim_command('colorscheme habamax')
 vim.cmd('hi normal guibg=#0F1C21')
 -- vim.api.nvim_command('colorscheme base2tone_lake_dark')
 -- vim.cmd('hi normal guibg=#0D0F10')
-
 
 -- keymaps
 vim.keymap.set("i", "<C-c>", "<Esc>")

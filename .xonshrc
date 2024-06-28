@@ -17,6 +17,7 @@ DEVELOPMENT = f'{HOME}/development'
 DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
 DISPLAY_SCRIPTS = f'{HOME}/.screenlayout'
+$SHELL = '/bin/bash'
 
 # get environment name (custom prompt)
 def env_name_cust(pre_chars='─[', post_chars=']'):
