@@ -144,9 +144,10 @@ $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]{get_tun0:{}}─
 aliases.update({
     'path_of': 'echo @(pwd())/@($arg0)',
     'v': 'nvim',
-    'll': 'ls -l',
-    'la': 'ls -a',
-    'lla': 'ls -la',
+    'ls': 'exa --icons',
+    'll': 'exa --icons -l',
+    'la': 'exa --icons -a',
+    'lla': 'exa --icons -la',
     'up': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
     'pfchangs': 'proxychains4',
     'acf': 'auto-cpufreq --stats',
