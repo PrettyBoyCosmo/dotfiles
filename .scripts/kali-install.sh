@@ -31,4 +31,4 @@ cd .dotfiles
 stow . --adopt
 cd $HOME
 
-
+rm kali-install.sh
