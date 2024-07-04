@@ -3,16 +3,18 @@
 # created by : bluecosmo
 
 # system updates
+cd $HOME
 sudo apt-get update -y
-sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
 sudo apt autoremove -y
  
 # packages
 sudo apt-get install i3 xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib ranger spice-vdagent -y
+sudo apt-get update --fix-missing -y
+sudo apt-get install i3 xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib ranger spice-vdagent -y
 
 # qemu tools
-systemctl enable spice-vdagentd.service
+sudo systemctl enable spice-vdagentd.service
 
 # hacking
 sudo adduser $USER wireshark
