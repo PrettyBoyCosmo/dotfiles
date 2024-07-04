@@ -22,3 +22,4 @@ polybar --config=$HOME/.config/polybar/config.ini HDMI-1 2>&1 | tee -a /tmp/poly
 polybar --config=$HOME/.config/polybar/config.ini HDMI-2 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=$HOME/.config/polybar/config.ini HDMI-3 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar --config=$HOME/.config/polybar/config.ini HDMI-4 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --config=$HOME/.config/polybar/config.ini Virtual-1 2>&1 | tee -a /tmp/polybar1.log & disown
