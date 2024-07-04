@@ -5,6 +5,7 @@
 # system updates
 cd $HOME
 sudo apt-get update -y
+sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
 sudo apt autoremove -y
  
@@ -13,9 +14,7 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 
 # packages
-sudo apt-get install spotify-client i3 flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib ranger -y
-sudo apt-get update --fix-missing -y
-sudo apt-get install spotify-client i3 flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib ranger -y
+sudo apt-get install spotify-client i3 flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib ranger -y --fix-missing
 
 # removed packages : go-md2man device-tree-compiler
 
