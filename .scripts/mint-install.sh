@@ -2,14 +2,6 @@
 # linux mint installer
 # created by : bluecosmo
 
-# dotfiles
-cd $HOME
-git clone https://github.com/PrettyBoyCosmo/dotfiles
-mv dotfiles .dotfiles
-cd .dotfiles
-stow . --adopt
-cd $HOME
-
 # system updates
 sudo apt-get update -y
 sudo apt-get update --fix-missing -y
@@ -68,3 +60,13 @@ sudo usermod -aG libvirt-qemu $USER
 sudo usermod -aG kvm $USER
 sudo usermod -aG input $USER
 sudo usermod -aG disk $USER
+
+# dotfiles
+cd $HOME
+git clone https://github.com/PrettyBoyCosmo/dotfiles
+mv dotfiles .dotfiles
+cd .dotfiles
+stow . --adopt
+cd $HOME
+
+
