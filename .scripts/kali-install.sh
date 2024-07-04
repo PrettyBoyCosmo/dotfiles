@@ -5,10 +5,10 @@
 # dotfiles
 cd $HOME
 git clone https://github.com/PrettyBoyCosmo/dotfiles
-cd dotfiles
+mv dotfiles .dotfiles
+cd .dotfiles
 stow . --adopt
 cd $HOME
-mv dotfiles .dotfiles
 
 # system updates
 sudo apt-get update -y
