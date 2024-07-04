@@ -2,13 +2,20 @@
 # linux mint installer
 # created by : bluecosmo
 
-# system updates
+# dotfiles
 cd $HOME
+git clone https://github.com/PrettyBoyCosmo/dotfiles
+cd dotfiles
+stow . --adopt
+cd $HOME
+mv dotfiles .dotfiles
+
+# system updates
 sudo apt-get update -y
 sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
 sudo apt autoremove -y
- 
+
 # tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
@@ -17,6 +24,7 @@ sudo tailscale up
 sudo apt-get install spotify-client i3 flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib ranger -y --fix-missing
 
 # removed packages : go-md2man device-tree-compiler
+# theme : org.gtk.Gtk3theme.Adapta-Nokto
 
 # flatpaks (built into mint)
 flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher net.werwolv.ImHex
@@ -46,14 +54,6 @@ sudo chmod +x /usr/bin/dumpcap
 # pip
 pip3 install pwntools 
 xonsh -c "xpip install -U 'xonsh[full]'"
-
-# dotfiles
-cd $HOME
-git clone https://github.com/PrettyBoyCosmo/dotfiles
-cd dotfiles
-stow . --adopt
-cd $HOME
-mv dotfiles .dotfiles
 
 # neovim pluginstall
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
