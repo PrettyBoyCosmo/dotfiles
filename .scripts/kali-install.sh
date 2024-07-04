@@ -20,9 +20,14 @@ sudo adduser $USER wireshark
 sudo chmod +x /usr/bin/dumpcap
 wget https://github.com/Giotino/stegsolve/releases/download/v.1.5/StegSolve-1.5-alpha1.jar
 
+# pip
+pip3 install pwntools 
+xonsh -c "xpip install -U 'xonsh[full]'"
+
 # dotfiles
 cd $HOME
 git clone https://github.com/PrettyBoyCosmo/dotfiles
 cd dotfiles
 stow . --adopt
 cd $HOME
+mv dotfiles .dotfiles

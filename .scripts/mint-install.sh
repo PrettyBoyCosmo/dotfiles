@@ -43,12 +43,17 @@ pip install -U --user shodan
 sudo adduser $USER wireshark
 sudo chmod +x /usr/bin/dumpcap
 
+# pip
+pip3 install pwntools 
+xonsh -c "xpip install -U 'xonsh[full]'"
+
 # dotfiles
 cd $HOME
 git clone https://github.com/PrettyBoyCosmo/dotfiles
 cd dotfiles
 stow . --adopt
 cd $HOME
+mv dotfiles .dotfiles
 
 # neovim pluginstall
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
