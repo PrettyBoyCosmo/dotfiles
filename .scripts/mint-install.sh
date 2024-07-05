@@ -3,13 +3,16 @@
 # created by : bluecosmo
 
 # system updates
+sudo echo "deb http://debian.sur5r.net/i3/ jammy universe" > /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt-get update -y
 sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
 sudo apt autoremove -y
 
 # packages
-sudo apt-get install spotify-client i3-wm polybar flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib ranger arandr rofi compton neovim lua -y --fix-missing
+sudo apt-get install spotify-client i3-wm polybar flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib build-essential gdb gdbserver gcc nasm xclip ranger arandr rofi compton neovim spice-vdagent lua fonts-font-awesome -y --fix-missing
+
+sudo systemctl enable spice-vdagentd.service
 
 # removed packages : go-md2man device-tree-compiler
 # theme : org.gtk.Gtk3theme.Adapta-Nokto
@@ -61,8 +64,9 @@ cd .dotfiles
 stow . --adopt
 cd $HOME
 
+# NOTE: uncomment later
 # tailscale
-curl -fsSL https://tailscale.com/install.sh | sh
-sudo tailscale up
+# curl -fsSL https://tailscale.com/install.sh | sh
+# sudo tailscale up
 
 rm -rf mint-install.sh
