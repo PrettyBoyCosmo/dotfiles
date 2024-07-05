@@ -45,9 +45,9 @@ sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestf
 sudo systemctl start libvirtd.service
 sudo systemctl enable libvirtd.service
 sudo systemctl status libvirtd.service
-sudo echo 'unix_sock_group = "libvirt"' >> /etc/libvirt/libvirtd.conf
-sudo echo 'unix_sock_rw_perms = "0770"' >> /etc/libvirt/libvirtd.conf
-# sudo vim /etc/libvirt/libvirtd.conf
+# unix_sock_group = "libvirt"
+# unix_sock_rw_perms = "0770"
+sudo vim /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt $USER
 systemctl restart libvirtd.service
 
