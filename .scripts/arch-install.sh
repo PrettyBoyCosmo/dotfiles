@@ -14,7 +14,7 @@ sudo ./strap.sh
 sudo pacman -Syu
 
 # install packages
-sudo pacman -S neovim xonsh kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster dirb btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent lua -y
+sudo pacman -S neovim kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster dirb btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent lua -y
 # removed packages : brightnessctl playerctl 
 
 # yay
@@ -22,7 +22,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 cd $HOME
-yay -Ss picom-git ttf-font-awesome-5 nerd-fonts-git
+yay -Ss picom-git ttf-font-awesome-5 nerd-fonts-git xonsh-git xontrib-vox-git
 
 # clone dotfiles
 git clone https://github.com/PrettyBoyCosmo/dotfiles
@@ -33,9 +33,10 @@ cd $HOME
 
 # xonsh
 # TODO: test this
-TARGET_DIR=$HOME/.local/xonsh-env PYTHON_VER=3.11 XONSH_VER='xonsh[full]>=0.17.0' \
- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anki-code/xonsh-install/main/mamba-install-xonsh.sh)"
-xonsh -c "xpip install -U 'xonsh[full]'"
+# TARGET_DIR=$HOME/.local/xonsh-env PYTHON_VER=3.11 XONSH_VER='xonsh[full]>=0.17.0' \
+#  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anki-code/xonsh-install/main/mamba-install-xonsh.sh)"
+# xonsh -c "xpip install -U 'xonsh[full]'"
+pipx install xonsh[full]
 xonsh -c "xpip install xontrib-vox pwn netifaces"
 
 rm -rf arch-install.sh strap.sh
