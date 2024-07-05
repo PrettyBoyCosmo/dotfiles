@@ -37,4 +37,5 @@ cd .dotfiles
 stow . --adopt
 cd $HOME
 
+# clean up
 rm -rf kali-install.sh Public Videos Documents Music Pictures Templates dotfiles

@@ -39,50 +39,17 @@ cd .dotfiles
 stow . --adopt
 cd $HOME
 
-rm -rf arch-install.sh strap.sh yay-bin
-
-# styling
-# wget https://github.com/ful1e5/Google_Cursor/releases/download/v2.0.0/GoogleDot-White.tar.gz
-
-# brightness with "brillo"
-# cd /home/$username/.config/i3/scripts/brillo
-# make
-# sudo make install
-# sudo setfacl -m u:$username:rx /bin/brillo
-# sudo chown $username /sys/class/backlight/intel_backlight/brightness
-
 # virtual machines with "qemu" and "virtual machine manger"
-sudo pacman -Syy
-sudo pacman -S archlinux-keyring qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
-
-sudo systemctl enable libvirtd.service
+sudo pacman -Syyu
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat
 sudo systemctl start libvirtd.service
+sudo systemctl enable libvirtd.service
+sudo systemctl status libvirtd.service
+sudo echo 'unix_sock_group = "libvirt"' >> /etc/libvirt/libvirtd.conf
+sudo echo 'unix_sock_rw_perms = "0770"' >> /etc/libvirt/libvirtd.conf
+# sudo vim /etc/libvirt/libvirtd.conf
+sudo usermod -aG libvirt $USER
+systemctl restart libvirtd.service
 
-# check proper install in : /etc/libvirt/libvirtd.conf
-# line 85 : unix_sock_group = "libvirt"
-# line 108 : unix_sock_rw_perms = "0770"
-
-sudo usermod -a -G libvirt $(whoami)
-newgrp libvirt
-
-# nested virtualization
-
-### Intel Processor ###
-sudo modprobe -r kvm_intel
-sudo modprobe kvm_intel nested=1
-echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
-systool -m kvm_intel -v | grep nested
-
-### AMD Processor ###
-#sudo modprobe -r kvm_amd
-#sudo modprobe kvm_amd nested=1
-#echo "options kvm-amd nested=1" | sudo tee /etc/modprobe.d/kvm-amd.conf
-#systool -m kvm_amd -v | grep nested
-
-# add virtual macine manager to dmenu
-# sudo ln -s /usr/bin/virt-manager /usr/bin/virtual-machine-manager
-
-# neovim
-# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-# pip3 install jedi
-
+# clean up
+rm -rf arch-install.sh strap.sh yay-bin

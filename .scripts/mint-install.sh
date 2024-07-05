@@ -79,4 +79,5 @@ cd $HOME
 # curl -fsSL https://tailscale.com/install.sh | sh
 # sudo tailscale up
 
+# clean up
 rm -rf mint-install.sh keyring.deb 
