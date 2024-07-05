@@ -4,6 +4,7 @@
 
 # wallpaper
 set $wallpaper $HOME/media/photos/wallpapers/wallpaper
+# set $wallpaper $HOME/.wallpapers/kali.jpeg
 exec_always feh --bg-fill $wallpaper
 # exec_always feh --bg-center $wallpaper
 
@@ -28,21 +29,20 @@ exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
 exec_always --no-startup-id ~/.dotfiles/.scripts/polybar.sh &
+exec xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
 
-# applications - `h,j,k,l` are reserved for terminator
+# applications
 bindsym $win+a exec mintinstall
 bindsym $win+b exec brave-browser
 bindsym $win+c exec kdenlive
 bindsym $win+d exec discord
-# bindsym $win+e exec terminator -e ranger
 bindsym $win+e exec nemo
 bindsym $win+f exec flameshot gui
 bindsym $win+g exec gimp
 bindsym $win+i exec cinnamon-settings
-# bindsym $win+m exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 1080x720 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-3 --off --output DP-4 --off --output HDMI-4 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
-bindsym $win_m exec xonsh -c "disp default"
+bindsym $win+m exec xonsh -c "d default"
 bindsym $win+o exec obsidian
 bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
