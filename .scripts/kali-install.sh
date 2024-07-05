@@ -17,11 +17,10 @@ sudo systemctl enable ssh
 sudo service ssh up
 
 # hacking
+pip3 install -U --user shodan
 sudo adduser $USER wireshark
 sudo chmod +x /usr/bin/dumpcap
 wget https://github.com/Giotino/stegsolve/releases/download/v.1.5/StegSolve-1.5-alpha1.jar
-
-# pip
 pip3 install pwntools 
 xonsh -c "xpip install -U 'xonsh[full]'"
 xonsh -c "xpip install xontrib-vox"
