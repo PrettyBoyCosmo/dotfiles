@@ -10,7 +10,7 @@ sudo apt upgrade -y
 sudo apt autoremove -y
 
 # packages
-sudo apt-get install spotify-client i3-wm polybar flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib build-essential gdb gdbserver gcc nasm xclip ranger arandr rofi compton neovim spice-vdagent lua fonts-font-awesome -y --fix-missing
+sudo apt-get install spotify-client i3-wm polybar flameshot xonsh git feh lxappearance i3blocks mate-media gcc-mingw-w64-x86-64 htop wireshark brightnessctl nmap playerctl hashcat hydra gobuster dirb btop ffmpeg openjdk-17-jdk proxychains4 hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty exa gcc-multilib build-essential gdb gdbserver gcc nasm xclip ranger arandr rofi compton neovim spice-vdagent lua5.4 fonts-font-awesome -y --fix-missing
 
 sudo systemctl enable spice-vdagentd.service
 

@@ -9,7 +9,7 @@ sudo apt upgrade -y
 sudo apt autoremove -y
  
 # packages
-sudo apt-get install i3 polybar xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib build-essential gdb gdbserver gcc nasm xclip ranger spice-vdagent arandr rofi compton neovim lua openssh-server -y --fix-missing
+sudo apt-get install i3 polybar xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib build-essential gdb gdbserver gcc nasm xclip ranger spice-vdagent arandr rofi compton neovim lua5.4 openssh-server -y --fix-missing
 
 # services
 sudo systemctl enable spice-vdagentd.service
