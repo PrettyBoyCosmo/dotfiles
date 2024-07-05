@@ -15,7 +15,7 @@ sudo apt-get install spotify-client i3-wm polybar flameshot xonsh git feh lxappe
 # theme : org.gtk.Gtk3theme.Adapta-Nokto
 
 # flatpaks (built into mint)
-flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform com.github.micahflee.torbrowser-launcher net.werwolv.ImHex
+flatpak install flathub md.obsidian.Obsidian com.brave.Browser com.obsproject.Studio org.kde.kdenlive com.discordapp.Discord org.gimp.GIMP im.riot.Riot com.obsproject.Studio.Plugin.waveform org.torproject.torbrowser-launcher net.werwolv.ImHex
 
 # add flatpaks to dmenu
 sudo ln -s /var/lib/flatpak/exports/bin/com.brave.Browser /usr/bin/brave
@@ -25,7 +25,7 @@ sudo ln -s /var/lib/flatpak/exports/bin/com.obsproject.Studio /usr/bin/obs
 sudo ln -s /var/lib/flatpak/exports/bin/org.kde.kdenlive /usr/bin/kdenlive
 sudo ln -s /var/lib/flatpak/exports/bin/org.gimp.GIMP /usr/bin/gimp
 sudo ln -s /var/lib/flatpak/exports/bin/im.riot.Riot /usr/bin/element
-sudo ln -s /var/lib/flatpak/exports/bin/ com.github.micahflee.torbrowser-launcher /usr/bin/tor-browser
+sudo ln -s /var/lib/flatpak/exports/bin/ org.torproject.torbrowser-launcher /usr/bin/tor-browser
 sudo ln -s /var/lib/flatpak/exports/bin/net.werwolv.ImHex /usr/bin/imhex
 
 # powershell
