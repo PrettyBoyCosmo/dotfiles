@@ -3,6 +3,7 @@
 # created by : bluecosmo
 
 # system updates
+cd $HOME
 sudo apt-get update -y
 sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
