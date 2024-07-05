@@ -18,6 +18,7 @@ sudo systemctl enable ssh
 sudo service ssh up
 
 # hacking
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 pip3 install -U --user shodan
 sudo adduser $USER wireshark
 sudo chmod +x /usr/bin/dumpcap
