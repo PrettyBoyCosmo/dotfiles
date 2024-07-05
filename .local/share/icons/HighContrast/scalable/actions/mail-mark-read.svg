@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1307" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1312">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Email read</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>read email</rdf:li>
+      <rdf:li>read message</rdf:li>
+      <rdf:li>open email</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:description>An open envelope</dc:description>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path1875" d="m6.8503 14 14.154-9.1114c1.9752-1.2545 3.158-1.0564 5.1332 0l14.88 9.1114c1.1895 1.0875 1.9824 1.7684 1.9824 3.9649v22.07c0 2.1966-1.797 3.9649-4.0291 3.9649h-29.942c-2.2321 0-4.0291-1.7684-4.0291-3.9649v-22.07c0-2.1966 1.0047-3.0406 1.8503-3.9649z" style="fill-rule:evenodd;fill:#fff;stroke-width:8;stroke:#fff"/>
+  <path id="rect2248" d="m6.8503 14 14.154-9.1114c1.9091-1.5186 3.158-1.4525 5.1332 0l14.88 9.1114c1.1895 1.0875 1.9824 1.7684 1.9824 3.9649v22.07c0 2.1966-1.797 3.9649-4.0291 3.9649h-29.942c-2.2321 0-4.0291-1.7684-4.0291-3.9649v-22.07c0-2.1966 1.0047-3.0406 1.8503-3.9649z" style="fill-rule:evenodd"/>
+  <path id="rect3123" d="m9 18 14.472-10.036 15.528 10.036v22h-30v-22z" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path1876" d="m8 18.175 14 13.825c1.0258 0.86878 1.8843 0.94098 2.8978 0l15.18-14.18" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#000"/>
+ </g>
+</svg>

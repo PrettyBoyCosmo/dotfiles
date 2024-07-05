@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1307" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1312">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect6561" x="4" y="7" width="40" height="34" rx="3.1319" ry="3.0078" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect1315" x="4" y="7" width="40" height="34" rx="3.4419" ry="3.3179" style="fill-rule:evenodd"/>
+  <rect id="rect6622" x="8" y="11" width="32" height="26" rx="1.4574" ry="1.3954" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2188" d="m4.062 33.062 8.938-11.062c1.6434-1.7984 2.7907-0.99225 4 0l8 9c3.093 3.1085-1.0078 6.093-3 3l-7-8-9.5116 11.946" style="fill-rule:evenodd"/>
+  <path id="path3962" d="m19.829 25.122 10.24-9.2016c1.6434-1.7984 2.7907-0.99225 4 0l7.814 6.1473c3.093 3.1085-1.0078 6.093-3 3l-6.814-5.1473-11.186 10.147" style="fill-rule:evenodd"/>
+ </g>
+</svg>

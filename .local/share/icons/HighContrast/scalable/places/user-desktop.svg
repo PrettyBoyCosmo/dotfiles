@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 9.0, SVG Export Plug-In  -->
+<svg id="svg1358" width="48" height="48" sodipodi:docbase="/home/luca/Artwork/blackwhite-icon-theme/scalable/places" sodipodi:docname="user-desktop.svg" sodipodi:version="0.32" version="1.0" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+<metadata id="metadata1375">
+  <rdf:RDF>
+    <cc:Work rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      <dc:title>Desktop Icon</dc:title>
+      <dc:description>A desktop rapresentation</dc:description>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+      <dc:subject>
+        <rdf:Bag>
+          <rdf:li>destkop</rdf:li>
+          <rdf:li>storage</rdf:li>
+          <rdf:li>files</rdf:li>
+          <rdf:li>default location</rdf:li>
+        </rdf:Bag></dc:subject>
+    </cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/"><cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/><cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/><cc:requires rdf:resource="http://web.resource.org/cc/Notice"/><cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/><cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/></cc:License></rdf:RDF></metadata><sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" gridempspacing="5" gridoriginx="0.0000000pt" gridoriginy="0.0000000pt" gridspacingx="1.0000000pt" gridspacingy="1.0000000pt" gridtolerance="1.0000000pt" guidetolerance="1.0000000pt" pagecolor="#ffffff" showgrid="true"/>
+	<g id="g7237" transform="matrix(.83512 0 0 .97553 3.9525 -4.5373)" style="fill:none;stroke-width:8.5312;stroke:#fff">
+			
+			<path id="path7239" d="m3.4893 9.6304c-1.4661 0-2.4137 0.35811-2.4137 2.0656v35.115c0.097878 1.1434 1.2108 2.0656 2.4137 2.0656l41.261-0.018552c1.2029 0 2.185-0.64602 2.185-2.047v-35.115c0-1.401-1.2108-2.0656-2.4137-2.0656h-41.032z" style="fill:none;stroke-width:8.5312;stroke:#fff" sodipodi:nodetypes="ccccccccc"/>
+			
+		</g><g id="g1361" transform="matrix(.82861 0 0 .96825 4.1087 -4.3246)" style="stroke-width:7;stroke:#000">
+			
+			<path id="path1365" d="m3.4893 9.6304c-1.2068 0-2.4137 1.0328-2.4137 2.0656v35.115c0.097878 1.1434 1.2108 2.0656 2.4137 2.0656l41.261-0.018552c1.2029 0 2.185-1.0142 2.185-2.047v-35.115c0-1.0328-1.2108-2.0656-2.4137-2.0656h-41.032z" style="stroke:none" sodipodi:nodetypes="ccccccccc"/>
+			
+		</g>
+	<g id="crop_x0020_marks" style="stroke:#000">
+		<path id="path1370" d="m48 48h-48v-48h48v48z" style="fill:none;stroke:none"/>
+	</g>
+<rect id="rect5771" x="9" y="24" width="20.868" height="14.202" rx="1.064" ry="1.25" style="fill:#fffffe"/><rect id="rect6499" x="12" y="26" width="15" height="4" rx=".00969" ry=".011628"/><rect id="rect7987" x="23.132" y="9" width="15.868" height="11" rx="1.064" ry="1.25" style="fill:#fffffe"/><rect id="rect7989" x="26" y="11" width="10" height="3.7984" rx=".00969" ry=".011628"/></svg>

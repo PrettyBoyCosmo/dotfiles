@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4974" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata id="metadata4979">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Preferences Desktop Accessibility</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <dc:source>http://www.gnome.org</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>preferences</rdf:li>
+      <rdf:li>desktop</rdf:li>
+      <rdf:li>accessibility</rdf:li>
+      <rdf:li>a11y</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path6164" d="m13.969 18.469c-4.714 2.3581-7.9688 7.309-7.9688 13.031 0 8.004 6.356 14.5 14.188 14.5 7.3732 0 13.44-5.7716 14.125-13.125h-19.438c-0.49885 0-0.90625-0.37615-0.90625-0.875v-13.531z" style="fill:#fff;stroke-linecap:round;stroke-width:4;stroke:#fff"/>
+  <path id="path6174" d="m20.375 21.031c-5.8439 0-10.594 4.6981-10.594 10.469 0 5.7707 4.7499 10.469 10.594 10.469s10.594-4.6981 10.594-10.469c0-0.010571 3.2e-5 -0.020686 0-0.03125h-8.9375c-0.49885 0-0.90625-0.4074-0.90625-0.90625v-9.5c-0.25297-0.017887-0.49244-0.03125-0.75-0.03125z" style="fill:#fff;stroke-linecap:round;stroke-width:4.0917;stroke:#000"/>
+  <path id="path6162" d="m36.121 39.983-9.0096-7.8839h-11.123l0.051961-20.95 7.9827-0.14905v13.071l7.0277-0.035348 10.95 9.115-5.8794 6.8319z" style="fill-rule:evenodd;stroke-width:4;stroke:#fff"/>
+  <path id="path6178" transform="matrix(1.149 0 0 1.149 -.34465 1.1816)" d="m25.544 6.3691a5.6569 5.6569 0 1 1-11.314 0 5.6569 5.6569 0 1 1 11.314 0z" style="fill:#fff;stroke-linecap:round;stroke-width:3.4811;stroke:#fff"/>
+  <path id="path6180" transform="matrix(.79543 0 0 .7955 6.6876 3.4334)" d="m25.544 6.3691a5.6569 5.6569 0 1 1-11.314 0 5.6569 5.6569 0 1 1 11.314 0z"/>
+  <rect id="rect6182" x="18.007" y="8" width="4" height="12.776" rx=".90046" ry=".90046"/>
+  <rect id="rect2170" width="48" height="48" rx="0" ry="0" style="fill:none;opacity:.6"/>
+ </g>
+</svg>

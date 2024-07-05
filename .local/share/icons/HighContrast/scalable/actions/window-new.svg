@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1306" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1311">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect5680" width="48" height="48" ry="0" style="fill:none"/>
+  <rect id="rect4952" x="5" y="5" width="38" height="34.95" ry="1.384" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <path id="rect1314" d="m8 5h32c2 0 3 1 3 3v32h-38v-32c0-2 1-3 3-3z" style="fill-rule:evenodd"/>
+  <path id="rect2044" d="m10 9h28c0.59248 0 1 0.40752 1 1v25c0 0.59248-0.40752 1-1 1h-28c-0.59248 0-1-0.40752-1-1v-25c0-0.59248 0.40752-1 1-1z" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2772" d="m11 14h26" style="fill:none;stroke-width:6;stroke:#000"/>
+  <path id="path1874" d="m16 27h16" style="fill:none;stroke-width:4;stroke:#000"/>
+  <path id="path2762" d="m24 19v16" style="fill:none;stroke-width:4;stroke:#000"/>
+ </g>
+</svg>

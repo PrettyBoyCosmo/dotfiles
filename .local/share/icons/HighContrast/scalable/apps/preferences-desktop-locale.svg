@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4932" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata4937">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Preferences Desktop Locale</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <dc:relation/>
+    <dc:source>http://www.gnome.org/</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>preferences</rdf:li>
+      <rdf:li>desktop</rdf:li>
+      <rdf:li>locale</rdf:li>
+      <rdf:li>language</rdf:li>
+      <rdf:li/>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect5941" x="2" y="-1.476e-15" width="12" height="48" rx="0" ry="0" style="fill:#fff"/>
+  <path id="rect5911" d="m10 32.072s2.9207-2.7204 8.5476-2.7204c5.5334 0 8.9688 2.7425 15.832 2.7204s11.62-2.8562 11.62-2.8562v-27.175s-4.8977 2.9262-11.62 2.9704c-6.724 0.044203-9.6434-3.1396-16.019-3.007-6.2821 0.13258-8.3605 4.0677-8.3605 4.0677v26z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+  <rect id="rect5939" x="6" y="4" width="4.253" height="40" rx="0" ry="0"/>
+  <rect id="rect2170" width="48" height="48" rx="0" ry="0" style="fill:none;opacity:.6"/>
+ </g>
+</svg>

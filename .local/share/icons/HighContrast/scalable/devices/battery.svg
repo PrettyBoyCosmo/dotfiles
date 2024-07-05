@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>battery</rdf:li>
+      <rdf:li>recharge</rdf:li>
+      <rdf:li>power</rdf:li>
+      <rdf:li>acpi</rdf:li>
+      <rdf:li>apm</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:title>Battery</dc:title>
+    <dc:date>September 2006</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="rect7943" d="m20.281 2c-2.9285 0-5.2812 2.3527-5.2812 5.2812v0.71875h-1.8438c-3.4055 0-6.1562 2.7508-6.1562 6.1562v25.688c0 3.4055 2.7508 6.1562 6.1562 6.1562h20.688c3.4055 0 6.1562-2.7508 6.1562-6.1562v-25.688c0-3.4055-2.7508-6.1562-6.1562-6.1562h-1.8438v-0.71875c0-2.9285-2.3527-5.2812-5.2812-5.2812h-6.4375z" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#fff"/>
+  <rect id="rect5744" x="10.5" y="11.5" width="26" height="31" rx="1.5004" ry="1.5004" style="stroke-linecap:round;stroke-width:3;stroke:#000"/>
+  <rect id="rect6634" x="18.5" y="5.5" width="10" height="6" rx="1.5004" ry="1.5004" style="fill:#fff;stroke-linecap:round;stroke-width:3;stroke:#000"/>
+  <rect id="rect2758" x="13" y="14" width="21.267" height="26.209" rx="1.5004" ry="1.5004" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path4046" d="m30 18.032-4.4204 5.3895 3.791 3.3443-9.2738 10.235 1.0601-8.9859-4.1569-3.1112 3.8806-6.9028 9.1194 0.031528z" style="fill-rule:evenodd"/>
+ </g>
+</svg>

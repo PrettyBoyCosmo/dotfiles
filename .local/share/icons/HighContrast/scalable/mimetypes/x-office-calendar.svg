@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" width="48" height="48" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Office Calendar</dc:title>
+    <dc:date>December 2008</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>office</rdf:li>
+      <rdf:li>calendar</rdf:li>
+      <rdf:li>appointmens</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Inspired by calendar icon on Nokia E71</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect3155" width="48" height="48" style="fill:none"/>
+  <rect id="rect3245" x="30" y="3" width="6" height="13" ry="2.1348" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6;stroke:#fff"/>
+  <rect id="rect3243" x="12" y="3" width="6" height="13" ry="2.2642" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6;stroke:#fff"/>
+  <rect id="rect3241" x="4" y="8" width="40" height="36" ry="5.8221" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect3221" x="4" y="8" width="40" height="36" ry="5.8221"/>
+  <rect id="rect3223" x="7" y="11" width="34" height="30" ry="2.9757" style="fill:#fff"/>
+  <rect id="rect3225" x="12" y="3" width="6" height="11" ry="2.1348" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2;stroke:#fff"/>
+  <rect id="rect3229" x="30" y="3" width="6" height="11" ry="2.2642" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2;stroke:#fff"/>
+  <path id="path3233" d="m15 17v20" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+  <path id="path3235" d="m33 17v20" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+  <path id="path3237" d="m24 17v20" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+  <path id="path3239" d="m11 24h26" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+  <path id="path3247" d="m11 17h26" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+  <path id="path3289" d="m11 32h26" style="fill:none;stroke-linecap:round;stroke-width:2;stroke:#000"/>
+ </g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg11300" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata4">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:title>Flip horizontal</dc:title>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>object flip horizontal</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path3969" d="m44 24-13-14v9h-14v-9l-13 14 13 14v-9h14v9l13-14z" style="color:#000000;display:block;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <path id="path1348" d="m44 24-13-14v9h-14v-9l-13 14 13 14v-9h14v9l13-14z" style="color:#000000;display:block"/>
+  <rect id="rect3089" width="48" height="48" rx="0" ry="0" style="fill:none"/>
+  <rect id="rect3091" x="48" width="0" height="0" rx="0" style="fill:none"/>
+ </g>
+</svg>

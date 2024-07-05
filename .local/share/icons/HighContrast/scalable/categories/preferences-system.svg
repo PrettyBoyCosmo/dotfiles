@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>System Preferences</dc:title>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:date>October 2006</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source>http://www.gnome.org</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>category</rdf:li>
+      <rdf:li>system</rdf:li>
+      <rdf:li>preferences</rdf:li>
+      <rdf:li>settings</rdf:li>
+      <rdf:li>control cenH</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path6743" d="m11.994 2.0051-7.9987 2.25v10.871l6.039 2.3438-1e-6 27.179 4.9048 1.4375 5.0563-1.4375 1e-6 -27.179 5.9589-2.3438v-10.871l-7.8768-2.25v8.0607h-6.0836v-8.0607z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+  <path id="path6745" d="m34.033 2.0714v6.5556l1-2e-7v17.524c-1.7319 0.46842-3.0714 2.0221-3.0714 3.9062v12.304c0 2.2556 1.8069 3.5625 4.0625 3.5625h4.0071c2.2556 0 4.0625-1.3069 4.0625-3.5625l1e-6 -12.304c0-1.8841-1.2681-3.4378-3-3.9062v-17.524h1v-6.5556l-8.0607 7e-7z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+ </g>
+</svg>

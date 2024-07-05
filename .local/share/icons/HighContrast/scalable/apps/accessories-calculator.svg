@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2394" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2399">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Accessories Calculator</dc:title>
+    <dc:date>May 2009</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>calculator</rdf:li>
+      <rdf:li>math</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A simplified calculator</dc:description>
+    <cc:license rdf:resource=""/>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Design based on existing icon in HighContast GNOME icon theme.</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2406" width="48" height="48" ry="0" style="fill:none"/>
+  <rect id="rect3194" x="6" y="4" width="35" height="40" ry="3.7986" style="fill:#fff;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect3178" x="6" y="4" width="35" height="40" ry="3.7986"/>
+  <rect id="rect3180" x="10" y="8" width="27" height="9" rx="1.332" ry="1.4326" style="fill:#fff"/>
+  <rect id="rect3182" x="10" y="23" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+  <rect id="rect3184" x="10" y="33" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+  <rect id="rect3186" x="20" y="23" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+  <rect id="rect3188" x="20" y="33" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+  <rect id="rect3190" x="30" y="23" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+  <rect id="rect3192" x="30" y="33" width="7" height="7" rx="1.3813" ry="1.3597" style="fill:#fff"/>
+ </g>
+</svg>

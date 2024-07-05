@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Video display</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/GPL/2.0/"/>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>monitor</rdf:li>
+      <rdf:li>display</rdf:li>
+      <rdf:li>video</rdf:li>
+      <rdf:li>screen</rdf:li>
+      <rdf:li>LCD</rdf:li>
+      <rdf:li>CRT</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect5087" width="48" height="48" style="fill:none"/>
+  <rect id="rect4784" width="48" height="48" style="fill:none"/>
+  <path id="rect5040" d="m4.8886 2.6477h38.129c2.0251 0 3.501 1.5304 3.501 3.8872l0.011876 30.465-45.034-0.020298 0.01633-30.646c0-1.9015 1.5394-3.6859 3.3758-3.6859z" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.1061;stroke:#fff"/>
+  <path id="path6541" d="m18 34s1 6-7.0076 6c-2.5057 0-1.9924 4.0352-1.9924 4.0352l30-0.035151s0.43175-3.9223-2.0849-3.941c-7.9151-0.058968-6.9151-6.059-6.9151-6.059h-12z" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <path id="path9222" d="m18 33.343s1.197 5.7373-6.8107 5.7022c-2.5057-0.010999-2.1893 4.9544-2.1893 4.9544h30.085s0.30042-4.9074-2.2162-4.926c-8-0.058968-6.8687-5.665-6.8687-5.665l-12-0.065664z" style="fill-rule:evenodd"/>
+  <path id="path2175" d="m7.3758 5.5616 33.123-0.18774c2.0251 0 3.501 1.4277 3.501 3.6261v25h-40v-25c0-1.7738 1.5394-3.4384 3.3758-3.4384z" style="fill-rule:evenodd"/>
+  <path id="path23408" d="m33.807 12.495c0.38938 0.9201 0.59375 1.9386 0.59375 3-1e-6 4.2457-3.4418 7.6875-7.6875 7.6875-1.24 0-2.3999-0.2906-3.4375-0.8125 1.1682 2.7603 3.9095 4.6875 7.0938 4.6875 4.2457 0 7.6875-3.4418 7.6875-7.6875 0-3.0058-1.7348-5.6099-4.25-6.875z" style="fill:#fff;stroke-linejoin:round;stroke-width:1.8851;stroke:#fff"/>
+  <path id="path1906" transform="translate(1 -2.1395)" d="m17.877 27.119a2.9384 3.0205 0 1 1-5.8769 0 2.9384 3.0205 0 1 1 5.8769 0z" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2795" transform="translate(-1 -13.14)" d="m17.877 27.119a2.9384 3.0205 0 1 1-5.8769 0 2.9384 3.0205 0 1 1 5.8769 0z" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2797" transform="translate(11 -15.14)" d="m17.877 27.119a2.9384 3.0205 0 1 1-5.8769 0 2.9384 3.0205 0 1 1 5.8769 0z" style="fill-rule:evenodd;fill:#fff"/>
+ </g>
+</svg>

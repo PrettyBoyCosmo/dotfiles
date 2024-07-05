@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1872" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1877">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Keyboard</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>keyboard device input</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A keybord</dc:description>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect4564" x="4" y="10" width="40" height="26" rx="2.0384" ry="2.2341" style="fill-rule:evenodd;stroke-width:8;stroke:#fff"/>
+  <rect id="rect1880" x="4" y="10" width="40" height="26" rx="2.0384" ry="2.2341" style="fill-rule:evenodd"/>
+  <path id="path2768" d="m14 30h19" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3655" d="m7 30h5" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3657" d="m35 30h6" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3659" d="m7 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3661" d="m13 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3663" d="m19 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3665" d="m25 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3667" d="m31 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3669" d="m34 23h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3671" d="m28 23h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3673" d="m22 23h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path3675" d="m16 23h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path5451" d="m37 16h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path5453" d="m10 23h4" style="fill:none;stroke-width:4;stroke:#fff"/>
+ </g>
+</svg>

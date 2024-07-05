@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4932" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata4937">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Mail Reply All</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Kevin Kubasik</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source/>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title/>
+     </cc:Agent>
+    </dc:rights>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>mail</rdf:li>
+      <rdf:li>email</rdf:li>
+      <rdf:li>sender</rdf:li>
+      <rdf:li>reply to</rdf:li>
+      <rdf:li>reply to sender</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource=""/>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson, Luca Ferretti</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2386" width="48" height="48" ry="0" style="fill:none"/>
+  <path id="path3164" d="m11.792 26.102c-1.0081-1.016-1.0081-3.048 0-4.064l10.081-14.224c1.0081-2.032 6.0487-3.048 6.0487 1.016v9.1441c10.84 0.037882 11.093-4.213 11.089-7.1121h6.0487c0.021802 8.4091-4.5126 19.124-17.138 19.304v9.1441c0 4.064-5.0406 3.048-6.0487 1.016l-10.081-14.224z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6.0723;stroke:#fff"/>
+  <path id="path3162" d="m3.8449 26.02c-1.0355-1.0102-1.0355-3.0307 0-4.0409l10.355-14.143c1.0355-2.0205 6.2128-3.0307 6.2128 1.0102v30.307c0 4.0409-5.1773 3.0307-6.2128 1.0102l-10.355-14.143z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:6.1366;stroke:#fff"/>
+  <path id="path3160" d="m4 26c-1-1-1-3 0-4l10-14c1-2 6-3 6 1v30c0 4-5 3-6 1l-10-14z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2;stroke:#fff"/>
+  <path id="rect4942" d="m12 26c-1-1-1-3 0-4l10-14c1-2 6-3 6 1v9c10.753 0.037284 11.003-4.1466 11-7h6c0.021627 8.2766-4.4763 18.823-17 19v9c0 4-5 3-6 1l-10-14z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2;stroke:#fff"/>
+  <rect id="rect7865" transform="scale(1,-1)" x="-103.62" y="-21.539" width="3" height="3" style="fill:#fff"/>
+  <rect id="rect9805" transform="scale(1,-1)" x="-103.62" y="-34.539" width="3" height="3" style="fill:#fff"/>
+  <rect id="rect2170" x="-124.62" y="2.5" width="48" height="48" rx="0" ry="0" style="fill:none;opacity:.6"/>
+ </g>
+</svg>

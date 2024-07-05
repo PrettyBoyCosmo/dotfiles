@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1307" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1312">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource=""/>
+    <dc:title>Insert Image</dc:title>
+    <dc:date>December 2008</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Vinicius Depizzol &lt;vdepizzol@gmail.com&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>image</rdf:li>
+      <rdf:li>picture</rdf:li>
+      <rdf:li>photo</rdf:li>
+      <rdf:li>insert</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2385" width="48" height="48" rx="0" ry="0" style="fill-opacity:0"/>
+  <rect id="rect6561" x="4" y="4" width="40" height="34" rx="3" ry="3" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <path id="path3165" transform="matrix(1 0 0 .76578 2.625 11.69)" d="m13.836 26.522h15.079l-7.5394 13.059-7.5394-13.059z" style="fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:13.713;stroke:#fff"/>
+  <rect id="rect1315" x="4" y="4" width="40" height="34" rx="3.3" ry="3.3" style="fill-rule:evenodd"/>
+  <rect id="rect6622" x="8" y="8" width="32" height="26" rx="1.5" ry="1.5" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2188" d="m4.062 30.062 8.938-11.062c1.6434-1.7984 2.7907-0.99225 4 0l8 9c3.093 3.1085-1.0078 6.093-3 3l-7-8-9.5116 11.946" style="fill-rule:evenodd"/>
+  <path id="path3962" d="m19.829 22.122 10.24-9.2016c1.6434-1.7984 2.7907-0.99225 4 0l7.814 6.1473c3.093 3.1085-1.0078 6.093-3 3l-6.814-5.1473-11.186 10.147" style="fill-rule:evenodd"/>
+  <path id="path3187" transform="matrix(1 0 0 .76578 2.625 11.69)" d="m13.836 26.522h15.079l-7.5394 13.059-7.5394-13.059z" style="fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:10.285;stroke:#fff"/>
+  <path id="path3159" transform="matrix(1 0 0 .76578 2.625 11.69)" d="m13.836 26.522h15.079l-7.5394 13.059-7.5394-13.059z" style="fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.571;stroke:#000"/>
+ </g>
+</svg>

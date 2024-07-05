@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1900" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata id="metadata1905">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Orca Screen Reader and Magnifier</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>orca</rdf:li>
+      <rdf:li>screen reader</rdf:li>
+      <rdf:li>screen magnifier</rdf:li>
+      <rdf:li>braille monitor</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A comic strip bubble with a magnify glass and a "O" in Braille insidX</dc:description>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>This icon was inspired by existing access tecnology icon in GNOME control center</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect3687" width="48" height="48" rx="0" ry="0" style="fill:none"/>
+  <rect id="rect3684" x="4.0055" y="3.9781" width="39.989" height="32.044" rx="2.8352" ry="2.8352" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:8.0109;stroke:#000"/>
+  <path id="path4578" d="m22.031 44.016c4.1399-2.2975 6.1473-4.3232 4.9528-8.4445l7.0171-0.033144c0.24617 4.1728-3.3142 8.1691-11.97 8.4777z" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#000"/>
+  <rect id="rect1908" x="4" y="4" width="40" height="32" rx="2.8352" ry="2.8352" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path2797" d="m22.031 44.016c4.1399-2.2975 6.1473-4.3232 4.9528-8.4445l7.0171-0.033144c0.24617 4.1728-3.3142 8.1691-11.97 8.4777z" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path6369" transform="translate(-15.984)" d="m36.59 15.049a5.8033 5.8033 0 1 1-11.607 0 5.8033 5.8033 0 1 1 11.607 0z" style="fill:none;stroke-width:4;stroke:#000"/>
+  <rect id="rect7258" transform="matrix(.86602 -.5 .5 .86602 0 0)" x="2.7986" y="27.167" width="5.2459" height="10.721" rx="2.8352" ry="2.8352" style="fill-rule:evenodd"/>
+  <path id="path5458" transform="translate(20.115 1.9508)" d="m12.885 10.008a2.8934 2.959 0 1 1-5.7869 0 2.8934 2.959 0 1 1 5.7869 0z" style="fill-rule:evenodd"/>
+  <use id="use6359" transform="translate(1.9998e-7 16)" width="48" height="48" xlink:href="#path5458"/>
+  <use id="use6361" transform="translate(8,8)" width="48" height="48" xlink:href="#path5458"/>
+ </g>
+</svg>

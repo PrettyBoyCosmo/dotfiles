@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1872" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1877">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>About</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>help</rdf:li>
+      <rdf:li>about</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A star</dc:description>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect3653" width="48" height="48.329" rx="0" ry="0" style="fill:none"/>
+  <path id="path5425" transform="matrix(1.1782 0 0 1.1837 -4.2711 -1.0801)" d="m24.132 5.1288 4.8682 10.16 11.13 1.7496-8.1585 7.7696 1.7753 11.125-9.9105-5.3582-10.032 5.1263 2.0335-11.081-7.9756-7.9572 11.167-1.4903 5.1032-10.044z" style="fill-rule:evenodd;fill:#fff;stroke-linejoin:round;stroke-width:8.4523;stroke:#fff"/>
+  <path id="path1880" transform="matrix(1.1781 0 0 1.1692 -4.2694 -1.0044)" d="m24.132 5.1288 4.8682 10.16 11.13 1.7496-8.1585 7.7696 1.7753 11.125-9.9105-5.3582-10.032 5.1263 2.0335-11.081-7.9756-7.9572 11.167-1.4903 5.1032-10.044z" style="fill-rule:evenodd;stroke-linejoin:round;stroke-width:1.6905;stroke:#000"/>
+ </g>
+</svg>

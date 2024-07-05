@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1306" width="48px" height="48px" sodipodi:docbase="/home/betatester/Desktop" sodipodi:docname="applications-graphics.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" pagecolor="#ffffff" showgrid="true"/>
+ <metadata id="metadata1311">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2290" width="48" height="48" ry="0" style="fill:none"/>
+  <path id="path3750" d="m20 27 6 4c5.6457-3.2875 12.487-10.359 15.427-20l-10.427-7c-6.0341 4.5653-9.118 12.647-11 23z" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff" sodipodi:nodetypes="ccccc"/>
+  <path id="path5221" d="m9 43c11 1 16.461-2 15-11l-4-2c-8 2-3 9-11 13z" style="fill-rule:evenodd;fill:#fff;stroke-linejoin:round;stroke-width:8;stroke:#fff" sodipodi:nodetypes="cccc"/>
+  <path id="path3020" d="m21 28 4 2c5.6457-3.2875 13.487-9.3587 16.427-19l-10.427-7c-6.0341 4.5653-8.118 13.647-10 24z" style="fill-rule:evenodd" sodipodi:nodetypes="ccccc"/>
+  <path id="path3748" d="m9 43c11 1 16.461-2 15-11l-4-2c-8 2-3 9-11 13z" style="fill-rule:evenodd" sodipodi:nodetypes="cccc"/>
+ </g>
+</svg>

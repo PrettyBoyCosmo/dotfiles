@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2383" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2388">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Weather Fog</dc:title>
+    <dc:date>December 2008</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:coverage/>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>feather</rdf:li>
+      <rdf:li>fog</rdf:li>
+      <rdf:li>no visibility</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>three horizontal bar, representing no visibility due fog</dc:description>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2397" width="48" height="48" style="fill:none"/>
+  <rect id="rect3168" x="2" y="6" width="44" height="11" ry="5.5" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+  <rect id="rect3182" x="2" y="31" width="44" height="11" ry="5.5" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+  <rect id="rect3184" x="2" y="18" width="44" height="11" ry="5.5" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+ </g>
+</svg>

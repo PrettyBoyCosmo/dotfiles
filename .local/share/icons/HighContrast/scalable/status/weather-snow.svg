@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2383" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2388">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Weather Snow</dc:title>
+    <dc:date>December 2008</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>weather</rdf:li>
+      <rdf:li>snow</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>Snow crystals</dc:description>
+    <cc:license rdf:resource=""/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2393" width="48" height="48" style="fill:none"/>
+  <g id="g3412" transform="translate(16.922 17)" style="stroke-width:12;stroke:#fff">
+   <path id="path3414" d="m16 5v20" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+   <path id="path3416" d="m25.046 10.033-18.013 9.9343" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+   <path id="path3418" d="m24.971 19.971-17.941-9.941" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+  </g>
+  <g id="g3428" transform="translate(-1.0456 1)" style="stroke-width:12;stroke:#fff">
+   <path id="path3430" d="m16 5v20" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+   <path id="path3432" d="m25.046 10.033-18.013 9.9343" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+   <path id="path3434" d="m24.971 19.971-17.941-9.941" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff"/>
+  </g>
+  <g id="g3399" transform="translate(-1,1)">
+   <path id="path3389" d="m16 5v20" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000"/>
+   <path id="path3393" d="m25.046 10.033-18.013 9.9343" style="fill:none;stroke-linecap:round;stroke-width:4.0657;stroke:#000"/>
+   <path id="path3395" d="m24.971 19.971-17.941-9.941" style="fill:none;stroke-linecap:round;stroke-width:4.059;stroke:#000"/>
+  </g>
+  <g id="g3404" transform="translate(16.922 17)">
+   <path id="path3406" d="m16 5v20" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000"/>
+   <path id="path3408" d="m25.046 10.033-18.013 9.9343" style="fill:none;stroke-linecap:round;stroke-width:4.0657;stroke:#000"/>
+   <path id="path3410" d="m24.971 19.971-17.941-9.941" style="fill:none;stroke-linecap:round;stroke-width:4.059;stroke:#000"/>
+  </g>
+ </g>
+</svg>

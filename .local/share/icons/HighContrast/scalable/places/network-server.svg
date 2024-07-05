@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1315" width="48px" height="48px" sodipodi:docbase="/home/luca/Artwork/blackwhite-icon-theme/scalable/places" sodipodi:docname="network-server.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" pagecolor="#ffffff" showgrid="true"/>
+ <metadata id="metadata1320">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Network Server Icon</dc:title>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>server</rdf:li>
+      <rdf:li>network</rdf:li>
+      <rdf:li>remote</rdf:li>
+      <rdf:li>resource</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A remote server or resource icon</dc:description>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect1323" width="48" height="48" rx="0" ry="0" style="fill:none"/>
+  <rect id="rect2179" x="12" y="5" width="24" height="39" ry="3.2168" style="fill-rule:evenodd;fill:#fff;stroke-width:8;stroke:#fff"/>
+  <path id="path6567" d="m6 32h6" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff" sodipodi:nodetypes="cc"/>
+  <path id="path7442" d="m36 32h6" style="fill:none;stroke-linecap:round;stroke-width:12;stroke:#fff" sodipodi:nodetypes="cc"/>
+  <rect id="rect2198" x="12" y="5" width="24" height="39" ry="3.2168" style="fill-rule:evenodd"/>
+  <rect id="rect3054" x="16" y="9" width="16" height="31" ry="1.2615" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path3929" d="m18 13h12" style="fill:none;stroke-width:4;stroke:#000"/>
+  <path id="path4804" d="m18 19h12" style="fill:none;stroke-width:4;stroke:#000"/>
+  <path id="path4806" d="m18 25h12" style="fill:none;stroke-width:4;stroke:#000"/>
+  <path id="path5690" d="m36 32h6" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+  <path id="path6565" d="m6 32h6" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+ </g>
+</svg>

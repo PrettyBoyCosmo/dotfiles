@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1872" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1877">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Video Camera</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>camera</rdf:li>
+      <rdf:li>video</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Based on a webcast icon I seen on Novell website.</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+    <dc:description>A video camera device</dc:description>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path6410" d="m10.53 10h12.404l0.065395 8" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:12;stroke:#fff"/>
+  <path id="path5523" d="m28 22 8-6h6v19h-6l-8-6" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect4636" x="5" y="15.714" width="24.429" height="19.857" ry="2.2888" style="fill-rule:evenodd;fill:#fff;stroke-width:8;stroke:#fff"/>
+  <rect id="rect1971" x="5" y="15.714" width="24.429" height="19.857" ry="2.2888" style="fill-rule:evenodd"/>
+  <path id="path1973" d="m28 22 8-6h6v19h-6l-8-6" style="fill-rule:evenodd"/>
+  <path id="path1975" d="m10.53 10h12.404l0.065395 8" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#000"/>
+ </g>
+</svg>

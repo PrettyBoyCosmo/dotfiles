@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1307" width="48px" height="48px" sodipodi:docbase="/home/luca/Artwork/blackwhite-icon-theme/scalable/categories" sodipodi:docname="preferences-desktop-personal.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" pagecolor="#ffffff" showgrid="true"/>
+ <metadata id="metadata1312">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect1315" width="48" height="48" style="fill:none"/>
+  <rect id="rect2190" x="4" y="4" width="40" height="40" ry="4.1656" style="fill-rule:evenodd;fill:#fff;stroke-width:8;stroke:#fff"/>
+  <rect id="rect3938" x="4" y="4" width="40" height="40" ry="4.1656" style="fill-rule:evenodd"/>
+  <path id="path4813" d="m15 9v30" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <path id="path5688" d="m33 9v30" style="fill:none;stroke-width:4;stroke:#fff"/>
+  <rect id="rect5692" x="7" y="24" width="16" height="10" ry="2.9479" style="fill-rule:evenodd;fill:#fff"/>
+  <path id="path7442" d="m12 23h6" style="fill:none;stroke-width:2;stroke:#000"/>
+  <path id="path8317" d="m12 35h6" style="fill:none;stroke-width:2;stroke:#000"/>
+  <path id="path9192" d="m30 13h6" style="fill:none;stroke-width:2;stroke:#000"/>
+  <path id="path9194" d="m30.449 25h6" style="fill:none;stroke-width:2;stroke:#000"/>
+  <rect id="rect9196" x="25" y="14" width="16" height="10" rx="2.9479" ry="2.9479" style="fill-rule:evenodd;fill:#fff"/>
+ </g>
+</svg>

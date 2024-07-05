@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2160" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata id="metadata2165">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:title>Generic Video File</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>video</rdf:li>
+      <rdf:li>movie</rdf:li>
+      <rdf:li>file</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:coverage>A generic icon for video files</dc:coverage>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect2192" width="48" height="48" style="fill:none"/>
+  <rect id="rect4142" transform="rotate(-90)" x="-43.002" y="6.9985" width="38.002" height="33.995" style="fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:7.9854;stroke:#fff"/>
+  <rect id="rect2176" transform="rotate(-90)" x="-43" y="7" width="38" height="34"/>
+  <rect id="rect5113" transform="rotate(-90)" x="-41.039" y="9.0166" width="3.9061" height="2.9088" ry=".86188" style="fill:#fff"/>
+  <use id="use6084" transform="translate(-.016575 -6.0394)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6086" transform="translate(-.016575 -12.039)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6090" transform="translate(-.016575 -18.039)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6092" transform="translate(-.016575 -24.133)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6094" transform="translate(-.016575 -30.133)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6098" transform="translate(27.075 -.039413)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6100" transform="translate(26.983 -6.0394)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6102" transform="translate(26.983 -12.039)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6104" transform="translate(27.075 -18.133)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6106" transform="translate(27.075 -24.133)" width="48" height="48" xlink:href="#rect5113"/>
+  <use id="use6108" transform="translate(26.983 -30.133)" width="48" height="48" xlink:href="#rect5113"/>
+  <rect id="rect2188" x="14" y="26" width="20" height="14.933" rx="1.4733" ry="1.547" style="fill:#fff"/>
+  <rect id="rect2190" x="14" y="7.0667" width="20" height="14.933" rx="1.4733" ry="1.547" style="fill:#fff"/>
+ </g>
+</svg>

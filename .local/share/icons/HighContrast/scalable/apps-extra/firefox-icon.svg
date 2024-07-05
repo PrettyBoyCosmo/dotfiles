@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" width="48px" height="48px" sodipodi:docbase="/home/luca/Desktop" sodipodi:docname="applications-internet.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" pagecolor="#ffffff" showgrid="true" showguides="true">
+  <sodipodi:guide id="guide4040" orientation="horizontal" position="43.968504"/>
+  <sodipodi:guide id="guide4042" orientation="vertical" position="4.0314961"/>
+  <sodipodi:guide id="guide4044" orientation="horizontal" position="4.0314961"/>
+  <sodipodi:guide id="guide4046" orientation="vertical" position="44.094488"/>
+  <sodipodi:guide id="guide4776" orientation="horizontal" position="40.000000"/>
+  <sodipodi:guide id="guide4778" orientation="vertical" position="8.0000000"/>
+  <sodipodi:guide id="guide4780" orientation="horizontal" position="7.9370079"/>
+  <sodipodi:guide id="guide4782" orientation="vertical" position="40.062992"/>
+ </sodipodi:namedview>
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path3312" d="m48 24a24 24 0 1 1-48 0 24 24 0 1 1 48 0z" style="fill-rule:evenodd;fill:#fff" sodipodi:cx="24.000000" sodipodi:cy="24.000000" sodipodi:rx="24.000000" sodipodi:ry="24.000000" sodipodi:type="arc"/>
+  <path id="path4048" d="m44 24a20 20 0 1 1-40 0 20 20 0 1 1 40 0z" style="fill-rule:evenodd" sodipodi:cx="24.000000" sodipodi:cy="24.000000" sodipodi:rx="20.000000" sodipodi:ry="20.000000" sodipodi:type="arc"/>
+  <path id="path4784" d="m40 24a16 16 0 1 1-32 0 16 16 0 1 1 32 0z" style="fill-rule:evenodd;fill:#fff" sodipodi:cx="24.000000" sodipodi:cy="24.000000" sodipodi:rx="16.000000" sodipodi:ry="16.000000" sodipodi:type="arc"/>
+  <path id="path5512" d="m10 34.25c8-3 20-3 28 0" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+  <path id="path5516" d="m7.9685 24h32.063" style="fill:none;stroke-width:4;stroke:#000"/>
+  <path id="path5520" d="m20 7.5512c-5 10.449-5 23.449 0 33.449" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+  <path id="path6250" d="m10 13.75c8 3 20 3 28 0" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+  <path id="path9156" d="m28 7.5512c5 10.449 5 23.449 0 33.449" style="fill:none;stroke-linecap:round;stroke-width:4;stroke:#000" sodipodi:nodetypes="cc"/>
+ </g>
+</svg>

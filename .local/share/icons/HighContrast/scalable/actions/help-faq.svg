@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1900" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata1905">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>FAQ</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti &lt;elle.uca@libero.it&gt;</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>help</rdf:li>
+      <rdf:li>faq</rdf:li>
+      <rdf:li>question</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>A comic-strip bubble with a ? inside</dc:description>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path4571" d="m23.484 44c-4.1399-2.2788-5.0085-4.2243-4.8525-8.5246l-6.6885-0.065574c-0.19672 2.929 2.8852 8.2842 11.541 8.5902z" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect3684" x="4" y="4" width="39.934" height="32" rx="2.8352" ry="2.8352" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect1908" x="4" y="4" width="39.934" height="32" rx="2.8352" ry="2.8352" style="fill-rule:evenodd"/>
+  <path id="path2797" d="m23.484 44c-4.1399-2.2788-4.8774-4.0276-4.7213-8.3279l-6.8197-0.065574c-0.19672 2.929 2.8852 8.0874 11.541 8.3934z" style="fill-rule:evenodd"/>
+  <rect id="rect1879" x="8" y="8" width="32.066" height="24" rx="1.4581" ry="1.9171" style="fill-rule:evenodd;fill:#fff"/>
+  <text id="text2770" x="14.814453" y="30.557377" style="fill:black;font-family:Bitstream Vera Sans Mono;font-size:28px;font-weight:bold;line-height:100%;stroke-width:1px" xml:space="preserve"><tspan id="tspan2772" x="14.814453" y="30.557377">?</tspan></text>
+ </g>
+</svg>

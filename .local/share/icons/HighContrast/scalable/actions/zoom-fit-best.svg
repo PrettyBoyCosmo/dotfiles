@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg249" width="48px" height="48px" sodipodi:docbase="/home/luca/Desktop" sodipodi:docname="zoom-best-fit.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" fill="#729fcf" stroke="#2e3436" bordercolor="#666666" borderopacity="1" gridempspacing="2" gridspacingx="0.5px" gridspacingy="0.5px" pagecolor="#b6b6b6" showborder="true" showgrid="true" showguides="false">
+  <sodipodi:guide id="guide1415" orientation="horizontal" position="28"/>
+  <sodipodi:guide id="guide1417" orientation="vertical" position="19"/>
+ </sodipodi:namedview>
+ <metadata id="metadata4">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Zoom</dc:title>
+    <dc:subject>
+     <rdf:Bag/>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title/>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source/>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title/>
+     </cc:Agent>
+    </dc:contributor>
+    <dc:date/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer5">
+  <rect id="rect1493" width="48" height="48" style="fill:none"/>
+  <path id="path3244" d="m40 20a20 20 0 1 1-40 0 20 20 0 1 1 40 0z" style="fill:#fff" sodipodi:cx="20" sodipodi:cy="20" sodipodi:rx="20" sodipodi:ry="20" sodipodi:type="arc"/>
+  <path id="path2682" d="m29.5 29.5 2 6.5 7 7.5c0.48247 0.51693 2.7322 1.2678 4.5-0.5 1.5-1.5 1.0333-4.0022 0.5-4.5l-7.5-7-6.5-2z" style="color:#000000;fill:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff" sodipodi:nodetypes="cczzzcc"/>
+  <path id="path4119" d="m36 20a16 16 0 1 1-32 0 16 16 0 1 1 32 0z" sodipodi:cx="20" sodipodi:cy="20" sodipodi:rx="16" sodipodi:ry="16" sodipodi:type="arc"/>
+  <path id="path4994" d="m32 20a12 12 0 1 1-24 0 12 12 0 1 1 24 0z" style="fill:#fff" sodipodi:cx="20" sodipodi:cy="20" sodipodi:rx="12" sodipodi:ry="12" sodipodi:type="arc"/>
+  <path id="path15511" d="m29.5 29.5 2 6.5 7 7.5c0.48247 0.51693 2.7322 1.2678 4.5-0.5 1.5-1.5 1.0333-4.0022 0.5-4.5l-7.5-7-6.5-2z" style="color:#000000" sodipodi:nodetypes="cczzzcc"/>
+  <rect id="rect17259" x="11.5" y="11.5" width="17" height="17" style="fill:none"/>
+  <rect id="rect19009" x="13" y="13" width="14" height="14" style="fill:#fff;stroke-linecap:round;stroke-width:3;stroke:#000"/>
+ </g>
+</svg>

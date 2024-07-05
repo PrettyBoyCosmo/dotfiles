@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg16888" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata16893">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Edit Copu</dc:title>
+    <dc:date>November 2007</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Luca Ferretti</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source>http://www.gnome.org</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>edit</rdf:li>
+      <rdf:li>copy</rdf:li>
+      <rdf:li>copy to clipboard</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect3157" width="48" height="48" style="fill:none"/>
+  <rect id="rect3155" x="19" y="5" width="24" height="21.357" ry="2.5" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect2181" x="5" y="21.643" width="24" height="21.357" ry="2.5" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:8;stroke:#fff"/>
+  <rect id="rect11064" x="5" y="22" width="24" height="21" ry="3.0348"/>
+  <rect id="rect11066" x="8" y="25" width="18" height="15" ry="0" style="fill:#fff"/>
+  <path id="path12037" d="m11 29.5h12" style="fill:none;stroke-width:3;stroke:#000"/>
+  <path id="path13008" d="m11 35.5h12" style="fill:none;stroke-width:3;stroke:#000"/>
+  <rect id="rect16900" x="19" y="5" width="24" height="21" ry="3.1685"/>
+  <rect id="rect16902" x="22" y="8" width="18" height="15" ry="0" style="fill:#fff"/>
+  <path id="path16904" d="m25 12.5h12" style="fill:none;stroke-width:3;stroke:#000"/>
+  <path id="path16906" d="m25 18.5h12" style="fill:none;stroke-width:3;stroke:#000"/>
+ </g>
+</svg>

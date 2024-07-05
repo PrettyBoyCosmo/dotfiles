@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg5490" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata5495">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>System Applications</dc:title>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/LGPL/2.1/"/>
+    <dc:date>October 2006</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Andreas Nilsson</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:source>http://www.gnome.org</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>system</rdf:li>
+      <rdf:li>applications</rdf:li>
+      <rdf:li>group</rdf:li>
+      <rdf:li>category</rdf:li>
+      <rdf:li>admin</rdf:li>
+      <rdf:li>root</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path5498" d="m19.586 2v5.8514c-1.3689 0.35423-2.4828 0.86775-3.6925 1.5364l-4.0862-4.0862-6.6686 6.6686 4.1189 4.0862v0.032689c-0.80156 1.4811-1.4074 2.7033-1.7325 4.4103h-5.5245v8.9611h6.0802c0.31082 0.9421 0.71144 1.6558 1.1768 2.5157 0.0046083 0.008517-0.0046226 0.024183 0 0.032689l-4.1189 4.0862 6.6686 6.6686 4.0862-4.0862c1.2097 0.66865 2.3236 1.1822 3.6925 1.5364v5.786h8.9611v-5.786c1.3445-0.34792 2.2382-0.85207 3.4296-1.5037l4.1516 4.1516 6.6686-6.6686-4.1516-4.1516c0.481-0.87937 0.8908-1.615 1.2095-2.5811h6.1456v-8.9611h-5.5899c-0.32995-1.7322-0.94538-2.9768-1.7652-4.4756l4.1516-4.1516-6.6686-6.6686-4.1516 4.1516c-1.1914-0.65165-2.0851-1.1558-3.4296-1.5037v-5.8514h-8.9611zm4.3818 14.71c4.042 1e-6 7.3224 3.2805 7.3224 7.3224-1e-6 4.042-3.2804 7.3224-7.3224 7.3224s-7.3224-3.2805-7.3224-7.3224c0-4.042 3.2804-7.3224 7.3224-7.3224z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:4;stroke:#fff"/>
+ </g>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" width="48px" height="48px" sodipodi:docbase="/home/luca/Desktop/black-and-white/scalable/categories" sodipodi:docname="applications-games.svg" sodipodi:version="0.32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" pagecolor="#ffffff" showgrid="true"/>
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Games</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>elle.uca@libero.it</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>games</rdf:li>
+      <rdf:li>applications</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/GPL/2.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/SourceCode"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <rect id="rect3312" width="48" height="48" style="fill:none"/>
+  <rect id="rect4768" x="7" y="4" width="34" height="40" ry="2.8198" style="fill-rule:evenodd;fill:#fff;stroke-width:8;stroke:#fff"/>
+  <rect id="rect4040" x="7" y="4" width="34" height="40" ry="2.8198" style="fill-rule:evenodd"/>
+  <path id="path5496" d="m23.755 15.99c3.6858-7.0601 14.137-3.2191 13.125 3.4465-1.0026 6.6043-9.8782 15.095-13 16.564-3.3325-1.5318-11.94-9.9077-12.817-16.501-0.91231-6.8568 8.2315-10.59 12.692-3.5091z" style="fill-rule:evenodd;fill:#fff" sodipodi:nodetypes="czczc"/>
+  <path id="path6950" d="m12.513 7.7505c0.72615-1.3909 2.7852-0.6342 2.5859 0.679-0.19753 1.3011-1.9461 2.9739-2.5612 3.2633-0.65654-0.30178-2.3523-1.952-2.5252-3.251-0.17974-1.3509 1.6217-2.0864 2.5005-0.69135z" style="fill-rule:evenodd;fill:#fff" sodipodi:nodetypes="czczc"/>
+  <path id="path6952" d="m35.401 40.249c0.72615 1.3909 2.7852 0.6342 2.5859-0.679-0.19753-1.3011-1.9461-2.9739-2.5612-3.2633-0.65654 0.30178-2.3523 1.952-2.5252 3.251-0.17974 1.3509 1.6217 2.0864 2.5005 0.69135z" style="fill-rule:evenodd;fill:#fff" sodipodi:nodetypes="czczc"/>
+ </g>
+</svg>

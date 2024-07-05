@@ -14,7 +14,7 @@ sudo ./strap.sh
 sudo pacman -Syu --noconfirm
 
 # install packages
-sudo pacman -S xonsh python-pygments python-prompt_toolkit python-setproctitle python-netifaces python-pwntools neovim kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster dirb btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent lua --noconfirm
+sudo pacman -S xonsh python-pygments python-prompt_toolkit python-setproctitle python-netifaces python-pwntools neovim kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster dirb btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent noto-fonts-emoji --noconfirm
 # removed packages (arch) : brightnessctl playerctl 
 
 # yay
@@ -32,6 +32,7 @@ pipx inject xonsh xontrib-vox
 yay -S xontrib-vox-git --noconfirm
 
 # clone dotfiles
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/PrettyBoyCosmo/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles
