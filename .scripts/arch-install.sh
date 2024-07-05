@@ -14,7 +14,7 @@ sudo ./strap.sh
 sudo pacman -Syu --noconfirm
 
 # install packages
-sudo pacman -S xonsh python-pygments python-prompt_toolkit python-setproctitle python-netifaces python-pwntools neovim kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster dirb btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent noto-fonts-emoji --noconfirm
+sudo pacman -S xonsh python-pygments python-prompt_toolkit python-setproctitle python-netifaces python-pwntools neovim kitty firefox tmux p7zip git python3 python-pip python-pipx python-pwntools python-netifaces net-tools lua zoxide i3-wm i3blocks i3lock polybar flatpak xorg-xrandr arandr stow fzf flameshot feh lxappearance mate-media mingw-w64-gcc htop wireshark-cli nmap hashcat hydra gobuster btop ffmpeg jdk21-openjdk proxychains-ng hexedit docker docker-compose stow fzf ripgrep exa gcc-multilib gdb gcc nasm xclip ranger rofi spice-vdagent noto-fonts-emoji --noconfirm
 # removed packages (arch) : brightnessctl playerctl 
 
 # yay
@@ -22,7 +22,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 cd $HOME
-yay -S picom-git ttf-font-awesome-5
+yay -S picom-git ttf-font-awesome-5 --noconfirm
 # removed packages (aur) : nerd-fonts-git
 
 # xonsh
@@ -52,26 +52,26 @@ rm -rf arch-install.sh strap.sh yay-bin
 # sudo chown $username /sys/class/backlight/intel_backlight/brightness
 
 # virtual machines with "qemu" and "virtual machine manger"
-# sudo pacman -Syy
-# sudo pacman -S archlinux-keyring qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+sudo pacman -Syy
+sudo pacman -S archlinux-keyring qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
 
-# sudo systemctl enable libvirtd.service
-# sudo systemctl start libvirtd.service
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
 
 # check proper install in : /etc/libvirt/libvirtd.conf
 # line 85 : unix_sock_group = "libvirt"
 # line 108 : unix_sock_rw_perms = "0770"
 
-# sudo usermod -a -G libvirt $(whoami)
-# newgrp libvirt
+sudo usermod -a -G libvirt $(whoami)
+newgrp libvirt
 
 # nested virtualization
 
 ### Intel Processor ###
-# sudo modprobe -r kvm_intel
-# sudo modprobe kvm_intel nested=1
-# echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
-# systool -m kvm_intel -v | grep nested
+sudo modprobe -r kvm_intel
+sudo modprobe kvm_intel nested=1
+echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
+systool -m kvm_intel -v | grep nested
 
 ### AMD Processor ###
 #sudo modprobe -r kvm_amd
