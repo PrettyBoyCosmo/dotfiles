@@ -1,0 +1,138 @@
+[global_config]
+  focus = mouse
+  borderless = True
+  tab_position = bottom
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  suppress_multiple_term_dialog = True
+[keybindings]
+  cycle_prev = <Primary><Shift>Tab
+  go_up = <Super>k
+  go_down = <Super>j
+  go_left = <Super>h
+  go_right = <Super>l
+  split_horiz = <Primary><Shift>o
+  split_vert = <Primary><Shift>e
+  search = ""
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
+  group_all = ""
+  group_tab = ""
+  broadcast_group = <Primary><Shift>Escape
+  broadcast_all = <Primary>Escape
+  edit_tab_title = ""
+  preferences = F1
+  help = ""
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_color = "#0d0f10"
+    cursor_color = "#007991"
+    font = Cascadia Mono PL Semi-Bold 22
+    foreground_color = "#80b6ad"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff"
+    login_shell = True
+    custom_command = b
+    use_system_font = False
+    bold_is_bright = True
+  [[powershell]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 22
+    foreground_color = "#839496"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_custom_command = True
+    custom_command = powershell
+    use_system_font = False
+    bold_is_bright = True
+  [[cosmo]]
+    icon_bell = False
+    background_color = "#0f1c21"
+    cursor_color = "#007991"
+    font = Cascadia Mono PL Semi-Bold 22
+    foreground_color = "#80b6ad"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#000000:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff:#465b60:#308891:#66dcc6:#465b60:#83a598:#f9f06b:#00ffff:#ffffff"
+    use_custom_command = True
+    custom_command = xonsh
+    use_system_font = False
+    bold_is_bright = True
+  [[Nord]]
+    icon_bell = False
+    background_color = "#2E3440"
+    cursor_color = "#D8DEE9"
+    cursor_color_fg = False
+    font = Cascadia Mono PL Semi-Bold 22
+    foreground_color = "#D8DEE9"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
+    use_custom_command = True
+    custom_command = xonsh
+    use_system_font = False
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+  [[nvim]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 12:35
+      maximised = False
+      fullscreen = False
+      size = 941, 1151
+      title = bluecosmo@ccs: ~/development/marks | xonsh
+      last_active_term = 1db17976-3b05-48ef-99b4-d335af0c052f
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 811
+      ratio = 0.7076788830715532
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = bd2bcfba-8d70-4ecf-bcd5-9ed89794718d
+    [[[child3]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 467
+      ratio = 0.49893162393162394
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = acb1059c-82c2-4b67-b32f-0e2dfbd37c24
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = 1db17976-3b05-48ef-99b4-d335af0c052f
+[plugins]

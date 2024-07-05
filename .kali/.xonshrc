@@ -1,0 +1,224 @@
+# ~/.xonshrc
+# xonsh rc file
+# created by cosmo
+
+# imports
+import os
+import os.path
+import socket
+import subprocess
+from pwn import *
+
+# constants
+HOME = '/home/bluecosmo'
+NOTEBOOK = f'{HOME}/constellations'
+WORKFLOW = f'{HOME}/workflow'
+DEVELOPMENT = f'{HOME}/development'
+DOWNLOADS = f'{HOME}/Downloads'
+WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
+DISPLAY_SCRIPTS = f'{HOME}/.screenlayout'
+$SHELL = '/bin/bash'
+
+# get environment name (custom prompt)
+def env_name_cust(pre_chars='─[', post_chars=']'):
+    env_path = __xonsh__.env.get('VIRTUAL_ENV', '')
+    env_name = os.path.basename(env_path)
+    if env_name and env_name != 'xonsh':
+        return '{WHITE}'+pre_chars+'{CYAN}'+env_name+'{WHITE}'+post_chars
+
+import netifaces
+
+def get_tun0(pre_chars='─[', post_chars=']'):
+    try:
+        tun0_ip = netifaces.ifaddresses('tun0')[netifaces.AF_INET][0]['addr']
+        return '{WHITE}'+pre_chars+'{PURPLE}'+tun0_ip+'{WHITE}'+post_chars
+    except (KeyError, IndexError, ValueError):
+        return ''
+
+# get working directory
+def pwd():
+    return os.getcwd()
+
+# get output from system command
+def command_output(command):
+    result = subprocess.check_output(command).decode('utf-8')
+    return result.strip()
+
+# animated-wallpaper
+def animated_wallpaper(wp):
+    wp = wp[0]
+    os.system(f'bash /home/bluecosmo/media/photos/wallpapers/animated-wallpaper.sh /home/bluecosmo/media/photos/wallpapers/{wp}')
+
+# get local ip address (ipv4)
+def local_ip():
+    try:
+        temp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        temp_socket.connect(("8.8.8.8", 80))  
+        local_ip = temp_socket.getsockname()[0] 
+        temp_socket.close()
+        return local_ip
+    except socket.error:
+        return "Unable to retrieve local IP address"
+
+# set wallpaper (wp)
+def set_wallpaper(args):
+    option = args[0]
+    wallpaper = args[1]
+    for root, dirs, files in os.walk(WALLPAPER_DIR):
+        for file in files:
+            name, ext = os.path.splitext(file)
+            if name == wallpaper:
+                os.system(f'cp {WALLPAPER_DIR}/{file} {WALLPAPER_DIR}/wallpaper')
+                os.system(f'feh --bg-{option} {WALLPAPER_DIR}/wallpaper')
+    return None
+
+# set display (d)
+def set_display(mode):
+    os.system(f'bash {DISPLAY_SCRIPTS}/{mode[0]}.sh')
+    os.system('i3 restart')
+    return None
+
+# monitor mode (monitor_mode)
+def monitor_mode(adapter):
+    adapter = adapter[0]
+    os.system('sudo airmon-ng check kill')
+    os.system(f'sudo airmon-ng start {adapter}')
+
+# managed mode (managed_mode)
+def managed_mode(adapter):
+    adapter = adapter[0]
+    os.system(f'sudo airmon-ng stop {adapter}')
+    os.system('sudo NetworkManager && sudo wpa_supplicant')
+
+# change mac address (change_mac)
+def change_mac(adapter):
+    adapter = adapter[0]
+    os.system(f'sudo ifconfig {adapter} down')
+    os.system(f'sudo macchanger -r {adapter}')
+    os.system(f'sudo ifconfig {adapter} up')
+
+# git (main)
+def mnupdate(commit_message):
+    commit_message = commit_message[0]
+    os.system('cd .')
+    os.system('git fetch')
+    os.system('git pull origin main')
+    os.system('git add .')
+    os.system(f'git commit -m "{commit_message}"')
+    os.system('git push -u origin main')
+
+# git (master)
+def msupdate(commit_message):
+    commit_message = commit_message[0]
+    os.system('cd .')
+    os.system('git fetch')
+    os.system('git pull origin master')
+    os.system('git add .')
+    os.system(f'git commit -m "{commit_message}"')
+    os.system('git push -u origin master')
+
+# add git token to repo (addtoken)
+def add_token(github_path):
+    github_path = github_path[0]
+    git_token = command_output(['pass', 'tokens/git'])
+    os.system('cd .')
+    os.system('git branch -M main')
+    os.system('git remote remove origin')
+    os.system(f'git remote add origin https://{git_token}@github.com/{github_path}')
+
+# modify $PATH environment variable
+for new_path in [
+    '/home/bluecosmo/.nimble/bin',
+    '/home/bluecosmo/workflow/tools/',
+    ]:
+    $PATH.insert(0, new_path)
+
+# custom prompt
+xontrib load vox
+$PROMPT_FIELDS['env_name_cust'] = env_name_cust
+$PROMPT_FIELDS['get_tun0'] = get_tun0
+# $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
+$PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]{get_tun0:{}}─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
+
+# aliases
+aliases.update({
+    'path_of': 'echo @(pwd())/@($arg0)',
+    'v': 'nvim',
+    'ls': 'exa --icons',
+    'll': 'exa --icons -l',
+    'la': 'exa --icons -a',
+    'lla': 'exa --icons -la',
+    'up': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
+    'pfchangs': 'proxychains4',
+    'acf': 'auto-cpufreq --stats',
+    'analyze': 'mv @($arg0) $HOME/research/analyze',
+    'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
+    'wp': set_wallpaper,
+    'd': set_display,
+    'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',
+    'mobile_display': 'xrandr --output eDP-1 --mode 1080x1920',
+    'mvcon': 'mullvad connect',
+    'mvdis': 'mullvad disconnect',
+    'mvstat': 'mullvad status',
+    'webserv': 'python3 -m http.server 8080',
+    'monitor_mode': monitor_mode,
+    'managed_mode': managed_mode,
+    'change_mac': change_mac,
+    'pccon': 'ssh bluecosmo@planetcosmo',
+    'gitcon': 'ssh git@planetcosmo',
+    'mcon': 'ssh moon -p 69',
+    'vcon': 'ssh void',
+    'dscon': 'ssh deathstar',
+    'thmcon': f'sudo openvpn {WORKFLOW}/vpn/thm.ovpn',
+    'htbcon': f'sudo openvpn {WORKFLOW}/vpn/htb.ovpn',
+    'bbcon': 'ssh root@172.16.64.1',
+    'sjcon': 'ssh root@172.16.24.1',
+    'wpcon': 'ssh root@172.16.42.1',
+    'ltcon': 'ssh root@172.16.84.1',
+    'pscon': 'ssh root@172.16.32.1',
+    'ff': 'firefox',
+    'mnupdate': mnupdate,
+    'msupdate': msupdate,
+    'fuck': 'rm -rf',
+    'please': 'sudo',
+    'addtoken': add_token,
+    'untar': 'tar -xf *.tar.xz',
+    'move': 'mv $HOME/Downloads/* @(pwd())',
+    'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
+    'deport': 'mv $HOME/Downloads/* $HOME/imports',
+    'vlone': 'scp -r @($arg0) bluecosmo@void:~',
+    'vdown': 'scp -r bluecosmo@void:~/@($arg0) .',
+    'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
+    'bak': 'cp @($arg0) @($arg0).bak -r',
+    'trash': 'mv @($arg0) $HOME/.local/share/Trash/files',
+    'comelf': 'g++ main.cpp && ./a.out',
+    'comexe': '/usr/bin/x86_64-w64-mingw32-gcc-win32 main.c',
+    'comdll': '/usr/bin/x86_64-w64-mingw32-gcc-win32 dll.c -o a.dll -shared',
+    'runpm': 'npm install && npm run dev',
+    'sjupload': 'scp -r payload.sh root@172.16.24.1:/root/payload',
+    'duckencode': 'python2 /home/bluecosmo/development/rubberducky/encoder/duckencoder.py -i payload.txt',
+    'onlyrat': 'python3 /home/bluecosmo/.MK01-OnlyRAT/main.py',
+    'key': 'python3 ~/.SkeletonKey/main.py',   
+    'wpls': f'ls {WALLPAPER_DIR}',
+    'rng': 'ranger',
+    'ipv4': local_ip,
+    'ipv': local_ip,
+    'gen_frames': 'bash /home/bluecosmo/media/photos/wallpapers/generate-frames.sh',
+    'wp_animated': animated_wallpaper,
+    'xc':'xclip -selection c',
+    'blah':'ls -alh',
+    'mkvenv':'python3 -m venv ./venv/',
+    'vac': 'vox activate @($arg0)',
+    'vdac': 'vox deactivate',
+    'vlis': 'vox list',
+    'vls': 'vox list',
+    'c': 'clear',
+    'code': 'codium', 
+    'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
+    'dload': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
+    'remload': 'scp -r remnux@192.168.122.7:/home/remnux/Downloads/Desktop /home/bluecosmo/research/analyze/remnux',
+    'tkill': 'tmux kill-server',
+    'r': 'ranger .',
+})
+
+execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

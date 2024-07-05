@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the window ID of the currently focused window
+window_id=$(xdotool getactivewindow)
+
+# Get the class name of the focused window using xprop
+class_name=$(xprop -id $window_id | grep 'WM_CLASS' | awk '{print $4}')
+
+# Print the class name (usually the application name)
+echo "$class_name "
