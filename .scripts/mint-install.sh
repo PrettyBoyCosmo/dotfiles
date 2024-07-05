@@ -70,4 +70,4 @@ cd .dotfiles
 stow . --adopt
 cd $HOME
 
-rm mint-install.sh
+rm -rf mint-install.sh
