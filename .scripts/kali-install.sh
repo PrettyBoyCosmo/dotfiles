@@ -9,10 +9,12 @@ sudo apt upgrade -y
 sudo apt autoremove -y
  
 # packages
-sudo apt-get install i3 polybar xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib ranger spice-vdagent arandr rofi compton neovim -y --fix-missing
+sudo apt-get install i3 polybar xonsh git feh lxappearance i3blocks gcc-mingw-w64-x86-64 htop gobuster ffmpeg openjdk-17-jdk hexedit docker.io docker-compose stow fzf ripgrep tmux zoxide kitty eza gcc-multilib ranger spice-vdagent arandr rofi compton neovim openssh-server -y --fix-missing
 
-# qemu tools
+# services
 sudo systemctl enable spice-vdagentd.service
+sudo systemctl enable ssh
+sudo service ssh up
 
 # hacking
 sudo adduser $USER wireshark
@@ -28,9 +30,9 @@ xonsh -c "xpip install xontrib-vox"
 cd $HOME
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/PrettyBoyCosmo/dotfiles
-mv dotfiles .dotfiles
+mv dotfiles/.kali .dotfiles
 cd .dotfiles
 stow . --adopt
 cd $HOME
 
-rm kali-install.sh Public Videos Documents Music Pictures Templates
+rm kali-install.sh Public Videos Documents Music Pictures Templates dotfiles
