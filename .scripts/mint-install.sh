@@ -3,7 +3,7 @@
 # created by : bluecosmo
 
 # system updates
-sudo echo "deb http://debian.sur5r.net/i3/ jammy universe" > /etc/apt/sources.list.d/sur5r-i3.list
+sudo add-apt-repository http://debian.sur5r.net/i3/ jammy universe
 sudo apt-get update -y
 sudo apt-get update --fix-missing -y
 sudo apt upgrade -y
