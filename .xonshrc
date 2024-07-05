@@ -7,7 +7,6 @@ import os
 import os.path
 import socket
 import subprocess
-from pwn import *
 
 # constants
 HOME = '/home/bluecosmo'
@@ -128,6 +127,7 @@ def add_token(github_path):
 
 # modify $PATH environment variable
 for new_path in [
+    '/home/bluecosmo/.local/bin',
     '/home/bluecosmo/.nimble/bin',
     '/home/bluecosmo/workflow/tools/',
     ]:
