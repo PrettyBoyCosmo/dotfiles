@@ -1,7 +1,7 @@
 # NeoVim Config
 > created by : bluecosmo
 
-![[https://github.com/PrettyBoyCosmo/dotfiles/blob/main/.assets/nvim.png]]
+![nvim](https://github.com/PrettyBoyCosmo/dotfiles/blob/main/.assets/nvim.png)
 
 ## Installtation
 ```bash
