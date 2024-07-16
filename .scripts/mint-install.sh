@@ -48,6 +48,7 @@ rm -rf powershell_7.4.3-1.deb_amd64.deb
 sudo ln -s /bin/pwsh /bin/powershell
 
 # hacking
+bash -c "$(wget https://gef.blah.cat/sh -O -)"
 pip3 install -U --user shodan
 sudo adduser $USER wireshark
 sudo chmod +x /usr/bin/dumpcap
