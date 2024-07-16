@@ -8,17 +8,17 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#archive  ",
+      "query": "tag:#area",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 11492566
       }
     },
     {
-      "query": "tag:#area  ",
+      "query": "tag:#resources  ",
       "color": {
         "a": 1,
-        "rgb": 14069084
+        "rgb": 16742190
       }
     },
     {
@@ -29,10 +29,10 @@
       }
     },
     {
-      "query": "tag:#resources  ",
+      "query": "tag:#archive  ",
       "color": {
         "a": 1,
-        "rgb": 6084188
+        "rgb": 6084273
       }
     }
   ],
@@ -46,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.032682986629980135,
+  "scale": 0.03574501508289669,
   "close": true
 }
