@@ -2,6 +2,8 @@
 -- neovim config file
 -- created by : bluecosmo
 
+vim.g.mapleader = " "
+
 -- lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -137,7 +139,7 @@ local plugins = {
     {"christoomey/vim-tmux-navigator"},
     -- treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    {"atelierbram/Base2Tone-nvim"},
+    {"atelierbram/Base2Tone-nvim"}
 }
 
 -- plugin options
@@ -200,7 +202,12 @@ function fold_text()
     vim.cmd("%!fold -s -w60")
     vim.fn.setpos(".", current_pos)
 end
-vim.api.nvim_set_keymap("n", "<Leader>f", ":lua fold_text()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap(
+    "n", 
+    "<Leader>f", 
+    ":lua fold_text()<CR>", 
+    {noremap = true, silent = true}
+)
 
 -- harpoon
 local mark = require("harpoon.mark")
@@ -438,4 +445,3 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.conceallevel = 2
-vim.g.mapleader = " "
