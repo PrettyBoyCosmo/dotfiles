@@ -2,6 +2,7 @@
 -- neovim config file
 -- created by : bluecosmo
 
+-- global
 vim.g.mapleader = " "
 
 -- lazy
