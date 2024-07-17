@@ -2,98 +2,26 @@
 -- neovim config file
 -- created by : bluecosmo
 
-vim.g.mapleader = " "
-
 -- lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system(
-        {
+    vim.fn.system({
             "git",
             "clone",
             "--filter=blob:none",
             "https://github.com/folke/lazy.nvim.git",
             "--branch=stable", -- latest stable release
             lazypath
-        }
-    )
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- installed plugins
 local plugins = {
-    -- telescope
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.5",
-        dependencies = {"nvim-lua/plenary.nvim"}
-    },
-    -- treesitter
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     -- airline
     {"vim-airline/vim-airline"},
     {"vim-airline/vim-airline-themes"},
-    -- harpoon
-    {"ThePrimeagen/harpoon"},
-    -- obsidian
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*", -- recommended, use latest release instead of latest commit
-        lazy = true,
-        ft = "markdown",
-        -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-        -- event = {
-        --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-        --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-        --   "BufReadPre path/to/my-vault/**.md",
-        --   "BufNewFile path/to/my-vault/**.md",
-        -- },
-        dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim"
-
-            -- see below for full list of optional dependencies 👇
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "vault",
-                    path = "~/obsidian"
-                }
-            },
-            templates = {
-                folder = "04 - templates",
-                date_format = "%Y-%m-%d"
-            },
-            disable_frontmatter = true,
-            -- see below for full list of options 👇
-            attachments = {
-                -- The default folder to place images in via `:ObsidianPasteImg`.
-                -- If this is a relative path it will be interpreted as relative to the vault root.
-                -- You can always override this per image by passing a full path to the command instead of just a filename.
-                img_folder = "05 - assets", -- This is the default
-                -- A function that determines the text to insert in the note when pasting an image.
-                -- It takes two arguments, the `obsidian.Client` and an `obsidian.Path` to the image file.
-                -- This is the default implementation.
-                ---@param client obsidian.Client
-                ---@param path obsidian.Path the absolute path to the image file
-                ---@return string
-                img_text_func = function(client, path)
-                    path = client:vault_relative_path(path) or path
-                    return string.format("![[%s]]", path.name)
-                end
-            }
-        }
-    },
-    -- commentary and surround
-    {"tpope/vim-commentary"},
-    {"tpope/vim-surround"},
-    -- icons and colors
-    {"ryanoasis/vim-devicons"},
-    {"ap/vim-css-color"},
-    -- notify
-    {"rcarriga/nvim-notify"},
-    -- startup
+    -- alpha
     {
         "goolord/alpha-nvim",
         dependencies = {"nvim-tree/nvim-web-devicons"},
@@ -115,13 +43,13 @@ local plugins = {
             dashboard.section.buttons.val = {
                 dashboard.button("n", "📄 • New File", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("o", "📁 • Open File", ":Telescope find_files <CR>"),
-                dashboard.button("r", "👀 • Recently Used", ":Telescope oldfiles <CR>"),
-                dashboard.button("f", "🔎 • Find Text", ":Telescope live_grep <CR>"),
                 dashboard.button(
                     "v",
                     "🪨 • Obsidian Vault",
                     ":lua require('telescope.builtin').find_files({ cwd = '~/obsidian' })<CR>"
                 ),
+                dashboard.button("r", "👀 • Recently Used", ":Telescope oldfiles <CR>"),
+                dashboard.button("f", "🔎 • Find Text", ":Telescope live_grep <CR>"),
                 dashboard.button("e", "🤖 • Edit Config", ":e ~/.dotfiles/.config/nvim/init.lua<CR>"),
                 dashboard.button("q", "🙈 • Quit NeoVim", ":qa<CR>")
             }
@@ -134,28 +62,16 @@ local plugins = {
             alpha.setup(dashboard.config)
         end
     },
-    -- vim tmux navigator
-    {"christoomey/vim-tmux-navigator"},
-    -- Lua
-    {
-        "olivercederborg/poimandres.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("poimandres").setup {
-                disable_background = true -- disable background
-                -- leave this setup function empty for default config
-                -- or refer to the configuration section
-                -- for configuration options
-            }
-        end
-
-        -- optionally set the colorscheme within lazy config
-        -- init = function()
-        --   vim.cmd("colorscheme poimandres")
-        -- end
-    },
-    {"atelierbram/Base2Tone-nvim"},
+    -- bullets
+    {"bullets-vim/bullets.vim"},
+    -- commentary and surround
+    {"tpope/vim-commentary"},
+    {"tpope/vim-surround"},
+    -- harpoon
+    {"ThePrimeagen/harpoon"},
+    -- icons and colors
+    {"ryanoasis/vim-devicons"},
+    {"ap/vim-css-color"},
     -- lsp zero
     {"williamboman/mason.nvim"},
     {"williamboman/mason-lspconfig.nvim"},
@@ -176,111 +92,57 @@ local plugins = {
         dependencies = {
             {"L3MON4D3/LuaSnip"}
         }
-    }
+    },
+    -- markdown table
+    {"tyrossel/MarkdownTable.nvim"},
+    -- notify
+    {"rcarriga/nvim-notify"},
+    -- obsidian
+    {
+        "epwalsh/obsidian.nvim",
+        version = "*",
+        lazy = true,
+        ft = "markdown",
+        dependencies = {
+            "nvim-lua/plenary.nvim"
+        },
+        opts = {
+            workspaces = {
+                {
+                    name = "vault",
+                    path = "~/obsidian"
+                }
+            },
+            templates = {
+                folder = "04 - templates",
+                date_format = "%Y-%m-%d"
+            },
+            disable_frontmatter = true,
+            attachments = {
+                img_folder = "05 - assets",
+                img_text_func = function(client, path)
+                    path = client:vault_relative_path(path) or path
+                    return string.format("![[%s]]", path.name)
+                end
+            }
+        }
+    },
+    -- telescope
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.5",
+        dependencies = {"nvim-lua/plenary.nvim"}
+    },
+    -- tmux navigator
+    {"christoomey/vim-tmux-navigator"},
+    -- treesitter
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    {"atelierbram/Base2Tone-nvim"},
 }
 
 -- plugin options
 local opts = {}
-
 require("lazy").setup(plugins, opts)
-
--- notify
-vim.notify = require("notify")
-
--- telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<C-o>", builtin.find_files, {noremap = true, silent = true})
-vim.keymap.set("n", "<C-f>", builtin.live_grep, {noremap = true, silent = true})
-vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
-
--- treesitter
-local config = require("nvim-treesitter.configs")
-config.setup(
-    {
-        ensure_installed = {"c", "lua", "vim", "vimdoc", "query"},
-        highlight = {
-            enable = true,
-            additional_vim_regex_highlighting = false
-        },
-        indent = {enable = true}
-    }
-)
-
--- harpoon
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<leader>m", ui.toggle_quick_menu)
-vim.keymap.set(
-    "n",
-    "<leader>1",
-    function()
-        ui.nav_file(1)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>2",
-    function()
-        ui.nav_file(2)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>3",
-    function()
-        ui.nav_file(3)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>4",
-    function()
-        ui.nav_file(4)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>5",
-    function()
-        ui.nav_file(5)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>6",
-    function()
-        ui.nav_file(6)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>7",
-    function()
-        ui.nav_file(7)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>8",
-    function()
-        ui.nav_file(8)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>9",
-    function()
-        ui.nav_file(9)
-    end
-)
-vim.keymap.set(
-    "n",
-    "<leader>0",
-    function()
-        ui.nav_file(0)
-    end
-)
 
 -- airline
 if vim.g.airline_symbols == nil then
@@ -296,6 +158,77 @@ vim.g.airline_symbols.linenr = ""
 vim.g.airline_theme = "lucius"
 -- vim.g.airline_theme = 'deus'
 
+-- bullets
+vim.g.bullets_enabled_file_types = {
+  'markdown',
+  'text',
+  'gitcommit',
+  'scratch'
+}
+
+-- file type text width
+vim.opt.textwidth = 80
+vim.api.nvim_create_augroup('filetype_specific', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = {
+        'markdown',
+        'text'
+    },
+    group = 'filetype_specific',
+    callback = function()
+        vim.opt_local.textwidth = 60
+    end,
+})
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = {
+        'python',
+        'c',
+        'lua',
+        'javascript',
+        'html'
+    },
+    group = 'filetype_specific',
+    callback = function()
+        vim.opt_local.textwidth = 80
+    end,
+})
+
+-- fold text
+function fold_text()
+    local current_pos = vim.fn.getpos(".")
+    vim.cmd("normal! m`")
+    vim.cmd("%!fold -s -w60")
+    vim.fn.setpos(".", current_pos)
+end
+vim.api.nvim_set_keymap("n", "<Leader>f", ":lua fold_text()<CR>", {noremap = true, silent = true})
+
+-- harpoon
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<leader>m", ui.toggle_quick_menu)
+vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end)
+vim.keymap.set("n", "<leader>6", function() ui.nav_file(6) end)
+vim.keymap.set("n", "<leader>7", function() ui.nav_file(7) end)
+vim.keymap.set("n", "<leader>8", function() ui.nav_file(8) end)
+vim.keymap.set("n", "<leader>9", function() ui.nav_file(9) end)
+vim.keymap.set("n", "<leader>0", function() ui.nav_file(0) end)
+
+-- keymaps
+vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.api.nvim_set_keymap("n", "<Leader>q", ":Alpha<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>l", ":Mason<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>r", ":edit<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>b", "<C-^>", {noremap = true, silent = true})
+
 -- lsp zero
 local lsp_zero = require("lsp-zero")
 lsp_zero.on_attach(
@@ -305,131 +238,109 @@ lsp_zero.on_attach(
 )
 local cmp = require("cmp")
 local cmp_action = require("lsp-zero").cmp_action()
-
-cmp.setup(
-    {
-        mapping = cmp.mapping.preset.insert(
-            {
-                ["<CR>"] = cmp.mapping.confirm({select = false}),
-                ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-                ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-                ["<Tab>"] = cmp.mapping.confirm({select = true}),
-                ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-                ["<C-d>"] = cmp.mapping.scroll_docs(4)
-            }
-        )
-    }
-)
-
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ["<CR>"] = cmp.mapping.confirm({select = false}),
+        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<Tab>"] = cmp.mapping.confirm({select = true}),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4)
+    })
+})
 lsp_zero.on_attach(
     function(client, bufnr)
         local opts = {buffer = bufnr, remap = false}
         vim.keymap.set(
             "n",
             "<leader>gd",
-            function()
-                vim.lsp.buf.definition()
-            end,
+            function() vim.lsp.buf.definition() end,
             opts
         )
         vim.keymap.set(
             "n",
             "K",
-            function()
-                vim.lsp.buf.hover()
-            end,
+            function() vim.lsp.buf.hover() end,
             opts
         )
         vim.keymap.set(
             "n",
             "<leader>vws",
-            function()
-                vim.lsp.buf.workspace_symbol()
-            end,
+            function() vim.lsp.buf.workspace_symbol() end,
             opts
         )
         vim.keymap.set(
             "n",
             "<leader>vd",
-            function()
-                vim.diagnostic.open_float()
-            end,
+            function() vim.diagnostic.open_float() end,
             opts
         )
         vim.keymap.set(
             "n",
             "[d",
-            function()
-                vim.diagnostic.goto_next()
-            end,
+            function() vim.diagnostic.goto_next() end,
             opts
         )
         vim.keymap.set(
             "n",
             "]d",
-            function()
-                vim.diagnostic.goto_prev()
-            end,
+            function() vim.diagnostic.goto_prev() end,
             opts
         )
         vim.keymap.set(
             "n",
             "<leader>vca",
-            function()
-                vim.lsp.buf.code_action()
-            end,
+            function() vim.lsp.buf.code_action() end,
             opts
         )
         vim.keymap.set(
             "n",
             "<leader>vrr",
-            function()
-                vim.lsp.buf.references()
-            end,
+            function() vim.lsp.buf.references() end,
             opts
         )
         vim.keymap.set(
             "n",
             "<leader>vrn",
-            function()
-                vim.lsp.buf.rename()
-            end,
+            function() vim.lsp.buf.rename() end,
             opts
         )
         vim.keymap.set(
             "i",
             "<C-h>",
-            function()
-                vim.lsp.buf.signature_help()
-            end,
+            function() vim.lsp.buf.signature_help() end,
             opts
         )
     end
 )
 vim.g.lsp_zero_api_warnings = 0
-
-lsp_zero.set_preferences(
-    {
-        suggest_lsp_servers = false,
-        sign_icons = {
-            error = "E",
-            warn = "W",
-            hint = "H",
-            info = "I"
-        }
+lsp_zero.set_preferences({
+    suggest_lsp_servers = true,
+    sign_icons = {
+        error = "E",
+        warn = "W",
+        hint = "H",
+        info = "I"
     }
-)
-
+})
 lsp_zero.setup()
-
 require("mason").setup({})
-require("mason-lspconfig").setup(
-    {
-        handlers = {
-            lsp_zero.default_setup
-        }
+require("mason-lspconfig").setup({
+    handlers = {
+        lsp_zero.default_setup
     }
-)
+})
+
+-- navigation (default centering)
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.api.nvim_set_keymap("n", "<CR>", ":normal! zz<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("i", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("v", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "gg", "ggzz", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "GG", "GGzz", {noremap = true, silent = true})
 
 -- netrw
 function ToggleNetrw()
@@ -461,7 +372,47 @@ vim.api.nvim_command("augroup END")
 -- vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", ":lua ToggleNetrw()<CR>", {noremap = true, silent = true})
 
--- options
+-- notify
+vim.notify = require("notify")
+
+-- obsidian
+vim.api.nvim_set_keymap("n", "<A-i>", ":ObsidianTemplate<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>op", ":ObsidianPasteImg<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("v", "<leader>ot", ":!column -t -s '|' -o '|'<CR>", {noremap = true, silent = true})
+
+-- telescope
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<C-o>", builtin.find_files, {noremap = true, silent = true})
+vim.keymap.set("n", "<C-f>", builtin.live_grep, {noremap = true, silent = true})
+vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
+
+-- tmux navigation
+function netrw_move_to_right_pane()
+    vim.cmd([[wincmd l]])
+end
+vim.cmd [[
+  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
+]]
+
+-- treesitter
+local config = require("nvim-treesitter.configs")
+config.setup({
+    ensure_installed = {"c", "lua", "vim", "vimdoc", "query"},
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false
+    },
+    indent = {enable = true}
+})
+
+-- settings
+vim.api.nvim_command("set mouse=a")
+vim.api.nvim_command("set completeopt-=preview")
+vim.api.nvim_command("set encoding=UTF-8")
+vim.api.nvim_command("colorscheme habamax")
+-- vim.api.nvim_command('colorscheme base2tone_lake_dark')
+vim.cmd("hi normal guibg=#0F1C21")
+-- vim.cmd('hi normal guibg=#0D0F10')
 vim.o.guicursor = "a:block"
 vim.opt.guifont = {"Cascadia Code", ":h12"}
 vim.opt.nu = true
@@ -473,9 +424,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
-vim.opt.textwidth = 80
 vim.opt.linebreak = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
@@ -488,67 +438,4 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.conceallevel = 2
-vim.api.nvim_command("set mouse=a")
-vim.api.nvim_command("set completeopt-=preview")
-vim.api.nvim_command("set encoding=UTF-8")
-vim.api.nvim_command("colorscheme habamax")
-vim.cmd("hi normal guibg=#0F1C21")
-
--- vim.api.nvim_command('colorscheme base2tone_lake_dark')
--- vim.cmd('hi normal guibg=#0D0F10')
-
--- keymaps
-vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
-
--- move lines
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
--- vim tmux navigation
-function netrw_move_to_right_pane()
-    vim.cmd([[wincmd l]])
-end
-vim.cmd [[
-  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
-]]
-
--- navigation (default centering)
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.api.nvim_set_keymap("n", "<CR>", ":normal! zz<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("i", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "gg", "ggzz", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "GG", "GGzz", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<Leader>q", ":Alpha<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<Leader>l", ":Mason<CR>", {noremap = true, silent = true})
-
--- obsidian
-vim.api.nvim_set_keymap("n", "<A-i>", ":ObsidianTemplate<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>p", ":ObsidianPasteImg<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>b", "<C-^>", {noremap = true, silent = true})
--- vim.api.nvim_set_keymap('n', '<leader>f', ':%!fold -s -w60<CR>', {noremap = true, silent = true})
--- vim.api.nvim_set_keymap('n', '<leader>f', [[:<C-u>%!fold -s -w60<CR>`^]], {noremap = true, silent = true})
-
--- Define the fold_text function
-function fold_text()
-    -- Save current cursor position
-    local current_pos = vim.fn.getpos(".")
-
-    -- Set a mark at the current cursor position
-    vim.cmd("normal! m`")
-
-    -- Execute the fold command on the whole file
-    vim.cmd("%!fold -s -w60")
-
-    -- Jump back to the saved cursor position
-    vim.fn.setpos(".", current_pos)
-end
-
--- Map <Leader>f to run the fold_text function
-vim.api.nvim_set_keymap("n", "<Leader>f", ":lua fold_text()<CR>", {noremap = true, silent = true})
-
+vim.g.mapleader = " "
