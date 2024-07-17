@@ -186,7 +186,7 @@ aliases.update({
     'move': 'mv $HOME/Downloads/* @(pwd())',
     'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
     'deport': 'mv $HOME/Downloads/* $HOME/imports',
-    'kup': 'scp -r @($arg0) bluecosmo@kali:~',
+    'kup': 'scp -r @($arg0) bluecosmo@kali:~/Downloads',
     'vdow': 'scp -r bluecosmo@kali:~/@($arg0) .',
     'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
     'bak': 'cp @($arg0) @($arg0).bak -r',

@@ -7019,13 +7019,13 @@ function getSnippetsFromFiles(plugin, files, snippetVariables) {
   });
 }
 
-// _mfzmsirx6:/home/runner/work/obsidian-latex-suite/obsidian-latex-suite/src/default_snippets.js
+// _mpqp3bu5b:/home/runner/work/obsidian-latex-suite/obsidian-latex-suite/src/default_snippets.js
 var default_snippets_default = '[\n    // Math mode\n	{trigger: "mk", replacement: "$$0$", options: "tA"},\n	{trigger: "dm", replacement: "$$\\n$0\\n$$", options: "tAw"},\n	{trigger: "beg", replacement: "\\\\begin{$0}\\n$1\\n\\\\end{$0}", options: "mA"},\n\n    // Dashes\n	// {trigger: "--", replacement: "\u2013", options: "tA"},\n	// {trigger: "\u2013-", replacement: "\u2014", options: "tA"},\n	// {trigger: "\u2014-", replacement: "---", options: "tA"},\n\n    // Greek letters\n	{trigger: "@a", replacement: "\\\\alpha", options: "mA"},\n	{trigger: "@b", replacement: "\\\\beta", options: "mA"},\n	{trigger: "@g", replacement: "\\\\gamma", options: "mA"},\n	{trigger: "@G", replacement: "\\\\Gamma", options: "mA"},\n	{trigger: "@d", replacement: "\\\\delta", options: "mA"},\n	{trigger: "@D", replacement: "\\\\Delta", options: "mA"},\n	{trigger: "@e", replacement: "\\\\epsilon", options: "mA"},\n	{trigger: ":e", replacement: "\\\\varepsilon", options: "mA"},\n	{trigger: "@z", replacement: "\\\\zeta", options: "mA"},\n	{trigger: "@t", replacement: "\\\\theta", options: "mA"},\n	{trigger: "@T", replacement: "\\\\Theta", options: "mA"},\n	{trigger: ":t", replacement: "\\\\vartheta", options: "mA"},\n	{trigger: "@i", replacement: "\\\\iota", options: "mA"},\n	{trigger: "@k", replacement: "\\\\kappa", options: "mA"},\n	{trigger: "@l", replacement: "\\\\lambda", options: "mA"},\n	{trigger: "@L", replacement: "\\\\Lambda", options: "mA"},\n	{trigger: "@s", replacement: "\\\\sigma", options: "mA"},\n	{trigger: "@S", replacement: "\\\\Sigma", options: "mA"},\n	{trigger: "@u", replacement: "\\\\upsilon", options: "mA"},\n	{trigger: "@U", replacement: "\\\\Upsilon", options: "mA"},\n	{trigger: "@o", replacement: "\\\\omega", options: "mA"},\n	{trigger: "@O", replacement: "\\\\Omega", options: "mA"},\n	{trigger: "ome", replacement: "\\\\omega", options: "mA"},\n	{trigger: "Ome", replacement: "\\\\Omega", options: "mA"},\n\n    // Text environment\n    {trigger: "text", replacement: "\\\\text{$0}$1", options: "mA"},\n    {trigger: "\\"", replacement: "\\\\text{$0}$1", options: "mA"},\n\n    // Basic operations\n    {trigger: "sr", replacement: "^{2}", options: "mA"},\n	{trigger: "cb", replacement: "^{3}", options: "mA"},\n	{trigger: "rd", replacement: "^{$0}$1", options: "mA"},\n	{trigger: "_", replacement: "_{$0}$1", options: "mA"},\n	{trigger: "sts", replacement: "_\\\\text{$0}", options: "mA"},\n	{trigger: "sq", replacement: "\\\\sqrt{ $0 }$1", options: "mA"},\n	{trigger: "//", replacement: "\\\\frac{$0}{$1}$2", options: "mA"},\n	{trigger: "ee", replacement: "e^{ $0 }$1", options: "mA"},\n    {trigger: "invs", replacement: "^{-1}", options: "mA"},\n    {trigger: /([A-Za-z])(\\d)/, replacement: "[[0]]_{[[1]]}", options: "rmA", description: "Auto letter subscript", priority: -1},\n\n    {trigger: /([^\\\\])(exp|log|ln)/, replacement: "[[0]]\\\\[[1]]", options: "rmA"},\n    {trigger: "conj", replacement: "^{*}", options: "mA"},\n    {trigger: "Re", replacement: "\\\\mathrm{Re}", options: "mA"},\n	{trigger: "Im", replacement: "\\\\mathrm{Im}", options: "mA"},\n    {trigger: "bf", replacement: "\\\\mathbf{$0}", options: "mA"},\n	{trigger: "rm", replacement: "\\\\mathrm{$0}$1", options: "mA"},\n\n    // Linear algebra\n    {trigger: /([^\\\\])(det)/, replacement: "[[0]]\\\\[[1]]", options: "rmA"},\n    {trigger: "trace", replacement: "\\\\mathrm{Tr}", options: "mA"},\n\n    // More operations\n	{trigger: "([a-zA-Z])hat", replacement: "\\\\hat{[[0]]}", options: "rmA"},\n    {trigger: "([a-zA-Z])bar", replacement: "\\\\bar{[[0]]}", options: "rmA"},\n	{trigger: "([a-zA-Z])dot", replacement: "\\\\dot{[[0]]}", options: "rmA", priority: -1},\n	{trigger: "([a-zA-Z])ddot", replacement: "\\\\ddot{[[0]]}", options: "rmA", priority: 1},\n	{trigger: "([a-zA-Z])tilde", replacement: "\\\\tilde{[[0]]}", options: "rmA"},\n	{trigger: "([a-zA-Z])und", replacement: "\\\\underline{[[0]]}", options: "rmA"},\n	{trigger: "([a-zA-Z])vec", replacement: "\\\\vec{[[0]]}", options: "rmA"},\n    {trigger: "([a-zA-Z]),\\\\.", replacement: "\\\\mathbf{[[0]]}", options: "rmA"},\n	{trigger: "([a-zA-Z])\\\\.,", replacement: "\\\\mathbf{[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}),\\\\.", replacement: "\\\\boldsymbol{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK})\\\\.,", replacement: "\\\\boldsymbol{\\\\[[0]]}", options: "rmA"},\n\n	{trigger: "hat", replacement: "\\\\hat{$0}$1", options: "mA"},\n    {trigger: "bar", replacement: "\\\\bar{$0}$1", options: "mA"},\n	{trigger: "dot", replacement: "\\\\dot{$0}$1", options: "mA", priority: -1},\n	{trigger: "ddot", replacement: "\\\\ddot{$0}$1", options: "mA"},\n	{trigger: "cdot", replacement: "\\\\cdot", options: "mA"},\n	{trigger: "tilde", replacement: "\\\\tilde{$0}$1", options: "mA"},\n	{trigger: "und", replacement: "\\\\underline{$0}$1", options: "mA"},\n	{trigger: "vec", replacement: "\\\\vec{$0}$1", options: "mA"},\n\n    // More auto letter subscript\n    {trigger: /([A-Za-z])_(\\d\\d)/, replacement: "[[0]]_{[[1]]}", options: "rmA"},\n	{trigger: /\\\\hat{([A-Za-z])}(\\d)/, replacement: "\\\\hat{[[0]]}_{[[1]]}", options: "rmA"},\n	{trigger: /\\\\vec{([A-Za-z])}(\\d)/, replacement: "\\\\vec{[[0]]}_{[[1]]}", options: "rmA"},\n	{trigger: /\\\\mathbf{([A-Za-z])}(\\d)/, replacement: "\\\\mathbf{[[0]]}_{[[1]]}", options: "rmA"},\n\n    {trigger: "xnn", replacement: "x_{n}", options: "mA"},\n	{trigger: "xii", replacement: "x_{i}", options: "mA"},\n	{trigger: "xjj", replacement: "x_{j}", options: "mA"},\n	{trigger: "xp1", replacement: "x_{n+1}", options: "mA"},\n	{trigger: "ynn", replacement: "y_{n}", options: "mA"},\n	{trigger: "yii", replacement: "y_{i}", options: "mA"},\n	{trigger: "yjj", replacement: "y_{j}", options: "mA"},\n\n    // Symbols\n    {trigger: "ooo", replacement: "\\\\infty", options: "mA"},\n	{trigger: "sum", replacement: "\\\\sum", options: "mA"},\n	{trigger: "prod", replacement: "\\\\prod", options: "mA"},\n	{trigger: "\\\\sum", replacement: "\\\\sum_{${0:i}=${1:1}}^{${2:N}} $3", options: "m"},\n	{trigger: "\\\\prod", replacement: "\\\\prod_{${0:i}=${1:1}}^{${2:N}} $3", options: "m"},\n    {trigger: "lim", replacement: "\\\\lim_{ ${0:n} \\\\to ${1:\\\\infty} } $2", options: "mA"},\n    {trigger: "+-", replacement: "\\\\pm", options: "mA"},\n	{trigger: "-+", replacement: "\\\\mp", options: "mA"},\n    {trigger: "...", replacement: "\\\\dots", options: "mA"},\n    {trigger: "nabl", replacement: "\\\\nabla", options: "mA"},\n	{trigger: "del", replacement: "\\\\nabla", options: "mA"},\n    {trigger: "xx", replacement: "\\\\times", options: "mA"},\n    {trigger: "**", replacement: "\\\\cdot", options: "mA"},\n    {trigger: "para", replacement: "\\\\parallel", options: "mA"},\n\n	{trigger: "===", replacement: "\\\\equiv", options: "mA"},\n    {trigger: "!=", replacement: "\\\\neq", options: "mA"},\n	{trigger: ">=", replacement: "\\\\geq", options: "mA"},\n	{trigger: "<=", replacement: "\\\\leq", options: "mA"},\n	{trigger: ">>", replacement: "\\\\gg", options: "mA"},\n	{trigger: "<<", replacement: "\\\\ll", options: "mA"},\n	{trigger: "simm", replacement: "\\\\sim", options: "mA"},\n	{trigger: "sim=", replacement: "\\\\simeq", options: "mA"},\n    {trigger: "prop", replacement: "\\\\propto", options: "mA"},\n\n\n    {trigger: "<->", replacement: "\\\\leftrightarrow ", options: "mA"},\n	{trigger: "->", replacement: "\\\\to", options: "mA"},\n	{trigger: "!>", replacement: "\\\\mapsto", options: "mA"},\n    {trigger: "=>", replacement: "\\\\implies", options: "mA"},\n	{trigger: "=<", replacement: "\\\\impliedby", options: "mA"},\n\n	{trigger: "and", replacement: "\\\\cap", options: "mA"},\n	{trigger: "orr", replacement: "\\\\cup", options: "mA"},\n	{trigger: "inn", replacement: "\\\\in", options: "mA"},\n	{trigger: "notin", replacement: "\\\\not\\\\in", options: "mA"},\n    {trigger: "\\\\\\\\\\\\", replacement: "\\\\setminus", options: "mA"},\n    {trigger: "sub=", replacement: "\\\\subseteq", options: "mA"},\n    {trigger: "sup=", replacement: "\\\\supseteq", options: "mA"},\n	{trigger: "eset", replacement: "\\\\emptyset", options: "mA"},\n	{trigger: "set", replacement: "\\\\{ $0 \\\\}$1", options: "mA"},\n	{trigger: "e\\\\xi sts", replacement: "\\\\exists", options: "mA", priority: 1},\n\n	{trigger: "LL", replacement: "\\\\mathcal{L}", options: "mA"},\n	{trigger: "HH", replacement: "\\\\mathcal{H}", options: "mA"},\n	{trigger: "CC", replacement: "\\\\mathbb{C}", options: "mA"},\n	{trigger: "RR", replacement: "\\\\mathbb{R}", options: "mA"},\n	{trigger: "ZZ", replacement: "\\\\mathbb{Z}", options: "mA"},\n	{trigger: "NN", replacement: "\\\\mathbb{N}", options: "mA"},\n\n    // Handle spaces and backslashes\n\n    // Snippet variables can be used as shortcuts when writing snippets.\n    // For example, ${GREEK} below is shorthand for "alpha|beta|gamma|Gamma|delta|..."\n    // You can edit snippet variables under the Advanced snippet settings section.\n\n	{trigger: "([^\\\\\\\\])(${GREEK})", replacement: "[[0]]\\\\[[1]]", options: "rmA", description: "Add backslash before Greek letters"},\n	{trigger: "([^\\\\\\\\])(${SYMBOL})", replacement: "[[0]]\\\\[[1]]", options: "rmA", description: "Add backslash before symbols"},\n\n    // Insert space after Greek letters and symbols\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}|${MORE_SYMBOLS})([A-Za-z])", replacement: "\\\\[[0]] [[1]]", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) sr", replacement: "\\\\[[0]]^{2}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) cb", replacement: "\\\\[[0]]^{3}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) rd", replacement: "\\\\[[0]]^{$0}$1", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) hat", replacement: "\\\\hat{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) dot", replacement: "\\\\dot{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) bar", replacement: "\\\\bar{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) vec", replacement: "\\\\vec{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) tilde", replacement: "\\\\tilde{\\\\[[0]]}", options: "rmA"},\n	{trigger: "\\\\\\\\(${GREEK}|${SYMBOL}) und", replacement: "\\\\underline{\\\\[[0]]}", options: "rmA"},\n\n\n    // Derivatives and integrals\n    {trigger: "par", replacement: "\\\\frac{ \\\\partial ${0:y} }{ \\\\partial ${1:x} } $2", options: "m"},\n    {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\\\frac{ \\\\partial [[0]] }{ \\\\partial [[1]] } ", options: "rm"},\n    {trigger: "ddt", replacement: "\\\\frac{d}{dt} ", options: "mA"},\n\n    {trigger: /([^\\\\])int/, replacement: "[[0]]\\\\int", options: "mA", priority: -1},\n    {trigger: "\\\\int", replacement: "\\\\int $0 \\\\, d${1:x} $2", options: "m"},\n    {trigger: "dint", replacement: "\\\\int_{${0:0}}^{${1:1}} $2 \\\\, d${3:x} $4", options: "mA"},\n    {trigger: "oint", replacement: "\\\\oint", options: "mA"},\n	{trigger: "iint", replacement: "\\\\iint", options: "mA"},\n    {trigger: "iiint", replacement: "\\\\iiint", options: "mA"},\n    {trigger: "oinf", replacement: "\\\\int_{0}^{\\\\infty} $0 \\\\, d${1:x} $2", options: "mA"},\n	{trigger: "infi", replacement: "\\\\int_{-\\\\infty}^{\\\\infty} $0 \\\\, d${1:x} $2", options: "mA"},\n\n\n    // Trigonometry\n    {trigger: /([^\\\\])(arcsin|sin|arccos|cos|arctan|tan|csc|sec|cot)/, replacement: "[[0]]\\\\[[1]]", options: "rmA", description: "Add backslash before trig funcs"},\n\n    {trigger: /\\\\(arcsin|sin|arccos|cos|arctan|tan|csc|sec|cot)([A-Za-gi-z])/,\n     replacement: "\\\\[[0]] [[1]]", options: "rmA",\n     description: "Add space after trig funcs. Skips letter h to allow sinh, cosh, etc."},\n\n    {trigger: /\\\\(sinh|cosh|tanh|coth)([A-Za-z])/,\n     replacement: "\\\\[[0]] [[1]]", options: "rmA",\n     description: "Add space after hyperbolic trig funcs"},\n\n\n    // Visual operations\n	{trigger: "U", replacement: "\\\\underbrace{ ${VISUAL} }_{ $0 }", options: "mA"},\n	{trigger: "O", replacement: "\\\\overbrace{ ${VISUAL} }^{ $0 }", options: "mA"},\n	{trigger: "B", replacement: "\\\\underset{ $0 }{ ${VISUAL} }", options: "mA"},\n	{trigger: "C", replacement: "\\\\cancel{ ${VISUAL} }", options: "mA"},\n	{trigger: "K", replacement: "\\\\cancelto{ $0 }{ ${VISUAL} }", options: "mA"},\n	{trigger: "S", replacement: "\\\\sqrt{ ${VISUAL} }", options: "mA"},\n\n\n    // Physics\n	{trigger: "kbt", replacement: "k_{B}T", options: "mA"},\n	{trigger: "msun", replacement: "M_{\\\\odot}", options: "mA"},\n\n    // Quantum mechanics\n    {trigger: "dag", replacement: "^{\\\\dagger}", options: "mA"},\n	{trigger: "o+", replacement: "\\\\oplus ", options: "mA"},\n	{trigger: "ox", replacement: "\\\\otimes ", options: "mA"},\n    {trigger: "bra", replacement: "\\\\bra{$0} $1", options: "mA"},\n	{trigger: "ket", replacement: "\\\\ket{$0} $1", options: "mA"},\n	{trigger: "brk", replacement: "\\\\braket{ $0 | $1 } $2", options: "mA"},\n    {trigger: "outer", replacement: "\\\\ket{${0:\\\\psi}} \\\\bra{${0:\\\\psi}} $1", options: "mA"},\n\n    // Chemistry\n	{trigger: "pu", replacement: "\\\\pu{ $0 }", options: "mA"},\n	{trigger: "cee", replacement: "\\\\ce{ $0 }", options: "mA"},\n	{trigger: "he4", replacement: "{}^{4}_{2}He ", options: "mA"},\n	{trigger: "he3", replacement: "{}^{3}_{2}He ", options: "mA"},\n	{trigger: "iso", replacement: "{}^{${0:4}}_{${1:2}}${2:He}", options: "mA"},\n\n\n    // Environments\n	{trigger: "pmat", replacement: "\\\\begin{pmatrix}\\n$0\\n\\\\end{pmatrix}", options: "MA"},\n	{trigger: "bmat", replacement: "\\\\begin{bmatrix}\\n$0\\n\\\\end{bmatrix}", options: "MA"},\n	{trigger: "Bmat", replacement: "\\\\begin{Bmatrix}\\n$0\\n\\\\end{Bmatrix}", options: "MA"},\n	{trigger: "vmat", replacement: "\\\\begin{vmatrix}\\n$0\\n\\\\end{vmatrix}", options: "MA"},\n	{trigger: "Vmat", replacement: "\\\\begin{Vmatrix}\\n$0\\n\\\\end{Vmatrix}", options: "MA"},\n	{trigger: "matrix", replacement: "\\\\begin{matrix}\\n$0\\n\\\\end{matrix}", options: "MA"},\n\n	{trigger: "pmat", replacement: "\\\\begin{pmatrix}$0\\\\end{pmatrix}", options: "nA"},\n	{trigger: "bmat", replacement: "\\\\begin{bmatrix}$0\\\\end{bmatrix}", options: "nA"},\n	{trigger: "Bmat", replacement: "\\\\begin{Bmatrix}$0\\\\end{Bmatrix}", options: "nA"},\n	{trigger: "vmat", replacement: "\\\\begin{vmatrix}$0\\\\end{vmatrix}", options: "nA"},\n	{trigger: "Vmat", replacement: "\\\\begin{Vmatrix}$0\\\\end{Vmatrix}", options: "nA"},\n	{trigger: "matrix", replacement: "\\\\begin{matrix}$0\\\\end{matrix}", options: "nA"},\n\n	{trigger: "cases", replacement: "\\\\begin{cases}\\n$0\\n\\\\end{cases}", options: "mA"},\n	{trigger: "align", replacement: "\\\\begin{align}\\n$0\\n\\\\end{align}", options: "mA"},\n	{trigger: "array", replacement: "\\\\begin{array}\\n$0\\n\\\\end{array}", options: "mA"},\n\n\n    // Brackets\n	{trigger: "avg", replacement: "\\\\langle $0 \\\\rangle $1", options: "mA"},\n	{trigger: "norm", replacement: "\\\\lvert $0 \\\\rvert $1", options: "mA", priority: 1},\n	{trigger: "Norm", replacement: "\\\\lVert $0 \\\\rVert $1", options: "mA", priority: 1},\n	{trigger: "ceil", replacement: "\\\\lceil $0 \\\\rceil $1", options: "mA"},\n	{trigger: "floor", replacement: "\\\\lfloor $0 \\\\rfloor $1", options: "mA"},\n	{trigger: "mod", replacement: "|$0|$1", options: "mA"},\n	{trigger: "(", replacement: "(${VISUAL})", options: "mA"},\n	{trigger: "[", replacement: "[${VISUAL}]", options: "mA"},\n	{trigger: "{", replacement: "{${VISUAL}}", options: "mA"},\n	{trigger: "(", replacement: "($0)$1", options: "mA"},\n	{trigger: "{", replacement: "{$0}$1", options: "mA"},\n	{trigger: "[", replacement: "[$0]$1", options: "mA"},\n	{trigger: "lr(", replacement: "\\\\left( $0 \\\\right) $1", options: "mA"},\n	{trigger: "lr{", replacement: "\\\\left\\\\{ $0 \\\\right\\\\} $1", options: "mA"},\n	{trigger: "lr[", replacement: "\\\\left[ $0 \\\\right] $1", options: "mA"},\n	{trigger: "lr|", replacement: "\\\\left| $0 \\\\right| $1", options: "mA"},\n	{trigger: "lra", replacement: "\\\\left< $0 \\\\right> $1", options: "mA"},\n\n\n    // Misc\n\n    // Automatically convert standalone letters in text to math (except a, A, I).\n    // (Un-comment to enable)\n    // {trigger: /([^\'])\\b([B-HJ-Zb-z])\\b([\\n\\s.,?!:\'])/, replacement: "[[0]]$[[1]]$[[2]]", options: "tA"},\n\n    // Automatically convert Greek letters in text to math.\n    // {trigger: "(${GREEK})([\\\\n\\\\s.,?!:\'])", replacement: "$\\\\[[0]]$[[1]]", options: "rtAw"},\n\n    // Automatically convert text of the form "x=2" and "x=n+1" to math.\n    // {trigger: /([A-Za-z]=\\d+)([\\n\\s.,?!:\'])/, replacement: "$[[0]]$[[1]]", options: "rtAw"},\n    // {trigger: /([A-Za-z]=[A-Za-z][+-]\\d+)([\\n\\s.,?!:\'])/, replacement: "$[[0]]$[[1]]", options: "tAw"},\n\n\n    // Snippet replacements can have placeholders.\n	{trigger: "tayl", replacement: "${0:f}(${1:x} + ${2:h}) = ${0:f}(${1:x}) + ${0:f}\'(${1:x})${2:h} + ${0:f}\'\'(${1:x}) \\\\frac{${2:h}^{2}}{2!} + \\\\dots$3", options: "mA", description: "Taylor expansion"},\n\n    // Snippet replacements can also be JavaScript functions.\n    // See the documentation for more information.\n	{trigger: /iden(\\d)/, replacement: (match) => {\n		const n = match[1];\n\n		let arr = [];\n		for (let j = 0; j < n; j++) {\n			arr[j] = [];\n			for (let i = 0; i < n; i++) {\n				arr[j][i] = (i === j) ? 1 : 0;\n			}\n		}\n\n		let output = arr.map(el => el.join(" & ")).join(" \\\\\\\\\\n");\n		output = `\\\\begin{pmatrix}\\n${output}\\n\\\\end{pmatrix}`;\n		return output;\n	}, options: "mA", description: "N x N identity matrix"},\n]\n';
 
 // src/utils/default_snippets.ts
 var DEFAULT_SNIPPETS = default_snippets_default;
 
-// _mfzmsirx6:/home/runner/work/obsidian-latex-suite/obsidian-latex-suite/src/default_snippet_variables.js
+// _mpqp3bu5b:/home/runner/work/obsidian-latex-suite/obsidian-latex-suite/src/default_snippet_variables.js
 var default_snippet_variables_default = '{\n	"${GREEK}": "alpha|beta|gamma|Gamma|delta|Delta|epsilon|varepsilon|zeta|eta|theta|vartheta|Theta|iota|kappa|lambda|Lambda|mu|nu|xi|omicron|pi|rho|varrho|sigma|Sigma|tau|upsilon|Upsilon|phi|varphi|Phi|chi|psi|omega|Omega",\n	"${SYMBOL}": "parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx",\n	"${MORE_SYMBOLS}": "leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint"\n}\n';
 
 // src/utils/default_snippet_variables.ts
@@ -7040,6 +7040,7 @@ var DEFAULT_SETTINGS = {
   snippetsTrigger: "Tab",
   suppressSnippetTriggerOnIME: true,
   removeSnippetWhitespace: true,
+  autoDelete$: true,
   loadSnippetsFromFile: false,
   loadSnippetVariablesFromFile: false,
   snippetsFileLocation: "",
@@ -12752,6 +12753,10 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
       this.plugin.settings.removeSnippetWhitespace = value;
       yield this.plugin.saveSettings();
     })));
+    new import_obsidian4.Setting(containerEl).setName("Remove closing $ when backspacing inside blank inline math").setDesc("Whether to also remove the closing $ when you delete the opening $ symbol inside blank inline math.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoDelete$).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.autoDelete$ = value;
+      yield this.plugin.saveSettings();
+    })));
     new import_obsidian4.Setting(containerEl).setName("Don't trigger snippets when IME is active").setDesc("Whether to suppress snippets triggering when an IME is active.").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.suppressSnippetTriggerOnIME).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.suppressSnippetTriggerOnIME = value;
@@ -12943,8 +12948,9 @@ function iterateCM6(workspace, callback) {
     (leaf == null ? void 0 : leaf.view) instanceof import_obsidian5.MarkdownView && ((_a = leaf.view.editor) == null ? void 0 : _a.cm) instanceof import_view5.EditorView && callback(leaf.view.editor.cm);
   });
 }
-function getCharacterAtPos(view, pos) {
-  const doc = view.state.doc;
+function getCharacterAtPos(viewOrState, pos) {
+  const state = viewOrState instanceof import_view5.EditorView ? viewOrState.state : viewOrState;
+  const doc = state.doc;
   return doc.slice(pos, pos + 1).toString();
 }
 function setCursor(view, pos) {
@@ -13014,9 +13020,6 @@ function escalateToToken(cursor, dir, target) {
 function isComposing(view, event) {
   return view.composing || event.keyCode === 229;
 }
-
-// src/utils/context.ts
-var import_view7 = require("@codemirror/view");
 
 // src/snippets/codemirror/config.ts
 var import_view6 = require("@codemirror/view");
@@ -13207,15 +13210,14 @@ var getCodeblockBounds = (state, pos = state.selection.main.from) => {
   const blockEnd = escalateToToken(cursor, 1 /* Forward */, "HyperMD-codeblock-end");
   return { start: blockBegin.to + 1, end: blockEnd.from - 1 };
 };
-var langIfWithinCodeblock = (view) => {
-  const state = view instanceof import_view7.EditorView ? view.state : view;
+var langIfWithinCodeblock = (state) => {
   const tree = (0, import_language4.syntaxTree)(state);
   const pos = state.selection.ranges[0].from;
-  const inCodeblock = tree.resolveInner(pos, -1).name.contains("codeblock");
+  const cursor = pos === 0 || getCharacterAtPos(state, pos - 1) === "\n" ? tree.cursorAt(pos, 1) : tree.cursorAt(pos, -1);
+  const inCodeblock = cursor.name.contains("codeblock");
   if (!inCodeblock) {
     return null;
   }
-  const cursor = tree.cursorAt(pos, -1);
   const codeblockBegin = escalateToToken(cursor, 0 /* Backward */, "HyperMD-codeblock_HyperMD-codeblock-begin");
   if (codeblockBegin == null) {
     console.warn("unable to locate start of the codeblock even though inside one");
@@ -13322,7 +13324,7 @@ var getEditorCommands = (plugin) => {
 
 // src/latex_suite.ts
 var import_state13 = require("@codemirror/state");
-var import_view13 = require("@codemirror/view");
+var import_view12 = require("@codemirror/view");
 
 // src/snippets/codemirror/snippet_queue_state_field.ts
 var import_state5 = require("@codemirror/state");
@@ -13412,7 +13414,7 @@ var import_state7 = require("@codemirror/state");
 var import_commands2 = require("@codemirror/commands");
 
 // src/snippets/codemirror/tabstops_state_field.ts
-var import_view8 = require("@codemirror/view");
+var import_view7 = require("@codemirror/view");
 var import_state6 = require("@codemirror/state");
 var addTabstopsEffect = import_state6.StateEffect.define();
 var filterTabstopsEffect = import_state6.StateEffect.define();
@@ -13447,14 +13449,14 @@ var tabstopsStateField = import_state6.StateField.define({
     return tabstopGroups;
   },
   provide: (field) => {
-    return import_view8.EditorView.decorations.of((view) => {
+    return import_view7.EditorView.decorations.of((view) => {
       const tabstopGroups = view.state.field(field);
       const decos = [];
       for (const tabstopGroup of tabstopGroups) {
         if (!tabstopGroup.hidden)
           decos.push(...tabstopGroup.getRanges());
       }
-      return import_view8.Decoration.set(decos, true);
+      return import_view7.Decoration.set(decos, true);
     });
   }
 });
@@ -13540,11 +13542,11 @@ var import_commands3 = require("@codemirror/commands");
 
 // src/snippets/tabstop.ts
 var import_state8 = require("@codemirror/state");
-var import_view9 = require("@codemirror/view");
+var import_view8 = require("@codemirror/view");
 var LATEX_SUITE_TABSTOP_DECO_CLASS = "latex-suite-snippet-placeholder";
 function getMarkerDecoration(from, to, color) {
   const className = `${LATEX_SUITE_TABSTOP_DECO_CLASS} ${LATEX_SUITE_TABSTOP_DECO_CLASS}-${color}`;
-  return import_view9.Decoration.mark({
+  return import_view8.Decoration.mark({
     inclusive: true,
     color,
     class: className
@@ -13553,7 +13555,7 @@ function getMarkerDecoration(from, to, color) {
 var TabstopGroup = class {
   constructor(tabstopSpecs, color) {
     const decos = tabstopSpecs.map((spec) => getMarkerDecoration(spec.from, spec.to, color));
-    this.decos = import_view9.Decoration.set(decos, true);
+    this.decos = import_view8.Decoration.set(decos, true);
     this.color = color;
     this.hidden = false;
   }
@@ -14060,7 +14062,7 @@ var snippetExtensions = [
 
 // src/editor_extensions/conceal.ts
 var import_obsidian6 = require("obsidian");
-var import_view10 = require("@codemirror/view");
+var import_view9 = require("@codemirror/view");
 var import_language5 = require("@codemirror/language");
 
 // src/editor_extensions/conceal_maps.ts
@@ -14558,7 +14560,7 @@ var mathscrcal = {
 };
 
 // src/editor_extensions/conceal.ts
-var ConcealWidget = class extends import_view10.WidgetType {
+var ConcealWidget = class extends import_view9.WidgetType {
   constructor(symbol, className, elementType) {
     super();
     this.symbol = symbol;
@@ -14578,7 +14580,7 @@ var ConcealWidget = class extends import_view10.WidgetType {
     return false;
   }
 };
-var TextWidget = class extends import_view10.WidgetType {
+var TextWidget = class extends import_view9.WidgetType {
   constructor(symbol) {
     super();
     this.symbol = symbol;
@@ -14901,14 +14903,14 @@ function conceal(view) {
             continue;
           if (start2 === end2) {
             widgets.push(
-              import_view10.Decoration.widget({
+              import_view9.Decoration.widget({
                 widget: new TextWidget(symbol),
                 block: false
               }).range(start2, end2)
             );
           } else {
             widgets.push(
-              import_view10.Decoration.replace({
+              import_view9.Decoration.replace({
                 widget: new ConcealWidget(symbol, concealment.class, concealment.elementType),
                 inclusiveStart,
                 inclusiveEnd,
@@ -14920,9 +14922,9 @@ function conceal(view) {
       }
     });
   }
-  return import_view10.Decoration.set(widgets, true);
+  return import_view9.Decoration.set(widgets, true);
 }
-var concealPlugin = import_view10.ViewPlugin.fromClass(class {
+var concealPlugin = import_view9.ViewPlugin.fromClass(class {
   constructor(view) {
     this.decorations = conceal(view);
   }
@@ -14933,12 +14935,12 @@ var concealPlugin = import_view10.ViewPlugin.fromClass(class {
 }, { decorations: (v) => v.decorations });
 
 // src/editor_extensions/highlight_brackets.ts
-var import_view11 = require("@codemirror/view");
+var import_view10 = require("@codemirror/view");
 var import_state11 = require("@codemirror/state");
 var import_language6 = require("@codemirror/language");
 var Ncolors = 3;
 function getHighlightBracketMark(pos, className) {
-  return import_view11.Decoration.mark({
+  return import_view10.Decoration.mark({
     inclusive: true,
     attributes: {},
     class: className
@@ -14986,7 +14988,7 @@ function colorPairedBrackets(view) {
       }
     });
   }
-  return import_view11.Decoration.set(widgets, true);
+  return import_view10.Decoration.set(widgets, true);
 }
 function getEnclosingBracketsPos(view, pos) {
   const result = getEquationBounds(view.state);
@@ -15022,11 +15024,11 @@ function highlightCursorBrackets(view) {
   const text = view.state.doc.toString();
   const ctx = Context.fromView(view);
   if (!ctx.mode.inMath()) {
-    return import_view11.Decoration.none;
+    return import_view10.Decoration.none;
   }
   const bounds = ctx.getBounds(selection.main.to);
   if (!bounds)
-    return import_view11.Decoration.none;
+    return import_view10.Decoration.none;
   const eqn = view.state.doc.sliceString(bounds.start, bounds.end);
   const openBrackets = ["{", "[", "("];
   const brackets2 = ["{", "[", "(", "}", "]", ")"];
@@ -15070,9 +15072,9 @@ function highlightCursorBrackets(view) {
     if (done)
       break;
   }
-  return import_view11.Decoration.set(widgets, true);
+  return import_view10.Decoration.set(widgets, true);
 }
-var colorPairedBracketsPlugin = import_view11.ViewPlugin.fromClass(class {
+var colorPairedBracketsPlugin = import_view10.ViewPlugin.fromClass(class {
   constructor(view) {
     this.decorations = colorPairedBrackets(view);
   }
@@ -15083,7 +15085,7 @@ var colorPairedBracketsPlugin = import_view11.ViewPlugin.fromClass(class {
   }
 }, { decorations: (v) => v.decorations });
 var colorPairedBracketsPluginLowestPrec = import_state11.Prec.lowest(colorPairedBracketsPlugin.extension);
-var highlightCursorBracketsPlugin = import_view11.ViewPlugin.fromClass(class {
+var highlightCursorBracketsPlugin = import_view10.ViewPlugin.fromClass(class {
   constructor(view) {
     this.decorations = highlightCursorBrackets(view);
   }
@@ -15094,7 +15096,7 @@ var highlightCursorBracketsPlugin = import_view11.ViewPlugin.fromClass(class {
 }, { decorations: (v) => v.decorations });
 
 // src/editor_extensions/math_tooltip.ts
-var import_view12 = require("@codemirror/view");
+var import_view11 = require("@codemirror/view");
 var import_state12 = require("@codemirror/state");
 var import_obsidian7 = require("obsidian");
 var updateTooltipEffect = import_state12.StateEffect.define();
@@ -15107,7 +15109,7 @@ var cursorTooltipField = import_state12.StateField.define({
     }
     return tooltips2;
   },
-  provide: (f) => import_view12.showTooltip.computeN([f], (state) => state.field(f))
+  provide: (f) => import_view11.showTooltip.computeN([f], (state) => state.field(f))
 });
 function handleMathTooltip(update) {
   const shouldUpdate = update.docChanged || update.selectionSet;
@@ -15185,7 +15187,7 @@ function shouldShowTooltip(state, ctx) {
     return false;
   return true;
 }
-var cursorTooltipBaseTheme = import_view12.EditorView.baseTheme({
+var cursorTooltipBaseTheme = import_view11.EditorView.baseTheme({
   ".cm-tooltip.cm-tooltip-cursor": {
     backgroundColor: "var(--background-secondary)",
     color: "var(--text-normal)",
@@ -15211,7 +15213,10 @@ var cursorTooltipBaseTheme = import_view12.EditorView.baseTheme({
 
 // src/latex_suite.ts
 var handleUpdate = (update) => {
-  handleMathTooltip(update);
+  const settings = getLatexSuiteConfig(update.state);
+  if (settings.mathPreviewEnabled) {
+    handleMathTooltip(update);
+  }
   const cursorTriggeredByChange = update.state.field(cursorTriggerStateField, false);
   if (update.selectionSet) {
     if (!cursorTriggeredByChange) {
@@ -15231,6 +15236,15 @@ var handleKeydown = (key, shiftKey, ctrlKey, isIME, view) => {
   const settings = getLatexSuiteConfig(view);
   const ctx = Context.fromView(view);
   let success = false;
+  if (settings.autoDelete$ && key === "Backspace" && ctx.mode.inMath()) {
+    const charAtPos = getCharacterAtPos(view, ctx.pos);
+    const charAtPrevPos = getCharacterAtPos(view, ctx.pos - 1);
+    if (charAtPos === "$" && charAtPrevPos === "$") {
+      replaceRange(view, ctx.pos - 1, ctx.pos + 1, "");
+      removeAllTabstops(view);
+      return true;
+    }
+  }
   if (settings.snippetsEnabled) {
     if (settings.suppressSnippetTriggerOnIME && isIME)
       return;
@@ -15281,16 +15295,16 @@ var handleTabstops = (view) => {
 };
 var latexSuiteExtensions = (settings) => [
   getLatexSuiteConfigExtension(settings),
-  import_state13.Prec.highest(import_view13.EditorView.domEventHandlers({ "keydown": onKeydown })),
+  import_state13.Prec.highest(import_view12.EditorView.domEventHandlers({ "keydown": onKeydown })),
   // Register keymaps
-  import_view13.EditorView.updateListener.of(handleUpdate),
+  import_view12.EditorView.updateListener.of(handleUpdate),
   snippetExtensions
 ];
 var optionalExtensions = {
   "conceal": [concealPlugin.extension],
   "colorPairedBrackets": [colorPairedBracketsPluginLowestPrec],
   "highlightCursorBrackets": [highlightCursorBracketsPlugin.extension],
-  "mathPreview": [cursorTooltipField.extension, cursorTooltipBaseTheme, (0, import_view13.tooltips)({ position: "absolute" })]
+  "mathPreview": [cursorTooltipField.extension, cursorTooltipBaseTheme, (0, import_view12.tooltips)({ position: "absolute" })]
 };
 
 // src/main.ts

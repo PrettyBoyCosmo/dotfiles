@@ -2160,6 +2160,12 @@ var _PomodoroSettings = class extends import_obsidian2.PluginSettingTab {
         this.updateSettings({ useStatusBarTimer: value });
       });
     });
+    new import_obsidian2.Setting(containerEl).setName("Low Animation FPS").setDesc("If you encounter high CPU usage, you can enable this option to lower the animation FPS to save CPU resources").addToggle((toggle) => {
+      toggle.setValue(this._settings.lowFps);
+      toggle.onChange((value) => {
+        this.updateSettings({ lowFps: value });
+      });
+    });
     new import_obsidian2.Setting(containerEl).setHeading().setName("Notification");
     new import_obsidian2.Setting(containerEl).setName("Use System Notification").addToggle((toggle) => {
       toggle.setValue(this._settings.useSystemNotification);
@@ -2346,7 +2352,8 @@ PomodoroSettings.DEFAULT_SETTINGS = {
   logTemplate: "",
   logFormat: "VERBOSE",
   useSystemNotification: false,
-  taskFormat: "TASKS"
+  taskFormat: "TASKS",
+  lowFps: false
 };
 PomodoroSettings.settings = writable(
   _PomodoroSettings.DEFAULT_SETTINGS
@@ -4245,7 +4252,7 @@ function instance4($$self, $$props, $$invalidate) {
     if ($$self.$$.dirty & /*$timer*/
     16) {
       $:
-        $$invalidate(6, strokeOffset = $timer.remained.millis * offset / $timer.count);
+        $$invalidate(6, strokeOffset = $timer.remained.millis / $timer.count * offset);
     }
   };
   return [
@@ -4335,7 +4342,7 @@ var import_obsidian8 = require("obsidian");
 
 // src/clock.worker.ts
 function inlineWorker() {
-  let blob = new Blob(['"use strict";var e=!1,s=()=>{e&&(self.postMessage(new Date().getTime()),requestAnimationFrame(s))};self.onmessage=async({data:n})=>{n?e||(e=!0,s()):e=!1};\n'], { type: "text/javascript" });
+  let blob = new Blob(['"use strict";var i=!1,t,f,n,s,a=!1,l=e=>{i&&(t===void 0?(t=e,s=e,requestAnimationFrame(l)):(n+=e-s,a?n>=1e3&&(self.postMessage(n),n=0):self.postMessage(e-s),requestAnimationFrame(l),s=e))};self.onmessage=async({data:e})=>{e.start?(a=e.lowFps,i||(i=!0,n=0,f=new Date().getTime(),requestAnimationFrame(l))):(i=!1,t=void 0,f=void 0,s=void 0)};\n'], { type: "text/javascript" });
   let url = URL.createObjectURL(blob);
   let worker = new Worker(url);
   URL.revokeObjectURL(url);
@@ -4487,7 +4494,7 @@ var _Timer = class {
       workLen: plugin.getSettings().workLen,
       breakLen: plugin.getSettings().breakLen,
       running: false,
-      lastTick: 0,
+      // lastTick: 0,
       mode: "WORK",
       elapsed: 0,
       startTime: null,
@@ -4531,10 +4538,8 @@ var _Timer = class {
     let timeup = false;
     let pause = false;
     this.update((s) => {
-      if (s.running && s.lastTick) {
-        let diff = t - s.lastTick;
-        s.lastTick = t;
-        s.elapsed += diff;
+      if (s.running) {
+        s.elapsed += t;
         if (s.elapsed >= s.count) {
           s.elapsed = s.count;
         }
@@ -4587,10 +4592,12 @@ var _Timer = class {
         s.count = s.duration * 60 * 1e3;
         s.startTime = now2;
       }
-      s.lastTick = now2;
       s.inSession = true;
       s.running = true;
-      this.clock.postMessage(true);
+      this.clock.postMessage({
+        start: true,
+        lowFps: this.plugin.getSettings().lowFps
+      });
       return s;
     });
   }
@@ -4604,7 +4611,10 @@ var _Timer = class {
     state.count = state.duration * 60 * 1e3;
     state.inSession = false;
     state.running = false;
-    this.clock.postMessage(false);
+    this.clock.postMessage({
+      start: false,
+      lowFps: this.plugin.getSettings().lowFps
+    });
     state.startTime = null;
     state.elapsed = 0;
     return state;
@@ -4644,7 +4654,10 @@ var _Timer = class {
   pause() {
     this.update((state) => {
       state.running = false;
-      this.clock.postMessage(false);
+      this.clock.postMessage({
+        start: false,
+        lowFps: this.plugin.getSettings().lowFps
+      });
       return state;
     });
   }
@@ -4660,7 +4673,10 @@ var _Timer = class {
       if (!this.plugin.tracker.pinned) {
         this.plugin.tracker.clear();
       }
-      this.clock.postMessage(false);
+      this.clock.postMessage({
+        start: false,
+        lowFps: this.plugin.getSettings().lowFps
+      });
       state.startTime = null;
       state.elapsed = 0;
       return state;
