@@ -101,6 +101,7 @@ bindsym $alt+a focus parent
 bindsym $alt+q focus child 
 
 # hide window title bar
+title_align center
 default_border pixel 1
 default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
@@ -249,9 +250,9 @@ set $GRAYMID    #999999
 bindsym $alt+r mode "resize"
 
 # window color           border  background  text      indicator
-client.focused           $WHITE  $WHITE      $WHITE    $WHITE
-client.unfocused         $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
-client.focused_inactive  $WHITE  $GRAYMID    $GRAYMID  $GRAYMID
+client.focused           $BLACK  $WHITE      $BLACK    $WHITE
+client.unfocused         $WHITE  $BLACK      $WHITE    $WHITE
+client.focused_inactive  $WHITE  $BLACK      $WHITE    $WHITE
 client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar

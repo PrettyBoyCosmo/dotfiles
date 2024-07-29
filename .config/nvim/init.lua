@@ -350,6 +350,14 @@ vim.api.nvim_set_keymap("v", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, s
 vim.api.nvim_set_keymap("n", "gg", "ggzz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "GG", "GGzz", {noremap = true, silent = true})
 
+-- tmux navigation
+function netrw_move_to_right_pane()
+    vim.cmd([[wincmd l]])
+end
+vim.cmd [[
+  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
+]]
+
 -- netrw
 function ToggleNetrw()
     local bufnr = vim.fn.bufnr("%")
@@ -366,6 +374,7 @@ function ToggleNetrw()
         vim.cmd("Vexplore")
     end
 end
+
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 vim.g.netrw_browse_split = 4
@@ -393,14 +402,6 @@ local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-o>", builtin.find_files, {noremap = true, silent = true})
 vim.keymap.set("n", "<C-f>", builtin.live_grep, {noremap = true, silent = true})
 vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
-
--- tmux navigation
-function netrw_move_to_right_pane()
-    vim.cmd([[wincmd l]])
-end
-vim.cmd [[
-  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
-]]
 
 -- treesitter
 local config = require("nvim-treesitter.configs")
