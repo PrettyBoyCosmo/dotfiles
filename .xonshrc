@@ -11,7 +11,7 @@ import subprocess
 # constants
 HOME = '/home/bluecosmo'
 NOTEBOOK = f'{HOME}/constellations'
-WORKFLOW = f'{HOME}/workflow'
+WORKFLOW = f'{HOME}/system'
 DEVELOPMENT = f'{HOME}/development'
 DOWNLOADS = f'{HOME}/Downloads'
 WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
@@ -129,7 +129,7 @@ def add_token(github_path):
 for new_path in [
     '/home/bluecosmo/.local/bin',
     '/home/bluecosmo/.nimble/bin',
-    '/home/bluecosmo/workflow/tools/',
+    '/home/bluecosmo/system/tools/',
     ]:
     $PATH.insert(0, new_path)
 
@@ -152,7 +152,7 @@ aliases.update({
     'pfchangs': 'proxychains4',
     'acf': 'auto-cpufreq --stats',
     'analyze': 'mv @($arg0) $HOME/research/analyze',
-    'neo': f'neofetch --ascii /home/bluecosmo/workflow/system/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
+    'neo': f'neofetch --ascii /home/bluecosmo/.dotfiles/.config/neofetch/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
     'wp': set_wallpaper,
     'd': set_display,
     'stream_display': 'xrandr --output eDP-1 --mode 1920x1080',

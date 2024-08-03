@@ -375,6 +375,7 @@ function ToggleNetrw()
     end
 end
 
+vim.o.splitright = true
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 vim.g.netrw_browse_split = 4
@@ -386,7 +387,6 @@ vim.api.nvim_command("augroup ProjectDrawer")
 vim.api.nvim_command("autocmd!")
 vim.api.nvim_command("autocmd VimEnter * let g:netrw_banner = 0")
 vim.api.nvim_command("augroup END")
--- vim.api.nvim_set_keymap('n', '<C-e>', ':Vexplore<CR>', { silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", ":lua ToggleNetrw()<CR>", {noremap = true, silent = true})
 
 -- notify
@@ -401,7 +401,6 @@ vim.api.nvim_set_keymap("v", "<leader>ot", ":!column -t -s '|' -o '|'<CR>", {nor
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-o>", builtin.find_files, {noremap = true, silent = true})
 vim.keymap.set("n", "<C-f>", builtin.live_grep, {noremap = true, silent = true})
-vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
 
 -- treesitter
 local config = require("nvim-treesitter.configs")

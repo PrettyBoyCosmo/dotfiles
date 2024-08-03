@@ -24,14 +24,16 @@ exec --no-startup-id virt-manager --show-systray
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 exec --no-startup-id nm-applet
+# exec --no-startup-id polychromatic-tray-applet
 exec --no-startup-id amixer sset Master unmute
 exec --no-startup-id amixer sset Speaker unmute
 exec --no-startup-id amixer sset Headphone unmute
 exec --no-startup-id numlockx on
-exec_always --no-startup-id ~/.dotfiles/.scripts/polybar.sh &
 exec xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x720 --rotate normal --same-as eDP-1
 exec_always --no-startup-id dbus-launch compton -CG --config .config/compton/compton.conf
+exec_always --no-startup-id polychromatic-cli -n "Razer BlackWidow V3" -e cosmo
+exec_always --no-startup-id ~/.dotfiles/.scripts/polybar.sh &
 
 # applications
 bindsym $win+a exec mintinstall
