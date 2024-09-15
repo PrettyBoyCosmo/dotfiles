@@ -109,5 +109,14 @@
       ],
       "key": "Tab"
     }
+  ],
+  "markdown:toggle-preview": [],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "E"
+    }
   ]
 }

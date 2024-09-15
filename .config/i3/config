@@ -50,7 +50,7 @@ bindsym $win+q exec virt-manager
 bindsym $win+r exec obs
 bindsym $win+s exec spotify
 bindsym $win+u exec cinnamon-settings sound
-bindsym $win+v exec firefox
+bindsym $win+v exec firefox --ProfileManager
 
 # pulseaudio pactl (volume)
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
@@ -99,16 +99,17 @@ bindsym $alt+b layout tabbed
 bindsym $alt+t layout toggle split 
 bindsym $alt+Shift+space floating toggle 
 bindsym $win+space focus mode_toggle 
-bindsym $alt+a focus parent 
-bindsym $alt+q focus child 
+# bindsym $alt+a focus parent 
+# bindsym $alt+q focus child 
 
 # hide window title bar
+workspace_layout default
+# workspace_layout tabbed
 title_align center
 default_border pixel 1
 default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
-for_window [class="Firefox" instance="Places"] floating enable
-# new_window pixel 0
+for_window [workspace="5"] floating enable
 
 # i3 gaps
 gaps inner 10
@@ -252,9 +253,9 @@ set $GRAYMID    #999999
 bindsym $alt+r mode "resize"
 
 # window color           border  background  text      indicator
-client.focused           $BLACK  $WHITE      $BLACK    $WHITE
-client.unfocused         $WHITE  $BLACK      $WHITE    $WHITE
-client.focused_inactive  $WHITE  $BLACK      $WHITE    $WHITE
+client.focused           $WHITE  $WHITE      $BLACK    $WHITE
+client.unfocused         $BLACK  $BLACK      $WHITE    $WHITE
+client.focused_inactive  $BLACK  $BLACK      $WHITE    $WHITE
 client.urgent            $WHITE  $TEAL       $WHITE    $TEAL
 
 # status bar

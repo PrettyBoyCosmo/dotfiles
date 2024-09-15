@@ -28,6 +28,8 @@
   "templater-obsidian",
   "obsidian-tagfolder",
   "tag-wrangler",
-  "obsidian-style-settings",
-  "obsidian-git"
+  "obsidian-git",
+  "homepage",
+  "obsidian-minimal-settings",
+  "obsidian-style-settings"
 ]

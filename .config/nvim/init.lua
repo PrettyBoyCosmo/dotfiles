@@ -366,7 +366,6 @@ function ToggleNetrw()
 
     if filetype == "netrw" then
         vim.cmd("bwipeout")
-        -- Close the window if it's not the last one
         if vim.fn.winnr("$") > 1 then
             vim.cmd("close")
         end
@@ -374,7 +373,6 @@ function ToggleNetrw()
         vim.cmd("Vexplore")
     end
 end
-
 vim.o.splitright = true
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
@@ -419,7 +417,9 @@ vim.api.nvim_command("set completeopt-=preview")
 vim.api.nvim_command("set encoding=UTF-8")
 vim.api.nvim_command("colorscheme habamax")
 -- vim.api.nvim_command('colorscheme base2tone_lake_dark')
+-- vim.cmd("hi normal guibg=#2e3440")
 vim.cmd("hi normal guibg=#0F1C21")
+-- vim.cmd("hi normal guibg=#000000")
 -- vim.cmd('hi normal guibg=#0D0F10')
 vim.o.guicursor = "a:block"
 vim.opt.guifont = {"Cascadia Code", ":h12"}

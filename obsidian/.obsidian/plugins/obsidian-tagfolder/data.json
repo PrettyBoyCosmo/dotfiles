@@ -1,7 +1,7 @@
 {
   "displayMethod": "NAME",
   "alwaysOpen": true,
-  "ignoreDocTags": "blog, todo, doing, done, video, priority",
+  "ignoreDocTags": "todo, doing, done, priority",
   "ignoreTags": "",
   "hideOnRootTags": "",
   "sortType": "DISPNAME_ASC",
@@ -10,7 +10,7 @@
   "expandLimit": 0,
   "disableNestedTags": false,
   "hideItems": "ALL_EXCEPT_BOTTOM",
-  "ignoreFolders": "",
+  "ignoreFolders": "02 - excalidraw, 03 - calendar, 04 - templates",
   "targetFolders": "",
   "scanDelay": 250,
   "useTitle": false,

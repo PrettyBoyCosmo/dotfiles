@@ -171,6 +171,8 @@ aliases.update({
     'dscon': 'ssh deathstar',
     'thmcon': f'sudo openvpn {WORKFLOW}/vpn/thm.ovpn',
     'htbcon': f'sudo openvpn {WORKFLOW}/vpn/htb.ovpn',
+    'cst12con': f'sudo openvpn {WORKFLOW}/vpn/cst12.ovpn',
+    'cst2con': f'sudo openvpn {WORKFLOW}/vpn/cst2.ovpn',
     'bbcon': 'ssh root@172.16.64.1',
     'sjcon': 'ssh root@172.16.24.1',
     'wpcon': 'ssh root@172.16.42.1',
@@ -219,6 +221,8 @@ aliases.update({
     'remdow': 'scp -r remnux@192.168.122.7:/home/remnux/Downloads/Desktop /home/bluecosmo/research/analyze/remnux',
     'tkill': 'tmux kill-server',
     'r': 'ranger .',
+    'cat': 'batcat',
+    'xp': 'tmux set-environment',
 })
 
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

@@ -27,8 +27,23 @@
     },
     {
       "type": "local",
+      "color": "#06c4ea",
+      "directory": "03 - calendar/cosmodiumcs"
+    },
+    {
+      "type": "local",
       "color": "#00ff91",
-      "directory": "03 - calendar/personal"
+      "directory": "03 - calendar/development"
+    },
+    {
+      "type": "local",
+      "color": "#ffffff",
+      "directory": "03 - calendar/recovery"
+    },
+    {
+      "type": "local",
+      "color": "#cba9fe",
+      "directory": "03 - calendar/rest"
     }
   ],
   "defaultCalendar": 0,
