@@ -3191,6 +3191,7 @@ var CurrentFileWordProvider = class {
     this.words = [];
   }
   async refreshWords(option) {
+    var _a;
     this.clearWords();
     const editor = this.appHelper.getCurrentEditor();
     if (!editor) {
@@ -3225,7 +3226,12 @@ var CurrentFileWordProvider = class {
         accentsDiacritics: option.makeSynonymAboutAccentsDiacritics
       })
     }));
-    this.wordsByFirstLetter = groupBy(this.words, (x) => x.value.charAt(0));
+    for (const word of this.words) {
+      pushWord(this.wordsByFirstLetter, word.value.charAt(0), word);
+      (_a = word.aliases) == null ? void 0 : _a.forEach(
+        (a) => pushWord(this.wordsByFirstLetter, a.charAt(0), word)
+      );
+    }
   }
   clearWords() {
     this.words = [];
@@ -3394,6 +3400,7 @@ var CurrentVaultWordProvider = class {
     this.words = [];
   }
   async refreshWords(option) {
+    var _a;
     this.clearWords();
     const currentDirname = this.appHelper.getCurrentDirname();
     const markdownFilePaths = this.app.vault.getMarkdownFiles().map((x) => x.path).filter((p) => this.includePrefixPatterns.every((x) => p.startsWith(x))).filter((p) => this.excludePrefixPatterns.every((x) => !p.startsWith(x))).filter(
@@ -3422,7 +3429,12 @@ var CurrentVaultWordProvider = class {
       }
     }
     this.words = Object.values(wordByValue);
-    this.wordsByFirstLetter = groupBy(this.words, (x) => x.value.charAt(0));
+    for (const word of this.words) {
+      pushWord(this.wordsByFirstLetter, word.value.charAt(0), word);
+      (_a = word.aliases) == null ? void 0 : _a.forEach(
+        (a) => pushWord(this.wordsByFirstLetter, a.charAt(0), word)
+      );
+    }
   }
   clearWords() {
     this.words = [];

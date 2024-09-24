@@ -109,7 +109,7 @@ title_align center
 default_border pixel 1
 default_floating_border pixel 1
 for_window [class="^.*"] border pixel 1
-for_window [workspace="5"] floating enable
+# for_window [workspace="5"] floating enable
 
 # i3 gaps
 gaps inner 10

@@ -136,6 +136,11 @@ local plugins = {
         tag = "0.1.5",
         dependencies = {"nvim-lua/plenary.nvim"}
     },
+    {'glepnir/template.nvim', cmd = {'Template','TemProject'}, config = function()
+    require('template').setup({
+            temp_dir = '/home/bluecosmo/development/templates'
+    })
+    end},
     -- tmux navigator
     {"christoomey/vim-tmux-navigator"},
     -- treesitter
@@ -445,4 +450,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 1
