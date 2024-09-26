@@ -7,33 +7,20 @@ import os
 import os.path
 import socket
 import subprocess
-
-# constants
-HOME = '/home/bluecosmo'
-NOTEBOOK = f'{HOME}/obsidian'
-WORKFLOW = f'{HOME}/operations'
-DEVELOPMENT = f'{HOME}/development'
-DOWNLOADS = f'{HOME}/Downloads'
-WALLPAPER_DIR = f'{HOME}/media/photos/wallpapers'
-DISPLAY_SCRIPTS = f'{HOME}/.screenlayout'
-$SHELL = '/bin/bash'
-
-# get environment name (custom prompt)
-def env_name_cust(pre_chars='─[', post_chars=']'):
-    env_path = __xonsh__.env.get('VIRTUAL_ENV', '')
-    env_name = os.path.basename(env_path)
-    if env_name and env_name != 'xonsh':
-        return '{WHITE}'+pre_chars+'{CYAN}'+env_name+'{WHITE}'+post_chars
-
 import netifaces
 
-def get_tun0(pre_chars='─[', post_chars=']'):
-    try:
-        tun0_ip = netifaces.ifaddresses('tun0')[netifaces.AF_INET][0]['addr']
-        return '{WHITE}'+pre_chars+'{PURPLE}'+tun0_ip+'{WHITE}'+post_chars
-    except (KeyError, IndexError, ValueError):
-        return ''
+# constants
+NOTEBOOK = f'$HOME/obsidian'
+OPERATIONS = f'$HOME/operations'
+DEVELOPMENT = f'$HOME/development'
+DOWNLOADS = f'$HOME/Downloads'
+WALLPAPER_DIR = f'$HOME/media/photos/wallpapers'
+DISPLAY_SCRIPTS = f'$HOME/.screenlayout'
+$SHELL = '/bin/bash'
 
+"""
+TOOLS
+"""
 # get working directory
 def pwd():
     return os.getcwd()
@@ -43,30 +30,36 @@ def command_output(command):
     result = subprocess.check_output(command).decode('utf-8')
     return result.strip()
 
+"""
+SYSTEM
+"""
+# get environment name (custom prompt)
+def env_name_cust(pre_chars='─[', post_chars=']'):
+    env_path = __xonsh__.env.get('VIRTUAL_ENV', '')
+    env_name = os.path.basename(env_path)
+    if env_name and env_name != 'xonsh':
+        return '{WHITE}'+pre_chars+'{CYAN}'+env_name+'{WHITE}'+post_chars
+
 # animated-wallpaper
 def animated_wallpaper(wp):
     wp = wp[0]
-    os.system(f'bash /home/bluecosmo/media/photos/wallpapers/animated-wallpaper.sh /home/bluecosmo/media/photos/wallpapers/{wp}')
-
-# get local ip address (ipv4)
-def local_ip():
-    try:
-        temp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        temp_socket.connect(("8.8.8.8", 80))  
-        local_ip = temp_socket.getsockname()[0] 
-        temp_socket.close()
-        return local_ip
-    except socket.error:
-        return "Unable to retrieve local IP address"
 
 # set wallpaper (wp)
 def set_wallpaper(args):
+
+    # list wallpaper
     option = args[0]
     if (option == "ls"):
         os.system(f'exa --icons {WALLPAPER_DIR}')
         return None
 
+    # animated
     wallpaper = args[1]
+    if (option == "animated"):
+        os.system(f'bash {WALLPAPER_DIR}/animated-wallpaper.sh {WALLPAPER_DIR}/{wallpaper}')
+        return None
+
+    # static
     for root, dirs, files in os.walk(WALLPAPER_DIR):
         for file in files:
             name, ext = os.path.splitext(file)
@@ -75,11 +68,33 @@ def set_wallpaper(args):
                 os.system(f'feh --bg-{option} {WALLPAPER_DIR}/wallpaper')
     return None
 
-# set display (d)
+# set screen layout [display] (d)
 def set_display(mode):
     os.system(f'bash {DISPLAY_SCRIPTS}/{mode[0]}.sh')
     os.system('i3 restart')
     return None
+
+"""
+NETWORKING
+"""
+# get tun0 ipaddr for wargaming
+def get_tun0(pre_chars='─[', post_chars=']'):
+    try:
+        tun0_ip = netifaces.ifaddresses('tun0')[netifaces.AF_INET][0]['addr']
+        return '{WHITE}'+pre_chars+'{PURPLE}'+tun0_ip+'{WHITE}'+post_chars
+    except (KeyError, IndexError, ValueError):
+        return ''
+
+# get local ip address (ipv4)
+def get_local_ip():
+    try:
+        temp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        temp_socket.connect(("8.8.8.8", 80))  
+        get_local_ip = temp_socket.getsockname()[0] 
+        temp_socket.close()
+        return get_local_ip
+    except socket.error:
+        return "Unable to retrieve local IP address"
 
 # monitor mode (monitor_mode)
 def monitor_mode(adapter):
@@ -100,29 +115,24 @@ def change_mac(adapter):
     os.system(f'sudo macchanger -r {adapter}')
     os.system(f'sudo ifconfig {adapter} up')
 
-# git (main)
-def mnupdate(commit_message):
-    commit_message = commit_message[0]
+"""
+DEVELOPMENT
+"""
+# git pull, commit, and push (gup)
+def git_sync(args):
+    branch = args[0]
+    commit_message = args[1]
     os.system('cd .')
     os.system('git fetch')
-    os.system('git pull origin main')
+    os.system(f'git pull origin {branch}')
     os.system('git add .')
     os.system(f'git commit -m "{commit_message}"')
-    os.system('git push -u origin main')
-
-# git (master)
-def msupdate(commit_message):
-    commit_message = commit_message[0]
-    os.system('cd .')
-    os.system('git fetch')
-    os.system('git pull origin master')
-    os.system('git add .')
-    os.system(f'git commit -m "{commit_message}"')
-    os.system('git push -u origin master')
+    os.system(f'git push -u origin {branch}')
 
 # add git token to repo (addtoken)
-def add_token(github_path):
-    github_path = github_path[0]
+def add_git_token(args):
+    git_branch = args[0]
+    github_path = args[1]
     git_token = command_output(['pass', 'tokens/git'])
     os.system('cd .')
     os.system('git branch -M main')
@@ -131,10 +141,10 @@ def add_token(github_path):
 
 # modify $PATH environment variable
 for new_path in [
-    '/home/bluecosmo/.local/bin',
-    '/home/bluecosmo/.nimble/bin',
-    '/home/bluecosmo/operations/tools/',
-    '/home/bluecosmo/operations/tools/apps/',
+    '$HOME/.local/bin',
+    '$HOME/.nimble/bin',
+    f'{OPERATIONS}/tools/',
+    f'{OPERATIONS}/tools/apps/',
     ]:
     $PATH.insert(0, new_path)
 
@@ -142,89 +152,91 @@ for new_path in [
 xontrib load vox
 $PROMPT_FIELDS['env_name_cust'] = env_name_cust
 $PROMPT_FIELDS['get_tun0'] = get_tun0
-# $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
 $PROMPT = "{WHITE}┌[{RED}{user}{WHITE}@{RED}{hostname}{WHITE}]{get_tun0:{}}─[{YELLOW}{cwd}{WHITE}]\n└─{WHITE}{curr_branch:[{GREEN}{}{WHITE}]}{env_name_cust}─■ {YELLOW}$ "
 
 # aliases
 aliases.update({
+    # apps / tooling / shortcuts
     'path_of': 'echo @(pwd())/@($arg0)',
+    'fuck': 'rm -rf',
+    'please': 'sudo',
+    'wp': set_wallpaper,
+    'd': set_display,
+    'untar': 'tar -xf *.tar.xz',
+    'stress': 'strings @($arg0) | less',
     'v': 'nvim',
     'ls': 'exa --icons',
     'll': 'exa --icons -l',
     'la': 'exa --icons -a',
     'lla': 'exa --icons -la',
-    'up': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
     'pfchangs': 'proxychains4',
+    'neo': f'neofetch --ascii $HOME/.dotfiles/.config/neofetch/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
     'acf': 'auto-cpufreq --stats',
-    'analyze': 'mv @($arg0) $HOME/operations/research/analyze',
-    'neo': f'neofetch --ascii /home/bluecosmo/.dotfiles/.config/neofetch/planet-cosmo.ascii --ascii_colors 255 30 --colors 30 255 255 30 7 255',
-    'wp': set_wallpaper,
-    'd': set_display,
-    'mvstat': 'mullvad status',
-    'webserv': 'python3 -m http.server 8080',
-    'monitor_mode': monitor_mode,
-    'managed_mode': managed_mode,
-    'change_mac': change_mac,
-    'mvcon': 'mullvad connect',
-    'mvdis': 'mullvad disconnect',
+    'r': 'ranger .',
+    'tkill': 'tmux kill-server',
+    'cat': 'batcat',
+    'xp': 'tmux set-environment', # "export"
+    'ipv4': get_local_ip,
+    'gen_frames': f'bash {WALLPAPER_DIR}/generate-frames.sh',
+    'wp_animated': animated_wallpaper,
+    'xc': 'xclip -selection c',
+    'c': 'clear',
+    'code': 'codium', 
+    'etit': 'v $HOME/.dotfiles/.config/obs/title.txt',
+    # update / upload / download
+    'up': 'sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoremove',
+    'gup': git_sync,
+    'webup': 'python3 -m http.server 8080',
+    'kaliup': 'scp -r @($arg0) bluecosmo@kali:~/Downloads',
+    'kalidow': 'scp -r bluecosmo@kali:~/@($arg0) .',
+    'remdow': f'scp -r remnux@192.168.122.7:/home/remnux/Downloads/Desktop {OPERATIONS}/research/remnux-desktop',
+    'sjup': 'scp -r payload.sh root@172.16.24.1:/root/payload',
+    'duckup': f'mv {DOWNLOADS}/inject.bin /media/bluecosmo/DUCKY',
+    # connect / disconnect
     'pccon': 'ssh bluecosmo@planetcosmo',
     'gitcon': 'ssh git@planetcosmo',
     'mcon': 'ssh moon -p 69',
     'kcon': 'ssh kali',
     'dscon': 'ssh deathstar',
-    'thmcon': f'sudo openvpn {WORKFLOW}/tools/vpn/thm.ovpn',
-    'htbcon': f'sudo openvpn {WORKFLOW}/tools/vpn/htb.ovpn',
-    'cst12con': f'sudo openvpn {WORKFLOW}/tools/vpn/cst12.ovpn',
-    'cst2con': f'sudo openvpn {WORKFLOW}/tools/vpn/cst2.ovpn',
+    'thmcon': f'sudo openvpn {OPERATIONS}/tools/vpn/thm.ovpn',
+    'htbcon': f'sudo openvpn {OPERATIONS}/tools/vpn/htb.ovpn',
+    'cst12con': f'sudo openvpn {OPERATIONS}/tools/vpn/cst12.ovpn',
+    'cst2con': f'sudo openvpn {OPERATIONS}/tools/vpn/cst2.ovpn',
     'bbcon': 'ssh root@172.16.64.1',
     'sjcon': 'ssh root@172.16.24.1',
     'wpcon': 'ssh root@172.16.42.1',
     'ltcon': 'ssh root@172.16.84.1',
     'pscon': 'ssh root@172.16.32.1',
-    'mnupdate': mnupdate,
-    'msupdate': msupdate,
-    'fuck': 'rm -rf',
-    'please': 'sudo',
-    'addtoken': add_token,
-    'untar': 'tar -xf *.tar.xz',
+    'mvcon': 'mullvad connect',
+    'mvdis': 'mullvad disconnect',
+    'mvstat': 'mullvad status',
+    # file moving
+    'analyze': f'mv @($arg0) {OPERATIONS}/research/analyze',
     'move': 'mv $HOME/Downloads/* @(pwd())',
     'movex': 'mv $HOME/Downloads/*.@($arg0) @(pwd())',
     'deport': 'mv $HOME/Downloads/* $HOME/imports',
-    'kup': 'scp -r @($arg0) bluecosmo@kali:~/Downloads',
-    'vdow': 'scp -r bluecosmo@kali:~/@($arg0) .',
     'add_license': f'cp @(NOTEBOOK)/LICENSE.md ./LICENSE',
     'bak': 'cp @($arg0) @($arg0).bak -r',
     'trash': 'mv @($arg0) $HOME/.local/share/Trash/files',
-    'comelf': 'g++ main.cpp && ./a.out',
-    'comexe': '/usr/bin/x86_64-w64-mingw32-gcc-win32 main.c',
-    'comdll': '/usr/bin/x86_64-w64-mingw32-gcc-win32 dll.c -o a.dll -shared',
-    'runpm': 'npm install && npm run dev',
-    'sjup': 'scp -r payload.sh root@172.16.24.1:/root/payload',
-    'duckencode': 'python2 /home/bluecosmo/development/rubberducky/encoder/duckencoder.py -i payload.txt',
-    'onlyrat': 'python3 /home/bluecosmo/.MK01-OnlyRAT/main.py',
-    'key': 'python3 ~/.SkeletonKey/main.py',   
-    'rng': 'ranger',
-    'ipv4': local_ip,
-    'ipv': local_ip,
-    'gen_frames': 'bash /home/bluecosmo/media/photos/wallpapers/generate-frames.sh',
-    'wp_animated': animated_wallpaper,
-    'xc':'xclip -selection c',
-    'blah':'ls -alh',
+    # development
     'mkvenv':'python3 -m venv ./venv/',
     'vac': 'vox activate @($arg0)',
     'vdac': 'vox deactivate',
     'vlis': 'vox list',
     'vls': 'vox list',
-    'c': 'clear',
-    'code': 'codium', 
-    'etit': 'v /home/bluecosmo/.dotfiles/.config/obs/title.txt',
-    'duckup': 'mv /home/bluecosmo/downloads/inject.bin /media/bluecosmo/DUCKY',
-    'remdow': 'scp -r remnux@192.168.122.7:/home/remnux/Downloads/Desktop /home/bluecosmo/operations/research/remnux-desktop',
-    'tkill': 'tmux kill-server',
-    'r': 'ranger .',
-    'cat': 'batcat',
-    'xp': 'tmux set-environment',
-    'stress': 'strings @($arg0) | less',
+    'addtoken': add_git_token,
+    'comelf': 'g++ main.cpp && ./a.out',
+    'comexe': '/usr/bin/x86_64-w64-mingw32-gcc-win32 main.c',
+    'comdll': '/usr/bin/x86_64-w64-mingw32-gcc-win32 dll.c -o a.dll -shared',
+    'runpm': 'npm install && npm run dev',
+    # hacking
+    'monitor_mode': monitor_mode,
+    'managed_mode': managed_mode,
+    'change_mac': change_mac,
+    'duckencode': f'python2 {DEVELOPMENT}/rubberducky/encoder/duckencoder.py -i payload.txt',
+    'onlyrat': 'python3 $HOME/.MK01-OnlyRAT/main.py',
+    'key': 'python3 $HOME/SkeletonKey/main.py',   
 })
 
+# zoxide
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
