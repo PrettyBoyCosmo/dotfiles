@@ -1,6 +1,6 @@
--- ~/.config/nvim/init.lua
--- neovim config file
--- created by : bluecosmo
+-- Title:       ~/.config/nvim/init.lua
+-- Description: neovim config file
+-- Author:      bluecosmo
 
 -- global
 vim.g.mapleader = " "
@@ -33,32 +33,25 @@ local plugins = {
             local dashboard = require("alpha.themes.dashboard")
 
             dashboard.section.header.val = {
-                [[  ██████╗ ██████╗ ███████╗███╗   ███╗ ██████╗ ██████╗ ██╗██╗   ██╗███╗   ███╗ ██████╗███████╗ ]],
-                [[ ██╔════╝██╔═══██╗██╔════╝████╗ ████║██╔═══██╗██╔══██╗██║██║   ██║████╗ ████║██╔════╝██╔════╝ ]],
-                [[ ██║     ██║   ██║███████╗██╔████╔██║██║   ██║██║  ██║██║██║   ██║██╔████╔██║██║     ███████╗ ]],
-                [[ ██║     ██║   ██║╚════██║██║╚██╔╝██║██║   ██║██║  ██║██║██║   ██║██║╚██╔╝██║██║     ╚════██║ ]],
-                [[ ╚██████╗╚██████╔╝███████║██║ ╚═╝ ██║╚██████╔╝██████╔╝██║╚██████╔╝██║ ╚═╝ ██║╚██████╗███████║ ]],
-                [[  ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝ ╚═════╝╚══════╝ ]],
-                [[]],
-                [[             • Malware Development • Offensive Development • Payload Development •            ]]
+                [[ ███╗   ██╗███████╗ ██████╗██████╗  ██████╗ ██╗   ██╗██╗███╗   ███╗]],
+                [[ ████╗  ██║██╔════╝██╔════╝██╔══██╗██╔═══██╗██║   ██║██║████╗ ████║]],
+                [[ ██╔██╗ ██║█████╗  ██║     ██████╔╝██║   ██║██║   ██║██║██╔████╔██║]],
+                [[ ██║╚██╗██║██╔══╝  ██║     ██╔══██╗██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║]],
+                [[ ██║ ╚████║███████╗╚██████╗██║  ██║╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║]],
+                [[ ╚═╝  ╚═══╝╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
             }
 
             dashboard.section.buttons.val = {
-                dashboard.button("n", "📄 • New File", ":ene <BAR> startinsert <CR>"),
-                dashboard.button("o", "📁 • Open File", ":Telescope find_files <CR>"),
-                dashboard.button(
-                    "v",
-                    "🪨 • Obsidian Vault",
-                    ":lua require('telescope.builtin').find_files({ cwd = '~/obsidian' })<CR>"
-                ),
-                dashboard.button("r", "👀 • Recently Used", ":Telescope oldfiles <CR>"),
-                dashboard.button("f", "🔎 • Find Text", ":Telescope live_grep <CR>"),
-                dashboard.button("e", "🤖 • Edit Config", ":e ~/.dotfiles/.config/nvim/init.lua<CR>"),
-                dashboard.button("q", "🙈 • Quit NeoVim", ":qa<CR>")
+                dashboard.button("n", "[+] New file", ":ene <BAR> startinsert <CR>"),
+                dashboard.button("o", "[+] Open file", ":Telescope find_files <CR>"),
+                dashboard.button("r", "[+] Recent files", ":Telescope oldfiles <CR>"),
+                dashboard.button("f", "[+] Find text", ":Telescope live_grep <CR>"),
+                dashboard.button("e", "[+] Edit config", ":e ~/.config/nvim/init.lua<CR>"),
+                dashboard.button("q", "[!] Quit", ":qa<CR>")
             }
 
             local function footer()
-                return "• NeoVim •"
+                return "• youtube.com/cosmodiumcs •"
             end
 
             dashboard.section.footer.val = footer()
@@ -68,8 +61,8 @@ local plugins = {
     -- bullets
     {"bullets-vim/bullets.vim"},
     -- commentary and surround
-    {"tpope/vim-commentary"},
-    {"tpope/vim-surround"},
+    -- {"tpope/vim-commentary"},
+    -- {"tpope/vim-surround"},
     -- harpoon
     {"ThePrimeagen/harpoon"},
     -- icons and colors
@@ -98,38 +91,10 @@ local plugins = {
     },
     -- markdown table
     {"tyrossel/MarkdownTable.nvim"},
-    -- notify
-    {"rcarriga/nvim-notify"},
-    -- obsidian
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*",
-        lazy = true,
-        ft = "markdown",
-        dependencies = {
-            "nvim-lua/plenary.nvim"
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "vault",
-                    path = "~/obsidian"
-                }
-            },
-            templates = {
-                folder = "04 - templates",
-                date_format = "%Y-%m-%d"
-            },
-            disable_frontmatter = true,
-            attachments = {
-                img_folder = "05 - assets",
-                img_text_func = function(client, path)
-                    path = client:vault_relative_path(path) or path
-                    return string.format("![[%s]]", path.name)
-                end
-            }
-        }
-    },
+    -- mini.nvim
+    { 'nvim-mini/mini.nvim', version = false },
+    -- solarized
+    {"maxmx03/solarized.nvim"},
     -- telescope
     {
         "nvim-telescope/telescope.nvim",
@@ -143,8 +108,26 @@ local plugins = {
     end},
     -- tmux navigator
     {"christoomey/vim-tmux-navigator"},
+    -- todo comments
+    {
+      "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      opts = { }
+    },
     -- treesitter
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    tag = "v0.9.3",
+    build = ":TSUpdate",
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = {"c", "lua", "vim", "vimdoc", "query"},
+            highlight = { enable = true, additional_vim_regex_highlighting = false },
+            indent = { enable = true }
+        })
+    end
+    },
     {"atelierbram/Base2Tone-nvim"}
 }
 
@@ -163,57 +146,24 @@ vim.g.airline_right_alt_sep = ""
 vim.g.airline_symbols.branch = ""
 vim.g.airline_symbols.readonly = ""
 vim.g.airline_symbols.linenr = ""
-vim.g.airline_theme = "lucius"
--- vim.g.airline_theme = 'deus'
+vim.g.airline_theme = "transparent"
+
+-- airline transparent
+vim.cmd([[
+  augroup airline_transparent
+    autocmd!
+    autocmd VimEnter * highlight airline_c ctermfg=NONE ctermbg=NONE guibg=NONE
+    autocmd VimEnter * highlight airline_c_bold ctermfg=NONE ctermbg=NONE guibg=NONE
+    autocmd VimEnter * highlight StatusLine ctermbg=NONE guibg=NONE
+    autocmd VimEnter * highlight StatusLineNC ctermbg=NONE guibg=NONE
+  augroup END
+]])
 
 -- bullets
 vim.g.bullets_enabled_file_types = {
   'markdown',
-  'text',
-  'gitcommit',
-  'scratch'
+  'text'
 }
-
--- file type text width
-vim.opt.textwidth = 80
-vim.api.nvim_create_augroup('filetype_specific', { clear = true })
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = {
-        'markdown',
-        'text'
-    },
-    group = 'filetype_specific',
-    callback = function()
-        vim.opt_local.textwidth = 60
-    end,
-})
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = {
-        'python',
-        'c',
-        'lua',
-        'javascript',
-        'html'
-    },
-    group = 'filetype_specific',
-    callback = function()
-        vim.opt_local.textwidth = 80
-    end,
-})
-
--- fold text
-function fold_text()
-    local current_pos = vim.fn.getpos(".")
-    vim.cmd("normal! m`")
-    vim.cmd("%!fold -s -w60")
-    vim.fn.setpos(".", current_pos)
-end
-vim.api.nvim_set_keymap(
-    "n", 
-    "<Leader>f", 
-    ":lua fold_text()<CR>", 
-    {noremap = true, silent = true}
-)
 
 -- harpoon
 local mark = require("harpoon.mark")
@@ -344,6 +294,13 @@ require("mason-lspconfig").setup({
     }
 })
 
+-- mini.nvim
+require("mini.pairs").setup()
+require("mini.comment").setup()
+require("mini.surround").setup()
+require("mini.indentscope").setup()
+-- require("mini.notify").setup()
+
 -- navigation (default centering)
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -355,80 +312,24 @@ vim.api.nvim_set_keymap("v", "<Esc>", "<Esc>:normal! zz<CR>", {noremap = true, s
 vim.api.nvim_set_keymap("n", "gg", "ggzz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "GG", "GGzz", {noremap = true, silent = true})
 
--- tmux navigation
-function netrw_move_to_right_pane()
-    vim.cmd([[wincmd l]])
-end
-vim.cmd [[
-  autocmd FileType netrw nnoremap <buffer> <C-L> :lua netrw_move_to_right_pane()<CR>
-]]
-
--- netrw
-function ToggleNetrw()
-    local bufnr = vim.fn.bufnr("%")
-    local bufname = vim.fn.bufname(bufnr)
-    local filetype = vim.bo.filetype
-
-    if filetype == "netrw" then
-        vim.cmd("bwipeout")
-        if vim.fn.winnr("$") > 1 then
-            vim.cmd("close")
-        end
-    else
-        vim.cmd("Vexplore")
-    end
-end
-vim.o.splitright = true
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
-vim.g.netrw_browse_split = 4
-vim.g.netrw_fastbrowse = 0
-vim.g.netrw_altv = 1
-vim.g.netrw_winsize = 25
-vim.g.netrw_list_hide = "\\(^\\|\\s\\s\\)\\(\\.env\\|\\.secrets\\|\\.git\\)\\($\\|/\\|\\s\\s\\)"
-vim.api.nvim_command("augroup ProjectDrawer")
-vim.api.nvim_command("autocmd!")
-vim.api.nvim_command("autocmd VimEnter * let g:netrw_banner = 0")
-vim.api.nvim_command("augroup END")
-vim.api.nvim_set_keymap("n", "<C-e>", ":lua ToggleNetrw()<CR>", {noremap = true, silent = true})
-
--- notify
-vim.notify = require("notify")
-
--- obsidian
-vim.api.nvim_set_keymap("n", "<A-i>", ":ObsidianTemplate<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>op", ":ObsidianPasteImg<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "<leader>ot", ":!column -t -s '|' -o '|'<CR>", {noremap = true, silent = true})
+-- -- netrw
+vim.g.netrw_winsize = 30
+vim.keymap.set("n", "<C-e>", ":Lexplore<CR>", { noremap = true, silent = true })
 
 -- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-o>", builtin.find_files, {noremap = true, silent = true})
 vim.keymap.set("n", "<C-f>", builtin.live_grep, {noremap = true, silent = true})
 
--- treesitter
-local config = require("nvim-treesitter.configs")
-config.setup({
-    ensure_installed = {"c", "lua", "vim", "vimdoc", "query"},
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false
-    },
-    indent = {enable = true}
-})
-
 -- settings
 vim.api.nvim_command("set mouse=a")
 vim.api.nvim_command("set completeopt-=preview")
 vim.api.nvim_command("set encoding=UTF-8")
 vim.api.nvim_command("colorscheme habamax")
--- vim.api.nvim_command('colorscheme base2tone_lake_dark')
--- vim.cmd("hi normal guibg=#2e3440")
-vim.cmd("hi normal guibg=#0F1C21")
--- vim.cmd("hi normal guibg=#000000")
--- vim.cmd('hi normal guibg=#0D0F10')
 vim.o.guicursor = "a:block"
 vim.opt.guifont = {"Cascadia Code", ":h12"}
 vim.opt.nu = true
+vim.opt.laststatus = 2
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 4
@@ -438,7 +339,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
 vim.opt.linebreak = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
@@ -451,3 +352,4 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.conceallevel = 1
+vim.opt.spell = false
